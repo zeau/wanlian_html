@@ -1,0 +1,350 @@
+/*清除浮动*/
+.clearfix::after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/*登陆*/
+.container{ width: 1200px; margin: 0px auto; padding: 20px 0;}
+body{ font:12px/150% Arial,Verdana,"\5b8b\4f53";}
+a{ color: #666;}
+.head2{width:1000px;height:43px;margin:20px auto;}
+.head2 a{float:left;}
+.head2 h1{display:block;float:left;height:43px;line-height:43px;margin-left:20px;padding-left:20px;border-left:1px solid #C8C8C8;font-family:"微软雅黑";font-size:25px;}
+
+.login_con{ width: 340px; margin-left: 700px; background: #fff; height: 340px; padding: 20px 25px; border-radius: 3px;}
+.login_con_title{ width: 100%; overflow: hidden;}
+.login_con_title span{font-size: 20px; font-family: '\5fae\8f6f\96c5\9ed1'; color: #999; float: left; line-height: 52px; font-weight: bold;}
+.login_con_title p{float: right; color: #888888; line-height: 52px;}
+.login_con_title p a{ color: #C0A369;}
+.login_con_main{ margin-top: 20px;}
+.login_con_main_row{ position: relative; margin-bottom: 20px;}
+.login_con_main_row .login_con_main_text{ width: 100%; height: 52px; border: 1px solid #d3d3d3;
+  line-height: 52px;
+  text-indent: 45px;
+}
+input::-webkit-input-placeholder,input::-ms-input-placeholder,input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #D0C0A3;
+}
+input[type="text"], input[type="password"] {
+  color: #B3A180 !important;
+  border: 1px solid #CBBFA8 !important;
+}
+input, label {
+  vertical-align: middle;
+  display: inline-block;
+}
+#login_name {
+  width: 18px;
+  height: 18px;
+  background:  no-repeat;
+  position: absolute;
+  top: 18px;
+  left: 12px;
+}
+.login_con_main_tips{
+  position: absolute;
+  left: 0px;
+  top: 55px;
+  padding-left: 20px;
+  color: #f2445d;
+  display: none;
+  background: no-repeat left center;
+}
+.login_con_main_btn{
+  height: 52px;
+  background: #57402e;
+  color: #fff;
+  text-align: center;
+  line-height: 52px;
+  font-size: 18px;
+  border-radius: 3px;
+  border: none;
+  display: block;
+  width: 100%;
+  font-family: "微软雅黑";
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.login_con_main_btn:hover{ background: #352110}
+input[type="button"] {
+  color: #fff !important;
+  background: #C0A369 !important;
+  border: 1px solid #C0A369 !important;
+}
+.forgetPwd{
+  float: right;
+  display: inline;
+  color: #C0A369;
+  text-decoration: none;
+}
+.re_checkBox{
+
+}
+.beauty-checkbox{
+  width: 16px;
+  height: 16px;
+  background: 0 0 no-repeat;
+  position: absolute;
+  top: 0;
+  border: 1px solid #C0A369;
+}
+.re_label{
+  color: #C0A369;
+  margin-left: 10px;
+}
+.login_footer{
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #999999;
+  line-height: 60px;
+}
+
+
+/*注册*/
+.login_tip{
+  display: inline-block;
+  float: right;
+  font-size: 14px;
+  line-height: 60px;
+  color: #9c9c9c;
+  text-align: right;
+  font-weight: normal;
+}
+.login_tip a{
+  float: right;
+  padding-left: 5px;
+  display: inline-block;
+  color: #C0A369;
+}
+.register_con{
+  width: 1160px;
+  margin: 10px auto;
+  padding: 40px 0;
+  background: #fff;
+  border-top: 1px solid #ebebeb;
+  min-height: 500px;
+}
+.register_con .register_con_steps{
+  padding: 0;
+  border-bottom: 0;
+  margin-bottom: 80px;
+}
+.register_con_step{
+  width: 33.3%;
+  position: relative;
+  float: left;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+}
+.register_con .register_con_steps .register_con_step::before {
+  content: '';
+  display: block;
+  width: 170px;
+  height: 2px;
+  position: absolute;
+  background: #E45050;
+  z-index: 0;
+  background-color: #e6e6e6;
+  top: 50%;
+  bottom: auto;
+}
+.register_con .register_con_steps .register_con_step.active::before {
+  background-color: #57402e;
+}
+.register_con .register_con_steps .register_con_step::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  left: auto !important;
+  right: 0;
+  width: 170px !important;
+  height: 2px;
+  background-color: #e6e6e6;
+}
+.register_con .register_con_steps .register_con_step.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background-color: #57402e;
+}
+.register_con .register_con_steps .register_con_step i {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 25px;
+  background-color: #fff;
+  color: #e6e6e6;
+  border: 2px solid #e6e6e6;
+  display: inline-block;
+  background-color: #fff;
+  font-style: normal;
+}
+.register_con .register_con_steps .register_con_step.active i {
+  background-color: #fff;
+  border-color: #57402e;
+  color: #57402e;
+}
+.register_con .register_con_steps .register_con_step span {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  color: #e6e6e6;
+  vertical-align: middle;
+}
+.register_con .register_con_steps .register_con_step.active span {
+  color: #333;
+}
+
+.register_con_form{
+  width: 560px;
+  padding: 100px 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  margin: 50px auto;
+}
+.register_con_form .reg_form_item {
+  margin-bottom: 0;
+  position: relative;
+  padding-left: 120px;
+}
+.register_con_form .reg_form_item label.for_text {
+  line-height: 48px;
+  font-size: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100px;
+  text-align: right;
+  color: #352110;
+  font-family: Microsoft YaHei, tahoma, arial, Hiragino Sans GB;
+}
+.register_con_form .reg_form_item .item {
+  padding-bottom: 22px;
+  line-height: 48px;
+  position: relative;
+}
+.register_con_form .reg_form_item .item .text.long {
+  width: 338px;
+  height: 48px;
+  padding: 0 10px;
+}
+.register_con_form .reg_form_item .item i.correct {
+  position: absolute;
+  right: -25px;
+  top: 10px;
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+.register_con_form .reg_form_item.error .item p.tips {
+  padding-left: 20px;
+  background: left center no-repeat;
+  color: #c33;
+  top: 50px;
+  line-height: 22px;
+  margin: 0;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 14px;
+}
+.register_con_form .reg_form_item .item .text.medium {
+  width: 180px;
+  height: 48px;
+  padding: 0 10px;
+  font-size: 14px;
+  display: block;
+}
+.register_con_form .reg_form_item .item .agreement_confirm {
+  font-size: 14px;
+}
+.icheckbox_square-green.checked {
+  background: 0 0 no-repeat;
+}
+.icheckbox_square-green {
+  display: inline-block;
+  *display: inline;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+  background: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+.iCheck-helper{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+  border: 0px none;
+  opacity: 0;
+  text-decoration: none;
+}
+.register_con a{
+  color: #C0A369;
+  text-decoration: none;
+}
+.register_con_form .reg_form_item .item .sub_btn {
+  display: block;
+  width: 298px;
+  text-align: center;
+  background: #E45050;
+  height: 48px;
+  line-height: 48px;
+  font-size: 20px;
+}
+button, input[type="button"] {
+  color: #fff !important;
+  background-color: #C0A369 !important;
+  border: 1px solid #C0A369 !important;
+}
+.register_con_form .reg_form_item .item {
+  line-height: 48px;
+}
+.register_con_form .reg_form_item .item .tCode {
+  position: absolute;
+  left: 210px;
+  top: 0;
+  height: 36px;
+  padding-left: 2px;
+}
+.register_con_form .reg_form_item .item .tCode .btn {
+  height: 48px;
+  padding: 0 40px;
+  border-radius: 3px;
+  font-size: 16px;
+}
+.register_con_form .reg_form_item .item .sub_btn.free {
+  width: auto;
+  padding: 0 50px;
+  border-radius: 3px;
+}
+.register_con_form .reg_form_item .item .next {
+  background-color: #57402e;
+  border-color: #57402e;
+  height: 48px;
+  line-height: 48px;
+  font-size: 20px;
+  color: #fff;
+}
