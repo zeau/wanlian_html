@@ -7,12 +7,6 @@ import './common/css/base.css'  /*引入公共样式*/
 import './common/css/common.css'
 import './common/css/goods.css'
 
-import http from './Api/baseHttp'
-import URLString from './Api/api'
-
-Vue.use(http, URLString)
-
-
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

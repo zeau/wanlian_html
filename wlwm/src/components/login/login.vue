@@ -61,20 +61,11 @@
 </style>
 
 <script>
-
     export default {
         data() {
             return {
 
             }
-        },
-        methods:{
-          fetchData:async function(username,password) {
-            let param = {};
-            const res = await this.http.get(URLString.login,param);
-            if(this.http.data.success){
-            }
-          } 
         }
     }
 </script>
