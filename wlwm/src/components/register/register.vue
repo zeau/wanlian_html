@@ -47,25 +47,23 @@
               <identify :identifyCode="identifyCode" style="margin-top:10px;"></identify>
               <span class="code" @click="refreshCode"></span>
               </div>
-             
               <p class="tips mobile_info" style="display: none">请输入验证码</p>
             </div>
           </div>
-          <div class="reg_form_item">
-            <label class="for_text"></label>
-            <div class="item">
-              <div class="agreement_confirm">
-                <div class="icheckbox_square-green checked">
-                  <input id="readme" class="i-checks" checked="" type="checkbox" style="position: absolute; opacity: 0">
-                  <ins class="iCheck-helper"></ins>
-                </div>
-                我已阅读并同意
-                <a href="#">《商城用户注册协议》</a>
-              </div>
-              <p class="tips mobile_info" style="display: none">请接受服务条款</p>
-            </div>
+        <div class="reg_form_item">
+        <label class="for_text">&nbsp;</label>
+        <div class="item">
+          <div class="agreement_confirm">
+            <label>
+              <input type="checkbox" class="i-checks" checked id="readme">
+              我已阅读并同意<a href="javascript:void(0)" onclick="showpro();" id="protocol">《商城用户注册协议》</a>
+            </label>
           </div>
-        </form>
+            <p class="tips pro_info" style="display: none">请接受服务条款</p>
+        </div>
+      </div>
+    </form>
+
         <div class="reg_form_item">
           <label class="for_text"></label>
           <div class="item">
@@ -74,11 +72,12 @@
         </div>
       </div>
     </div>
+
     <!--页脚-->
-    <div class="container">
-      <p class="login_footer"> Copyright © 2018-2038 万联万名开发平台 苏ICP备17067244</p>
-    </div>
+    <page-footer></page-footer>
   </div>
+
+
 </template>
 
 <style>
@@ -87,6 +86,7 @@
 
 <script>
 import SIdentify from '@/components/pictureValidation/identify'
+import PageFooter from '@/components/footer/PageFooter'
 
   export default {
     data() {
@@ -96,7 +96,8 @@ import SIdentify from '@/components/pictureValidation/identify'
       }
     },
     components: {
-      identify:SIdentify
+      identify:SIdentify,
+      PageFooter
     },
     mounted() {
       this.identifyCode = "";

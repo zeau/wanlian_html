@@ -7,6 +7,7 @@ import './common/css/base.css'  /*引入公共样式*/
 import './common/css/common.css'
 import './common/css/goods.css'
 
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

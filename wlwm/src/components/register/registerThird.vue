@@ -62,9 +62,7 @@
 </template>
 
 <style>
-    body {
-
-    }
+   
 </style>
 
 <script>
