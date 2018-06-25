@@ -42,13 +42,17 @@ function checkCode (res) {
 }
 
 export default {
-  post (url, data) {
+
+
+
+  post (url,params,callback ) {
+
     return axios({
       method: 'post',
       //本地base
-      baseURL: 'https://cnodejs.org/api/v1',
+      baseURL: 'http://192.168.2.127:8080/',
       url,
-      data: qs.stringify(data),
+      data: qs.stringify(params),
       timeout: 10000,
       headers: {
         'X-Requested-With': 'XMLHttpRequest',
@@ -60,16 +64,16 @@ export default {
       }
     ).then(
       (res) => {
-        return checkCode(res)
+        callback(res.data);
       }
     )
   },
-  get (url, params) {
+  get (url,params,callback) {
     return axios({
       method: 'get',
-      baseURL: 'https://cnodejs.org/api/v1',
+      baseURL: 'http://192.168.2.127:8080/',
       url,
-      params, // get 请求时带的参数
+      data:qs.stringify(params),// get 请求时带的参数
       timeout: 10000,
       headers: {
         'X-Requested-With': 'XMLHttpRequest'
@@ -80,7 +84,7 @@ export default {
       }
     ).then(
       (res) => {
-        return checkCode(res)
+        callback(res.data);
       }
     )
   }

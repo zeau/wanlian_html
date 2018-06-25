@@ -36,6 +36,39 @@
               <input id="mobileInput" class="text long" placeholder="请输入手机号码" name="mobile" maxlength="11" type="text">
               <i class="correct" style="display: none"></i>
               <p class="tips mobile_info" style="display: none">请输入您的手机号码</p>
+        <div class="register_con_form">
+          <form id="" action="" method="">
+            <input id="registerId" name="" type="hidden">
+            <div class="reg_form_item">
+              <label class="for_text">手机号码</label>
+              <div class="item">
+                <input id="mobileInput" class="text long" placeholder="请输入手机号码" name="mobile" maxlength="11" type="text" v-model="userPhone">
+                <i class="correct" style="display: none"></i>
+                <p class="tips mobile_info" style="display: none">请输入您的手机号码</p>
+              </div>
+            </div>
+            <div class="reg_form_item">
+              <label class="for_text">验证码</label>
+              <div class="item">
+                <input id="checkCode" class="text medium" placeholder="请输入图片验证码" name="checkCode" maxlength="4" type="text">
+                <!--图片验证码-->
+                <div class="code"></div>
+                <p class="tips mobile_info" style="display: none">请输入验证码</p>
+              </div>
+            </div>
+            <div class="reg_form_item">
+              <label class="for_text"></label>
+              <div class="item">
+                <div class="agreement_confirm">
+                  <div class="icheckbox_square-green checked">
+                    <input id="readme" class="i-checks" checked="" type="checkbox" style="position: absolute; opacity: 0">
+                    <ins class="iCheck-helper"></ins>
+                  </div>
+                  我已阅读并同意
+                  <a href="#">《商城用户注册协议》</a>
+                </div>
+                <p class="tips mobile_info" style="display: none">请接受服务条款</p>
+              </div>
             </div>
           </div>
           <div class="reg_form_item">
@@ -48,6 +81,7 @@
               <span class="code" @click="refreshCode"></span>
               </div>
               <p class="tips mobile_info" style="display: none">请输入验证码</p>
+              <button class="sub_btn"  @click ="turnNext">同意协议并注册</button>
             </div>
           </div>
         <div class="reg_form_item">
@@ -121,6 +155,32 @@ import PageFooter from '@/components/footer/PageFooter'
       }
     }
   }
+  import http from '../../Api/baseHttp'
+  import URLString from '../../Api/api'
+    export default {
+      data() {
+        return {
+          userPhone: ""
+        }
+      },
+      methods: {
+        turnNext: function () {
+          //校验手机号跳转下一步
+          http.post(URLString.registerCode,this.userPhone, function resCallBack(data) {
+            console.log(data);
+          });
+//          re = /^1\d{10}$/
+//          if (re.test(this.data().userPhone)) {
+//            //手机号正确发送验证码，跳转下一步
+//
+//          } else {
+//            //弹框提示验证码错误。
+//
+//          }
+        }
+      }
+    }
+
 </script>
 
 

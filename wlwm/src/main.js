@@ -8,6 +8,7 @@ import './common/css/common.css'
 import './common/css/goods.css'
 
 
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
