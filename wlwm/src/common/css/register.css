@@ -1,0 +1,16 @@
+.pic_code {
+   margin-top: 10px;
+}
+
+.code {
+    background: url(../images/refresh.png),no-repeat;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: center;
+}
+
+.code_pic {
+    margin-top: 10px;
+    padding-top: 10px;
+}
