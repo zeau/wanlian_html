@@ -193,102 +193,7 @@
         </div>
       </div>
       <!--bottom-->
-      <div class="bottom">
-        <div class="wp">
-          <div class="row clearfix">
-            <div class="row_item"  v-for="">
-              <i class="icon "></i>
-              正品保障
-              <div>海外直采货源透明</div>
-            </div>
-            <div class="row_item"  v-for="">
-              <i class="icon "></i>
-              正品保障
-              <div>海外直采货源透明</div>
-            </div>
-            <div class="row_item"  v-for="">
-              <i class="icon "></i>
-              正品保障
-              <div>海外直采货源透明</div>
-            </div>
-            <div class="row_item"  v-for="">
-              <i class="icon "></i>
-              正品保障
-              <div>海外直采货源透明</div>
-            </div>
-          </div>
-          <div class="service clearfix">
-            <dl v-for="">
-              <dt>购物指南</dt>
-              <dd v-for="">
-                <a href="#">用户注册</a>
-              </dd>
-              <dd>
-                <a href="#">账户安全</a>
-              </dd>
-              <dd>
-                <a href="#">联系客服</a>
-              </dd>
-              <dd>
-                <a href="#">购物流程</a>
-              </dd>
-            </dl>
-            <dl>
-              <dt>帮助中心</dt>
-              <dd v-for="">
-                <a href="#">万联平台承诺</a>
-              </dd>
-
-            </dl>
-            <dl>
-              <dt>配送方式</dt>
-              <dd v-for="">
-                <a href="#">万联快递</a>
-              </dd>
-              <dd>
-                <a href="#">上门自提</a>
-              </dd>
-              <dd>
-                <a href="#">物流费用收费标准</a>
-              </dd>
-              <dd>
-                <a href="#">配送服务说明</a>
-              </dd>
-            </dl>
-            <dl>
-              <dt>支付方式</dt>
-              <dd v-for="">
-                <a href="#">在线支付</a>
-              </dd>
-              <dd>
-                <a href="#">货到付款</a>
-              </dd>
-            </dl>
-            <dl>
-              <dt>售后服务</dt>
-              <dd v-for="">
-                <a href="#">售后政策</a>
-              </dd>
-              <dd>
-                <a href="#">价格保护</a>
-              </dd>
-              <dd>
-                <a href="#">退单说明</a>
-              </dd>
-              <dd>
-                <a href="#">取消订单</a>
-              </dd>
-            </dl>
-            <dl>
-              <dt>微信公众号</dt>
-            </dl>
-          </div>
-        </div>
-      </div>
-      <!--foot-->
-      <div class="container">
-        <p class="login_footer"> Copyright © 2018-2038  万联万名开发平台   苏ICP备17067244</p>
-      </div>
+    <page-footer></page-footer>
     </div>
 </template>
 
@@ -297,11 +202,16 @@
 </style>
 
 <script>
+import PageFooter from '@/components/footer/PageFooter'
+
     export default {
         data() {
             return {
               logourl : 'src/assets/logo.jpg'
             }
+        },
+        components:{
+          PageFooter
         }
     }
 </script>
