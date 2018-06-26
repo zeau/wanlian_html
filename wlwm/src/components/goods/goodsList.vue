@@ -192,8 +192,10 @@
           </div>
         </div>
       </div>
+
       <!--bottom-->
     <page-footer></page-footer>
+    
     </div>
 </template>
 
