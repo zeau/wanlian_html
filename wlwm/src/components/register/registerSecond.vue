@@ -1,5 +1,5 @@
 <template>
-    <div id="registerThird">
+    <div id="registerSecond">
       <!--头部-->
       <div class="container">
         <div class="head2">
@@ -13,11 +13,11 @@
       <!--主体-->
       <div class="register_con">
         <div class="register_con_steps">
-          <div class="register_con_step">
+          <div class="register_con_step active">
             <i>1</i>
             <span>设置登录名</span>
           </div>
-          <div class="register_con_step active">
+          <div class="register_con_step">
             <i>2</i>
             <span>设置用户信息</span>
           </div>
@@ -26,33 +26,44 @@
             <span>注册成功</span>
           </div>
         </div>
-        <form>
-          <div class="register_con_form">
-            <input id="registerId" name="" type="hidden">
-            <div class="reg_form_item">
-              <label class="for_text">账号密码</label>
-              <div class="item">
-                <input class="text long passwordconf" name="" placeholder="设置账号密码" maxlength="20" type="password">
-                <i class="correct" style="display: none"></i>
-                <p class="tips pass" style="display: none">密码必须是6-20位</p>
-              </div>
-            </div>
-            <div class="reg_form_item">
-              <label class="for_text">确认密码</label>
-              <div class="item">
-                <input class="text long repasswordconf" name="" placeholder="确认账号密码" maxlength="20" type="password">
-                <i class="correct" style="display: none"></i>
-                <p class="tips pass" style="display: none">密码必须是6-20位</p>
-              </div>
-            </div>
-            <div class="reg_form_item">
-              <label class="for_text"></label>
-              <div class="item">
-                <div class="sub_btn next">下一步</div>
-              </div>
+        <div class="register_con_form">
+          <input id="registerId" name="" type="hidden">
+          <div class="reg_form_item">
+            <label class="for_text">手机号码</label>
+            <div class="item">
+              <b>139****4979</b>
             </div>
           </div>
-        </form>
+          <div class="reg_form_item">
+            <label class="for_text">验证码</label>
+            <div class="item">
+              <input id="checkCode" class="text medium" placeholder="请输入图片验证码" name="checkCode" maxlength="4" type="text">
+              <!--图片验证码-->
+              <div class="code"></div>
+              <p class="tips mobile_info" style="display: none">请输入验证码</p>
+            </div>
+          </div>
+          <div class="reg_form_item">
+            <label class="for_text">短信验证码</label>
+            <div class="item">
+              <form>
+                <input id="message" class="text medium" placeholder="请输入图片验证码" name="checkCode" maxlength="6" type="text">
+              </form>
+              <div class="tCode">
+                <button id="sendBtn" type="button" class="active_btn btn">
+                  <span id="auto_code">获取验证码</span>
+                </button>
+              </div>
+              <p class="tips mobile_info" style="display: none">请输入短信验证码</p>
+            </div>
+          </div>
+          <div class="reg_form_item">
+            <label class="for_text"></label>
+            <div class="item">
+              <button class="sub_btn free" type="submit">确定</button>
+            </div>
+          </div>
+        </div>
       </div>
       <!--页脚-->
       <div class="container">
@@ -62,7 +73,7 @@
 </template>
 
 <style>
-   
+
 </style>
 
 <script>
