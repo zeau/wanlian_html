@@ -724,7 +724,7 @@
               </div>
               <div class="noStock" >
                 <a class="dis_cart" href="" hidden="hidden"><i></i>加入购物车</a>
-                <a class="arrival_notice" "><i></i>到货通知</a>
+                <a class="arrival_notice"><i></i>到货通知</a>
               </div>
             </div><!--/by_cart-->
           </div><!--/product_info-->
@@ -942,9 +942,7 @@
             </div><!--/product_detail-->
           </div><!--/right_wp-->
 
-
           <!--左边-->
-
           <div class="left_wp fl" id="relative-data">
             <div class="business_area">
               <div class="business_info">
