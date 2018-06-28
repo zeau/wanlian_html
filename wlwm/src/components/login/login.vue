@@ -15,19 +15,19 @@
               <p>还没有账号？马上<a href="#">免费注册</a></p>
             </div>
             <div class="login_con_main">
-              <from id="" name="" action="" method="">
+              <from id="login_form" name="loginForm">
                 <div class="login_con_main_row">
-                  <input id="log_user" class="login_con_main_text" maxlength="40" name="username" value="" placeholder="已验证手机/邮箱/用户名"  type="text">
+                  <input id="log_user" class="login_con_main_text" maxlength="40" name="username" value="" placeholder="已验证手机/邮箱/用户名"  v-model="params.username" type="text">
                   <span id="login_name"></span>
                   <div class="login_con_main_tips">您输入的用户名不正确</div>
                 </div>
                 <div class="login_con_main_row">
-                  <input id="log_pwd" class="login_con_main_text" maxlength="20" name="password" value="" placeholder="密码" oncopy="return false" type="password">
+                  <input id="log_pwd" class="login_con_main_text" maxlength="20" name="password" value="" placeholder="密码" oncopy="return false" type="password" v-model="params.password">
                   <span id="login_pwd"></span>
                   <div class="login_con_main_tips">您输入的密码不正确</div>
                 </div>
                 <div class="login_con_main_row">
-                  <input id="log_btn" class="login_con_main_btn" maxlength="20" name="login" value="登 录" type="button">
+                  <input id="log_btn" class="login_con_main_btn" maxlength="20" name="login" value="登 录" type="button" @click="fetchData">
                   <div class="login_con_main_row">
                     <a class="forgetPwd">忘记密码？</a>
                     <input class="re_checkBox" name="remember" style="opacity:0;" type="checkbox">
@@ -66,6 +66,26 @@
             return {
 
             }
+  import http from '../../Api/baseHttp'
+  import URLString from '../../Api/api'
+
+    export default {
+      name: "Login",
+      data() {
+        return {
+          params: {}
         }
+      },
+      methods: {
+        fetchData: async function () {
+          let param = {"username": "admin", "password": "123456"};
+          http.post(URLString.login, param, function SuccessCallBack(data) {
+            if (data.statusCode === 200) {
+            } else {
+              alert(data.message);
+            }
+          });
+        }
+      }
     }
 </script>
