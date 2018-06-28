@@ -1,7 +1,6 @@
 <template>
 <div class="bottomF">
     <div class="wp">
-
         <div class="row">
             <div class="col-6"><i class="icons icon_bt_01"></i>正品保障
                 <div>海外直采货源透明</div>
