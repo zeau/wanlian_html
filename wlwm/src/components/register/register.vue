@@ -27,15 +27,6 @@
           <span>注册成功</span>
         </div>
       </div>
-      <div class="register_con_form">
-        <form id="" action="" method="">
-          <input id="registerId" name="" type="hidden">
-          <div class="reg_form_item">
-            <label class="for_text">手机号码</label>
-            <div class="item">
-              <input id="mobileInput" class="text long" placeholder="请输入手机号码" name="mobile" maxlength="11" type="text">
-              <i class="correct" style="display: none"></i>
-              <p class="tips mobile_info" style="display: none">请输入您的手机号码</p>
         <div class="register_con_form">
           <form id="" action="" method="">
             <input id="registerId" name="" type="hidden">
@@ -47,30 +38,6 @@
                 <p class="tips mobile_info" style="display: none">请输入您的手机号码</p>
               </div>
             </div>
-            <div class="reg_form_item">
-              <label class="for_text">验证码</label>
-              <div class="item">
-                <input id="checkCode" class="text medium" placeholder="请输入图片验证码" name="checkCode" maxlength="4" type="text">
-                <!--图片验证码-->
-                <div class="code"></div>
-                <p class="tips mobile_info" style="display: none">请输入验证码</p>
-              </div>
-            </div>
-            <div class="reg_form_item">
-              <label class="for_text"></label>
-              <div class="item">
-                <div class="agreement_confirm">
-                  <div class="icheckbox_square-green checked">
-                    <input id="readme" class="i-checks" checked="" type="checkbox" style="position: absolute; opacity: 0">
-                    <ins class="iCheck-helper"></ins>
-                  </div>
-                  我已阅读并同意
-                  <a href="#">《商城用户注册协议》</a>
-                </div>
-                <p class="tips mobile_info" style="display: none">请接受服务条款</p>
-              </div>
-            </div>
-          </div>
           <div class="reg_form_item">
             <label class="for_text">验证码</label>
             <div class="item">
@@ -109,6 +76,7 @@
 
     <!--页脚-->
     <page-footer></page-footer>
+
   </div>
 
 
@@ -121,12 +89,16 @@
 <script>
 import SIdentify from '@/components/pictureValidation/identify'
 import PageFooter from '@/components/footer/PageFooter'
+import http from '../../Api/baseHttp'
+import URLString from '../../Api/api'
 
-  export default {
+export default {
     data() {
       return {
         identifyCodes: "1234567890",
-        identifyCode: ""
+        identifyCode: "",
+        userPhone: ""
+
       }
     },
     components: {
@@ -152,19 +124,8 @@ import PageFooter from '@/components/footer/PageFooter'
           ];
         }
         console.log(this.identifyCode);
-      }
-    }
-  }
-  import http from '../../Api/baseHttp'
-  import URLString from '../../Api/api'
-    export default {
-      data() {
-        return {
-          userPhone: ""
-        }
       },
-      methods: {
-        turnNext: function () {
+      turnNext: function () {
           //校验手机号跳转下一步
           http.post(URLString.registerCode,this.userPhone, function resCallBack(data) {
             console.log(data);
@@ -178,8 +139,9 @@ import PageFooter from '@/components/footer/PageFooter'
 //
 //          }
         }
-      }
     }
+  }
+
 
 </script>
 

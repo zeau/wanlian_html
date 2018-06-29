@@ -61,11 +61,7 @@
 </style>
 
 <script>
-    export default {
-        data() {
-            return {
 
-            }
   import http from '../../Api/baseHttp'
   import URLString from '../../Api/api'
 
@@ -80,6 +76,7 @@
         fetchData: async function () {
           let param = {"username": "admin", "password": "123456"};
           http.post(URLString.login, param, function SuccessCallBack(data) {
+            console.log(data);
             if (data.statusCode === 200) {
             } else {
               alert(data.message);
@@ -88,4 +85,5 @@
         }
       }
     }
+
 </script>

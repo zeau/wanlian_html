@@ -43,8 +43,6 @@ function checkCode (res) {
 
 export default {
 
-
-
   post (url,params,callback ) {
 
     return axios({
@@ -59,10 +57,6 @@ export default {
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
       }
     }).then(
-      (response) => {
-        return checkStatus(response)
-      }
-    ).then(
       (res) => {
         callback(res.data);
       }
@@ -79,10 +73,6 @@ export default {
         'X-Requested-With': 'XMLHttpRequest'
       }
     }).then(
-      (response) => {
-        return checkStatus(response)
-      }
-    ).then(
       (res) => {
         callback(res.data);
       }
