@@ -1,0 +1,270 @@
+<template>
+  <div class="pageHome">
+    <!--轮播-->
+
+
+
+    <!--展示部分-->
+    <div class="container containerTop">
+      <div class="louceng">
+        <div class="index_title"><span>热门活动</span><span>Hot Event</span></div>
+        <div class="part01 row">
+          <div class="col-925">
+            <div class="row">
+              <div class="col-650">
+                <div class="life_service">
+                  <div class="body">
+                    <div id="lifeService">
+                      <a href="goods/searchproduct2.html?searchType=1&amp;title=欧舒丹" target="_blank"><img class="lazy" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522318791044.jpg"/></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-275">
+                <a href="goods/searchproduct2.html?searchType=1&amp;title=希思黎" target="_blank"><img class="lazy hot-img-01" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522318312333.jpg"/></a>
+                <a href="goods/searchproduct2.html?searchType=1&amp;title=兰芝" target="_blank"><img class="lazy hot-img-02" alt="" src="http://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1515649690629.jpg"/></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-24">
+                <a href="goods/searchproduct2.html?searchType=1&amp;title=ECCO" target="_blank">
+                  <img class="lazy hot-img-03" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522317387291.jpg"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-275">
+            <a href="goods/searchproduct2.html?searchType=1&amp;title=安悦" target="_blank">
+              <img class="lazy hot-img-04" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522313234035.jpg"/>
+            </a>
+            <a href="goods/searchproduct2.html?searchType=1&amp;title=迪柯尼" target="_blank">
+              <img class="lazy hot-img-05" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522315504735.jpg"/>
+            </a>
+            <a href="goods/searchproduct2.html?searchType=1&amp;title=黄色小鸭" target="_blank">
+              <img class="lazy hot-img-06" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522315659146.jpg"/>
+            </a>
+          </div>
+        </div><!--part01 row-->
+
+        <div class="index_title"><span>本周推荐</span><span>Luxury Goods</span></div>
+        <div class="special_buy">
+          <div class="body">
+            <div class="colFirst">
+              <div id="lifeService_02">
+                <a href="goods/searchproduct2.html?searchType=1&amp;title=SK-II" target="_blank"><img class="lazy" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522317932631.jpg"/></a>
+              </div>
+            </div>
+            <div class="colMid mid-img-box">
+              <div class="row">
+                <div class="col-block">
+                  <a href="goods/searchproduct2.html?searchType=1&amp;title=左天奴" target="_blank"><img class="lazy" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522318255974.jpg"/></a>
+                </div>
+                <div class="col-block">
+                  <a href="goods/searchproduct2.html?searchType=1&amp;title=SUSSI" target="_blank"><img class="lazy" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522315561618.jpg"/></a>
+                </div>
+                <div class="col-block">
+                  <a href="goods/searchproduct2.html?searchType=1&amp;title=新秀丽" target="_blank"><img class="lazy" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522318038243.jpg"/></a>
+                </div>
+                <div class="col-block">
+                  <a href="goods/searchproduct2.html?searchType=1&amp;title=露安适" target="_blank"><img class="lazy" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522313373714.jpg"/></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="txtSlide">
+                <div class="posLeft">
+                  <span class="active" onclick="setTxtSlide(this)">SUSSI</span>
+                  <span onclick="setTxtSlide(this)">TW Men</span>
+                  <span onclick="setTxtSlide(this)">SK-II</span>
+                  <span onclick="setTxtSlide(this)">ROLEX</span>
+                  <span onclick="setTxtSlide(this)">海蓝之谜</span>
+                  <span onclick="setTxtSlide(this)">GUCCI</span>
+                  <span onclick="setTxtSlide(this)">STELLA LUNA</span>
+                </div>
+                <div class="txtSlide_cont">
+                  <a class="active" href="onepage/5.html" target="_blank">
+                    <img src="http://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1516179062172.jpg" alt="">
+                  </a>
+                  <a href="onepage/6.html" target="_blank">
+                    <img src="http://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1516178860900.jpg" alt="">
+                  </a>
+                  <a href="onepage/1.html" target="_blank">
+                    <img src="http://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1516175997123.jpg" alt="">
+                  </a>
+                  <a href="onepage/9.html" target="_blank">
+                    <img src="http://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1516177823697.jpg" alt="">
+                  </a>
+                  <a href="onepage/7.html" target="_blank">
+                    <img src="http://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1516177119146.jpg" alt="">
+                  </a>
+                  <a href="onepage/4.html" target="_blank">
+                    <img src="http://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1516179922581.jpg" alt="">
+                  </a>
+                  <a href="onepage/8.html" target="_blank">
+                    <img src="http://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1516178111232.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-02">
+        <div class="index_title"><span>优质商品</span><span>Quality goods</span></div>
+        <div class="floor_adv fuzhuangxiebao row louceng" id="floor_1">
+          <div class="floor_links">
+            <a href="list/142-141.html"
+               target="_blank">进口表</a>
+            <a href="list/143-141.html"
+               target="_blank">休闲表</a>
+            <a href="list/144-141.html"
+               target="_blank">钟</a>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="floorLogo" style="background:url('https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522377787139.jpg') no-repeat; background-size:cover;" onclick="window.open('http://uat.hbunion.com/list/2500-2435.html','_blank');"></div>
+            </div>
+            <div class="col-18">
+              <div class="floor_slide" id="floorSlide01">
+                <div><a href="goods/searchproduct2.html?searchType=1&amp;title=积家" target="_blank"><img
+                  alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522394408133.jpg"/></a></div>
+                <div><a href="goods/searchproduct2.html?searchType=1&amp;title=万国" target="_blank"><img
+                  alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522395779562.jpg"/></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-18">
+              <ul class="tabs">
+                <li class="current"><a href="javascript:;" name=".current_2"><span>时尚生活</span></a>
+                </li>
+                <li><a href="javascript:;" name=".current_3"><span>轻奢体验</span></a></li>
+                <li><a href="javascript:;" name=".current_4"><span>品质卓越</span></a></li>
+              </ul>
+              <div class="tab_content">
+                <div name="current_2" class="remen current_2">
+                  <div class="goods">
+                    <ul></ul>
+                  </div>
+                </div>
+                <div name="current_3" class="current_3">
+                  <div class="goods">
+                    <ul></ul>
+                  </div>
+                </div>
+                <div name="current_4" class="current_4">
+                  <div class="goods">
+                    <ul></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="imgad">
+                <a href="goods/searchproduct2.html?searchType=1&amp;title=积家" target="_blank">
+                  <img class="lazy" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522393939544.jpg"/></a>
+              </div>
+            </div>
+          </div>
+          <div class="index_line"></div>
+        </div>
+
+      </div>
+      <!--左侧边固定导航-->
+      <div class="toolbar left" style="display: none;">
+        <div class="toolbar_tabs toolbar_navs">
+          <div class="item toolbar_nav pre">
+            <a href="javascript:;">
+              <span>导航</span>
+            </a>
+          </div>
+          <div class="item toolbar_nav">
+            <a href="index.html#quick-bar1">
+              <span>热门活动</span>
+            </a>
+          </div>
+          <div class="item toolbar_nav">
+            <a href="index.html#quick-bar2">
+              <span>每周推荐</span>
+            </a>
+          </div>
+          <div class="item toolbar_nav">
+            <a href="index.html#quick-bar3">
+              <span>美妆洗护</span>
+            </a>
+          </div>
+          <div class="item toolbar_nav">
+            <a href="index.html#quick-bar4">
+              <span>妈妈首选</span>
+            </a>
+          </div>
+          <div class="item toolbar_nav">
+            <a href="index.html#quick-bar5">
+              <span>珠宝配饰</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <!--右侧边固定-->
+        <div class="toolbar_tabs">
+          <div class="item customer_cart">
+            <a href="myshoppingcart.html" target="_blank">
+              <i class="icons icon-cart2"><span class="shop_num"><em>0</em></span></i>
+              <span>购物车</span>
+            </a>
+          </div>
+          <div class="item customer_bag">
+            <a href="customer/index.html" target="_blank">
+              <i class="icons icon-bag"></i>
+              <span>我的函美</span>
+            </a>
+          </div>
+        </div>
+        <!--返回顶部-->
+        <div class="toolbar_bottom">
+          <div class="item">
+            <a href="javascript:;" onclick="$('html,body').animate({scrollTop:0},500)">
+              <i class="icons icon-top2"></i><span>至顶</span>
+            </a>
+          </div>
+        </div>
+        <!--客服-->
+        <div class="customer-box">
+          <span class="title">客服咨询</span>
+          <hr>
+          <a href="javascript:;" class="close-cs"></a>
+          <p>
+            <span class="qq_name">函美客服</span>
+            <span class="qq_img">
+              <a style="float:right;" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=123456&site=qq&menu=yes">
+                <img border="0" src="http://wpa.qq.com/pa?p=2:123456:51" alt="点击这里给我发消息" title="点击这里给我发消息"/>
+              </a>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  @import "../../common/css/pageHome.css";
+</style>
+
+
+<script>
+export default {
+  name: 'pageHome',
+  data () {
+    return {
+
+    }
+  }
+}
+</script>
+
+

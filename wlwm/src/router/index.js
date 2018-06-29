@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import Login from '@/components/login/login'
 import Register from '@/components/register/register'
 import RegisterSecond from '@/components/register/registerSecond'
 import RegisterThird from '@/components/register/registerThird'
 import GoodsList from '@/components/goods/goodsList'
+import GoodsDetail from '@/components/goods/goodsDetail'
+import Cart from '@/components/cart/cart'
+import Home from '@/components/home/pageHome'
 
 
 Vue.use(Router)
@@ -14,12 +16,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/goodsList'
-    },
-    {
-      path: '/HelloWorld',
-      name: 'HelloWorld',
-      component: HelloWorld
+      redirect: '/pageHome'
     },
     {
       path: '/login',
@@ -45,6 +42,21 @@ export default new Router({
       path: '/goodsList',
       name: '商品列表',
       component: GoodsList
+    },
+    {
+      path: '/goodsDetail',
+      name: '商品详情',
+      component: GoodsDetail
+    },
+    {
+      path: '/cart',
+      name: '购物车',
+      component: Cart
+    },
+    {
+      path: '/pageHome',
+      name: '首页',
+      component: Home
     }
   ]
 })
