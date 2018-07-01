@@ -24,43 +24,44 @@
                 <dl class="svc_box fl">
                     <dt>购物指南</dt>
                     <dd>
-                        <div><a href="help/118" target="_blank">用户注册</a></div>
-                        <div><a href="help/116" target="_blank">账户安全</a></div>
-                        <div><a href="help/117" target="_blank">联系客服</a></div>
-                        <div><a href="help/115" target="_blank">购物流程</a></div>
+                        <div><router-link :to="{path:'/help'}" target="_blank">用户注册</router-link></div>
+                        <div><router-link :to="{path:'/help'}" target="_blank">账户安全</router-link></div>
+                        <div><router-link :to="{path:'/help'}" target="_blank">联系客服</router-link></div>
+                        <div><router-link :to="{path:'/help'}" target="_blank">购物流程</router-link></div>
                     </dd>
                 </dl>
                 <dl class="svc_box fl">
                     <dt>帮助中心</dt>
                     <dd>
-                        <div><a href="help/146" target="_blank">函百平台承诺</a></div>
+                        <div><router-link :to="{path:'/help'}" target="_blank">函百平台承诺</router-link></div>
                     </dd>
                 </dl>
 
                 <dl class="svc_box fl">
                     <dt>配送方式</dt>
                     <dd>
-                        <div><a href="help/119" target="_blank">函百快递</a></div>
-                        <div><a href="help/121" target="_blank">上门自提</a></div>
-                        <div><a href="help/120" target="_blank">物流费用收费标准</a></div>
-                        <div><a href="help/122" target="_blank">配送服务说明</a></div>
+                        <!-- <router-link :to="{path:''}" ></router-link> -->
+                        <div><router-link :to="{path:'/help'}" target="_blank">函百快递</router-link></div>
+                        <div><router-link :to="{path:'/help'}" target="_blank">上门自提</router-link></div>
+                        <div><router-link :to="{path:'/help'}" target="_blank">物流费用收费标准</router-link></div>
+                        <div><router-link :to="{path:'/help'}" target="_blank">配送服务说明</router-link></div>
                     </dd>
                 </dl>
 
                 <dl class="svc_box fl">
                     <dt>支付方式</dt>
                     <dd>
-                        <div><a href="help/125" target="_blank">在线支付</a></div>
+                        <div><router-link href="help/125" target="_blank">在线支付</router-link></div>
                     </dd>
                 </dl>
 
                 <dl class="svc_box fl">
                     <dt>售后服务</dt>
                     <dd>
-                        <div><a href="help/123" target="_blank">售后政策</a></div>
-                        <div><a href="help/128" target="_blank">价格保护</a></div>
-                        <div><a href="help/129" target="_blank">退单说明</a></div>
-                        <div><a href="help/130" target="_blank">取消订单</a></div>
+                        <div><router-link href="help/123" target="_blank">售后政策</router-link></div>
+                        <div><router-link href="help/128" target="_blank">价格保护</router-link></div>
+                        <div><router-link href="help/129" target="_blank">退单说明</router-link></div>
+                        <div><router-link href="help/130" target="_blank">取消订单</router-link></div>
                     </dd>
                 </dl>
 

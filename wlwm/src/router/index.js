@@ -8,6 +8,7 @@ import GoodsList from '@/components/goods/goodsList'
 import GoodsDetail from '@/components/goods/goodsDetail'
 import Cart from '@/components/cart/cart'
 import Home from '@/components/home/pageHome'
+import Help from '@/components/help/help'
 
 
 Vue.use(Router)
@@ -57,6 +58,11 @@ export default new Router({
       path: '/pageHome',
       name: '首页',
       component: Home
+    },
+    {
+      path: '/help',
+      name: '帮助',
+      component: Help
     }
   ]
 })
