@@ -1,5 +1,7 @@
 <template>
   <div class="pageHome">
+    <!-- 头部 -->
+    <page-header></page-header>
     <!--轮播-->
 
 
@@ -247,6 +249,9 @@
         </div>
       </div>
     </div>
+
+    <!-- pageFooter -->
+    <page-footer></page-footer>
   </div>
 </template>
 
@@ -257,12 +262,19 @@
 
 
 <script>
+import pageHeader from '@/components/header/pageHeader'
+import pageFooter from '@/components/footer/pageFooter'
+
 export default {
   name: 'pageHome',
   data () {
     return {
 
     }
+  },
+  components: {
+    pageHeader,
+    pageFooter
   }
 }
 </script>
