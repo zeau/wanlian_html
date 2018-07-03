@@ -9,6 +9,7 @@ import GoodsDetail from '@/components/goods/goodsDetail'
 import Cart from '@/components/cart/cart'
 import Home from '@/components/home/pageHome'
 import Help from '@/components/help/help'
+import PersonalCenter from '@/components/personal/personalCenter'
 
 
 Vue.use(Router)
@@ -63,6 +64,11 @@ export default new Router({
       path: '/help',
       name: '帮助',
       component: Help
+    },
+    {
+      path: '/personalCenter',
+      name: '个人中心首页',
+      component: PersonalCenter
     }
   ]
 })
