@@ -14,6 +14,7 @@ import PersonalCenter from '@/components/personal/personalCenter'
 
 Vue.use(Router)
 
+
 export default new Router({
   routes: [
     {

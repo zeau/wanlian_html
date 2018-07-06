@@ -11,7 +11,7 @@
         	<div class="title">
             	<h2>用户注册</h2>
             </div>
-            <div class="body">  
+            <div class="body">
             <p>
                 <b>
                     <span style="font-size: 14pt; font-family: 宋体;">新用户注册</span>
@@ -86,7 +86,7 @@
   @import "../../common/css/help.css";
 </style>
 <script>
-import PageFooter from '@/components/footer/PageFooter'
+import PageFooter from '@/components/footer/pageFooter'
 import http from '../../Api/baseHttp'
 import URLString from '../../Api/api'
 export default {

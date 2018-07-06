@@ -3,9 +3,9 @@
       <div class="container clearfix pr">
         <div class="mini_head" style="margin-top: 70px;">
           <h1 class="logo">
-            <a href="index.html">
+            <router-link to="/pageHome">
               <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1515739240142.jpg" alt="" style="width: 165px;height: 40px;"/>
-            </a>
+            </router-link>
           </h1>
         </div>
       </div>
@@ -50,7 +50,7 @@
             <form name="subForm" id="subForm" action="http://uat.hbunion.com/order/newsuborder.html" method="post">
               <input name="presentScopeIds" id="presentScopeIds" value="" type="hidden"/>
 
-              <p style="text-align:center;padding:20px 0;">购物车为空！！<a href="index.html" style="color:#c00"> 去逛逛</a></p>
+              <p style="text-align:center;padding:20px 0;">购物车为空！！<router-link to="/pageHome" style="color:#c00"> 去逛逛</router-link></p>
 
             </form>
 
@@ -73,7 +73,7 @@
 
           <div class="cart_btn mt10">
 
-            <a class="continue_shopping" href="#">继续购物</a>
+            <router-link to="/pageHome" class="continue_shopping">继续购物</router-link>
             <a class="g_delete_batch continue_shopping" style="cursor: pointer" >批量删除</a>
           </div><!-- /cart_btn -->
 

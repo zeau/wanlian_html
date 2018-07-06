@@ -39,6 +39,7 @@
   color: #784e30;
   text-transform: uppercase;
   font-weight: bold;
+  margin-left: 20px;
 }
 .floor_adv .row .col-18 .tabs{
   position: relative;
@@ -464,7 +465,7 @@
 }
 
 .col-6 {
-  width: 25%
+  width: 22%
 }
 
 .col-7 {

@@ -81,7 +81,7 @@
 
 <script>
 import SIdentify from '@/components/pictureValidation/identify'
-import PageFooter from '@/components/footer/PageFooter'
+import PageFooter from '@/components/footer/pageFooter'
 import http from '../../Api/baseHttp'
 import URLString from '../../Api/api'
 
@@ -119,7 +119,7 @@ export default {
         console.log(this.identifyCode);
       },
       turnNext: function () {
-          //校验手机号跳转下一步   
+          //校验手机号跳转下一步
          re = /^1\d{10}$/
          if (re.test(this.userPhone)) {
            //手机号正确发送验证码，跳转下一步

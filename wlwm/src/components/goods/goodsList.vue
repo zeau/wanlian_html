@@ -1,60 +1,7 @@
 <template>
     <div id="goodsList">
-      <!--Top-->
-      <div class="top">
-        <div class="top_con clearfix">
-          <div class="top_logo">
-            <span>万联万民产品平台</span>
-          </div>
-          <div class="top_fastLink">
-            <span class="myStore">
-              <a href="#">
-                <i></i>
-                我的万联平台
-              </a>
-            </span>
-            <span class="fastLink">
-              <i></i>
-              <a href="#">登录</a>
-              /
-              <a href="#">注册</a>
-            </span>
-          </div>
-        </div>
-      </div>
       <!--head-->
-      <div class="head container clearfix">
-        <div class="head_logo">
-          <a href="#"></a>
-        </div>
-        <div class="head_search">
-          <ul>
-            <li id="head_search_type_1" class="header_active">
-              <span>商品</span>
-            </li>
-            <li id="head_search_type_2" class="">
-              <span>店铺</span>
-            </li>
-          </ul>
-          <div class="clearfix">
-            <input id="search_keyword" class="ipt" placeholder="Hugo boss" value="" type="text">
-            <button id="head_search_btn" class="btn" type="button"></button>
-          </div>
-        </div>
-        <div class="head_cart">
-          <a>购物车</a>
-        </div>
-      </div>
-      <!--nav-->
-      <div class="nav">
-        <ul class="nav_con clearfix">
-          <li id="menu">全部分类</li>
-          <li v-for=""><a href="#">国际精品</a></li>
-          <li ><a href="#">时尚美颜</a></li>
-        </ul>
-        <!--分类hover显示的全部类别-->
-        <div></div>
-      </div>
+      <page-header></page-header>
       <!--浏览地址-->
       <div class="browseAddress container">
         <span>服饰/</span>
@@ -84,12 +31,12 @@
             <ul>
               <li v-for="">
                 <div class="browse_img">
-                  <a href="#">
-                    <img>
-                  </a>
+                  <router-link to="/goodsDetail">
+                    <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc/570984/main/Z_01.jpg">
+                  </router-link>
                 </div>
                 <p class="browse_name">
-                  <a href="#">SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444</a>
+                  <router-link to="/goodsDetail">SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444</router-link>
                 </p>
                 <p class="browse_price">
                   ¥ 1980
@@ -108,7 +55,7 @@
             <ul class="goods_list_item clearfix">
               <li class="goodsBox" v-for="">
                 <a class="">
-                  <img>
+                  <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc/217143/main/Z_01.jpg">
                   <h3>
                     SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444
                   </h3>
@@ -123,7 +70,7 @@
               </li>
               <li class="goodsBox" v-for="">
                 <a class="">
-                  <img>
+                  <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc/570984/main/Z_01.jpg">
                   <h3>
                     SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444
                   </h3>
@@ -138,7 +85,7 @@
               </li>
               <li class="goodsBox" v-for="">
                 <a class="">
-                  <img>
+                  <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1515995764806.jpg">
                   <h3>
                     SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444
                   </h3>
@@ -153,7 +100,7 @@
               </li>
               <li class="goodsBox" v-for="">
                 <a class="">
-                  <img>
+                  <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc/430004/main/Z_01.jpg">
                   <h3>
                     SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444
                   </h3>
@@ -168,7 +115,37 @@
               </li>
               <li class="goodsBox" v-for="">
                 <a class="">
-                  <img>
+                  <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1515995490681.jpg">
+                  <h3>
+                    SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444
+                  </h3>
+                  <p>
+                    <em>￥</em>
+                    19800.00
+                  </p>
+                  <span>
+                    有货
+                  </span>
+                </a>
+              </li>
+              <li class="goodsBox" v-for="">
+                <a class="">
+                  <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc/530624/main/Z_01.jpg">
+                  <h3>
+                    SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444
+                  </h3>
+                  <p>
+                    <em>￥</em>
+                    19800.00
+                  </p>
+                  <span>
+                    有货
+                  </span>
+                </a>
+              </li>
+              <li class="goodsBox" v-for="">
+                <a class="">
+                  <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1515986134559.jpg">
                   <h3>
                     SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444
                   </h3>
@@ -194,8 +171,8 @@
       </div>
 
       <!--bottom-->
-    <page-footer></page-footer>
-    
+      <page-footer></page-footer>
+
     </div>
 </template>
 
@@ -204,7 +181,8 @@
 </style>
 
 <script>
-import PageFooter from '@/components/footer/PageFooter'
+  import PageFooter from '@/components/footer/pageFooter'
+  import PageHeader from '@/components/header/pageHeader'
 
     export default {
         data() {
@@ -213,7 +191,8 @@ import PageFooter from '@/components/footer/PageFooter'
             }
         },
         components:{
-          PageFooter
+          PageFooter,
+          PageHeader
         }
     }
 </script>

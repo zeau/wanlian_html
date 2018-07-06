@@ -10,7 +10,7 @@
           </div>
           <div class="n_menu fl">
             <ul class="clearfix">
-              <li><a href="/index.html">函百首页</a></li>
+              <li><router-link to="/pageHome">函百首页</router-link></li>
               <li class="n_hover">
                 <div class="pr">
                   <a href="#">账户中心</a>

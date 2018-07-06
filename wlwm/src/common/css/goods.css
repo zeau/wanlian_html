@@ -139,10 +139,7 @@
 .nav ul li:hover{
   background-color: #8B572A;
 }
-.nav ul li a{
-  color: #fff;
-  font-size: 16px;
-}
+
 .nav ul li:hover a{
   font-size: 17px;
   text-decoration:none;

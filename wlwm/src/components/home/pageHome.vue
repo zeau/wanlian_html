@@ -3,9 +3,11 @@
     <!-- 头部 -->
     <page-header></page-header>
     <!--轮播-->
-
-
-
+    <el-carousel trigger="click" height="450px">
+      <el-carousel-item v-for="(item, index) in banners" :key="index">
+        <router-link to="/goodsList"><img :src="item.imgUrl"/></router-link>
+      </el-carousel-item>
+    </el-carousel>
     <!--展示部分-->
     <div class="container containerTop">
       <div class="louceng">
@@ -17,7 +19,11 @@
                 <div class="life_service">
                   <div class="body">
                     <div id="lifeService">
-                      <a href="goods/searchproduct2.html?searchType=1&amp;title=欧舒丹" target="_blank"><img class="lazy" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522318791044.jpg"/></a>
+                      <el-carousel :interval="5000" arrow="always" height="470px">
+                        <el-carousel-item v-for="(item , index) in banners2" :key="index">
+                          <img :src="item.imgUrl2"/>
+                        </el-carousel-item>
+                      </el-carousel>
                     </div>
                   </div>
                 </div>
@@ -125,7 +131,9 @@
           </div>
           <div class="row">
             <div class="col-6">
-              <div class="floorLogo" style="background:url('https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522377787139.jpg') no-repeat; background-size:cover;" onclick="window.open('http://uat.hbunion.com/list/2500-2435.html','_blank');"></div>
+              <div class="floorLogo">
+                <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522377787139.jpg"/>
+              </div>
             </div>
             <div class="col-18">
               <div class="floor_slide" id="floorSlide01">
@@ -136,39 +144,7 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-18">
-              <ul class="tabs">
-                <li class="current"><a href="javascript:;" name=".current_2"><span>时尚生活</span></a>
-                </li>
-                <li><a href="javascript:;" name=".current_3"><span>轻奢体验</span></a></li>
-                <li><a href="javascript:;" name=".current_4"><span>品质卓越</span></a></li>
-              </ul>
-              <div class="tab_content">
-                <div name="current_2" class="remen current_2">
-                  <div class="goods">
-                    <ul></ul>
-                  </div>
-                </div>
-                <div name="current_3" class="current_3">
-                  <div class="goods">
-                    <ul></ul>
-                  </div>
-                </div>
-                <div name="current_4" class="current_4">
-                  <div class="goods">
-                    <ul></ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="imgad">
-                <a href="goods/searchproduct2.html?searchType=1&amp;title=积家" target="_blank">
-                  <img class="lazy" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522393939544.jpg"/></a>
-              </div>
-            </div>
-          </div>
+
           <div class="index_line"></div>
         </div>
 
@@ -258,23 +234,43 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   @import "../../common/css/pageHome.css";
+
+  .el-carousel-item img {
+    width: 100%;
+  }
+
 </style>
 
 
 <script>
 import pageHeader from '@/components/header/pageHeader'
 import pageFooter from '@/components/footer/pageFooter'
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import lunbo1 from '../../common/images/lunbo1.jpg'
+import lunbo2 from '../../common/images/lunbo2.jpg'
+import xlunbo1 from '../../common/images/1522318791044.jpg'
+import xlunbo2 from '../../common/images/1522315830910.jpg'
 
 export default {
   name: 'pageHome',
   data () {
     return {
-
+      banners: [
+        { imgUrl: lunbo1 ,link:"/goodsList"},
+        { imgUrl: lunbo2 ,link:"/goodsDetail"},
+      ],
+      banners2: [
+        { imgUrl2: xlunbo1 },
+        { imgUrl2: xlunbo2 },
+      ],
     }
   },
   components: {
     pageHeader,
-    pageFooter
+    pageFooter,
+    swiper,
+    swiperSlide,
+
   }
 }
 </script>

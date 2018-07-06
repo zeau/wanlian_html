@@ -8,6 +8,12 @@ body {
 a {color:#666;}
 .hide {display:none;}
 
+.Mycontainer{
+  width: 1200px;
+  margin: auto;
+  padding: 40px 0 10px;
+}
+
 /* color */
 a:hover {text-decoration:none; color:#e32d2d;}
 .search_text, .ex_search, .side_tools .hover, .side_tools .hover span, .side_tools .cur, .side_tools .cur span, .backtotop:hover, .feedback:hover, .customer_service:hover, .sorting_box .checked, .g-scroll-wrap .cur img, .goods_contrast, .contrast_items dl, .contrast_btn, .go_pay, .od_list .cur a img, .is_tit {border-color:#df1738!important;}
@@ -17,7 +23,7 @@ a:hover {text-decoration:none; color:#e32d2d;}
 .promotion_info, .business_name a, .all_shops b, .gsPrice, .gp_check,  .rate strong, .rec_points li, .cmt_rule, .cs_con dd a:hover, .gd_price {color:#df1738!important;}
 .choose_item.selected {border-color:#df1738!important;}
 .top {height:30px; min-width:1200px; width:100%; line-height:30px; background:url(../images/top_bg.gif) repeat-x; *position:relative; *z-index:21;}
-.top_wp, .container {width:1200px; margin:0 auto;}
+.container {width:1200px; margin:0 auto;}
 .collect_me {background:url(../images/collect_star.gif) no-repeat left center; padding-left:20px;}
 .to_reg {color:#ff6600;}
 .top_nav li {float:left;}
@@ -33,8 +39,8 @@ a:hover {text-decoration:none; color:#e32d2d;}
 .header {padding:10px 0; *position:relative; *z-index:20;}
 .logo {width:410px;}
 .logo img {vertical-align:middle;}
-.search_text {width:397px; height:30px; line-height:30px\9; padding:0 5px; border-width:2px; border-style:solid; border-right:none;}
-.search_btn {background:url(../images/search_btn.gif) no-repeat; width:80px; height:36px; border:none; cursor:pointer;}
+.search_text {width:397px; height:33px; line-height:30px\9; padding:0 5px; border-width:2px; border-style:solid; border-right:none;}
+.search_btn {background:url(../images/search_btn.gif) no-repeat; width:80px; height:35px; border:none; cursor:pointer;}
 .hot_word a {margin-right:10px;}
 .ex_search {background:#fff; border-width:2px; border-style:solid; border-top:none; top:36px; width:407px; z-index:12; box-shadow:0 4px 8px rgba(140,140,140,.5); display:none;}
 .ex_search ul {border-bottom:1px solid #ddd;}
@@ -187,7 +193,7 @@ a:hover {text-decoration:none; color:#e32d2d;}
 .flr_line_01 .f_item li {width:199px; height:299px;}
 .flr_line_02 .f_item li {width:199px; height:199px;}
 .f_item li a:hover img {opacity:0.8; filter:alpha(opacity=80);}
-.goods_list li {float:left; width:169px; height:229px; border-right:1px solid #ddd; border-bottom:1px solid #ddd; padding:10px 15px;}
+.goods_list li {float:left; width:169px; height:229px; border:1px solid #ddd; padding:10px 15px;}
 .goods_list li:hover {box-shadow:0 0 5px rgba(140,140,140,.5);}
 .good_name {line-height:150%; height:36px;}
 .good_name a {color:#333;}
@@ -947,8 +953,7 @@ a:hover {text-decoration:none; color:#e32d2d;}
 .nav-mobile.hover .s-ma{display: block;}
 .nav-mobile .s-ma{ border: 1px solid #eee; text-align: center; background: #fff; border-top: none; padding: 20px 25px; display: none; position: absolute; top:40px; left:0;}
 .nav-mobile .s-nam{padding-left: 20px; padding-right: 10px;}
-.nav-mobile .s-nam i{ display: inline-block;
-  vertical-align: middle; width: 20px; height: 20px; margin-left: 5px; background:  no-repeat; margin-right: 5px;}
+.nav-mobile .s-nam i{ display: inline-block; vertical-align: middle; width: 20px; height: 20px; margin-left: 5px; background:  no-repeat; margin-right: 5px;}
 .detail_nav.sticky {position:fixed; width:988px; top:0; box-shadow:0 5px 5px rgba(240,240,240,.7); z-index:100;}
 .detail_nav.sticky .add-cart-btn {display:inline;}
 .details_box .details-more {width: 980px; float:left; background: #fff;}
@@ -961,7 +966,7 @@ a:hover {text-decoration:none; color:#e32d2d;}
 .parameter_tb {margin-top:10px; background: #fff;}
 .parameter_tb th, .parameter_tb td {border:1px solid #eee; height:30px; line-height:30px; text-indent:2em;}
 .parameter_tb th {background:#fafafa; font-weight:700;}
-.details_box {display:none;}
+.details_box {display:block;}
 .evaluation_info {background:#fff; padding:20px 10px;}
 .rate {width:85px; margin-top:10px;}
 .rate strong {display:block; font-family:microsoft YaHei; font-size:36px; color: #df1738;}
@@ -1040,6 +1045,9 @@ a:hover {text-decoration:none; color:#e32d2d;}
 .goods-dg ul li:hover{background: url(../images/r-quan.png) no-repeat left center;}
 .goods-dg ul li:hover a{ color: #df1738;}
 .goods-dg ul li a{color: #666;}
+.noStock{
+  display: none;
+}
 .dis_cart {float: left;width: 164px;height: 38px;white-space: nowrap;background-color: #57402e;border: 1px solid #57402e;color: #fff!important;text-align: center;line-height: 38px;font-size: 14px;font-weight: bold;}
 .dis_cart:hover {background-position:left bottom;}
 .arrival_notice{
@@ -1293,3 +1301,94 @@ a.Btop:hover b{
   background:  no-repeat center;
 }
 div.fl a.issued_consult:hover{color: #e32d2d;}
+
+
+/*原内联样式*/
+.enter_dp{display:block; float:left; width:75px; height:38px; border:1px solid #e5e5e5; background:#f6f6f6; margin-left:18px;border-radius:2px; line-height:38px; text-align:center;}
+.business_area{width:200px;margin-bottom:10px;}
+.business_area .business_info{border:1px solid #e5e5e5;}
+.business_area .business_info .name{display:block;text-align: center;height: 38px;line-height: 38px;background-color: #f5f5f5;margin-bottom: 0;border-bottom: 1px solid #e5e5e5;}
+.business_area .business_info .name a{font-size:14px;font-family:"微软雅黑", "宋体";line-height:38px;}
+.business_area .approve{padding:10px 0;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;}
+.business_area .approve ul li{float:left;display:block;width:62px;height:26px;line-height:26px;font-size:14px;font-weight:bold;font-family:"微软雅黑", "宋体";padding-left:30px;color:#666;}
+.business_area .approve ul .item1{background:url(../images/approve_icon.png) no-repeat left top;}
+.business_area .approve ul .item2{background:url(../images/approve_icon.png) no-repeat left -26px;}
+.business_area .collectstore{display: block;width: 176px;height: 38px;line-height: 38px;background-color: #fff;background-image: none;color: #333!important;font-size: 14px;margin: 10px auto;border: 1px solid #e5e5e5;text-align:center;}
+.business_area .collectstore i{display: inline-block;vertical-align: middle;width: 16px;height: 16px;background: url(../images/good-collect.png) no-repeat;padding-left: 7px;}
+.business_area .collectstore.active i{background: url(../images/good-collected.png) no-repeat;}
+.business_area .collectstore.liked i{background: url(../images/r-love.png) no-repeat;}
+.business_area .enter_shop{display: block;width: 176px;height: 38px;line-height: 38px;background-color: #fff;background-image: none;color: #333!important;font-size: 14px;margin: 10px auto;border: 1px solid #e5e5e5;}
+.business_area .enter_shop del{text-decoration: none;}
+.business_area .store-goods del{text-decoration: none;}
+.business_area .collectstore del{text-decoration: none;}
+.business_area .enter_shop i{display: inline-block;vertical-align: middle;width: 16px;height: 16px;background: url(../images/shop-store.png) no-repeat;padding-left: 7px;}
+.dp_detail table tr td{ line-height:26px; color:#666; font-size:14px; font-family:"微软雅黑";}
+.dp_detail{border-bottom:1px solid #e5e5e5;padding: 10px;line-height: 31px;}
+.publish_cmt {width: 200px;}
+.recommend_point {margin-left:25px; border-right:1px solid #eee; width:350px; height:90px; padding:0;}
+
+.customer_service:hover, .feedback:hover {background:#c33;}
+.customer_service:hover em, .feedback:hover em {font-size:12px; position:relative; top:3px; font-style:normal;}
+.customer_service b {height: 38px!important;}
+.feedback b {background:url(http://uat.hbunion.com/index_seven/images/-02.png) #fff no-repeat center center!important;}
+
+.customer-box {
+  position: absolute;
+  background: #efefef;
+  width: 155px;
+  min-height: 150px;
+  border: 1px solid #ccc;
+  padding: 9px;
+  right: 50px;
+  display: none;
+  top: 20px!important;
+}
+.sideBar .customer-box a {width:auto; height:auto; background-color:transparent; border:none; line-height:normal;}
+.close-cs {
+  position: absolute!important;
+  top: 10px;
+  right: 10px;
+  background: url(http://uat.hbunion.com/index_seven/images/agree_close1.gif) no-repeat;
+  width: 10px!important;
+  height: 10px!important;
+  display: block;
+}
+.customer-box p {overflow:hidden; margin-top:10px;}
+.customer-box p .qq_name {float:right;width: 74px;}
+.customer-box p .qq_img {float:left;}
+.sideBar a span {font-size:12px!important; padding:2px 5px; width:28px!important; line-height:normal!important;}
+
+.sideBar {
+  position: fixed;
+  top: 30%;
+  right: 0;
+  z-index: 101;
+}
+.sideBar a {
+  display: block;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e8e8e8;
+  text-align: center;
+  line-height: 38px;
+  font-size: 18px;
+  color: #333;
+  margin-top: -1px;
+  background-color: #fff;
+  position: relative;
+}
+.customer_service em {
+  display: none;
+}
+.customer_service:hover, .feedback:hover {
+  background: #c33;
+}
+.detail_show p{
+  text-align: center;
+}
+.detail_show p img{
+  max-width: 100%;
+}
+.product_detail .tit_wp ul li:hover a{ color: #e32d2d;}
+del:hover{color: #e32d2d}
+div.share-goodbtn span:hover{color: #e32d2d}
