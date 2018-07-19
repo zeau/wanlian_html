@@ -1,3 +1,4 @@
+
 <template>
     <div id="login">
       <!--头部-->
@@ -72,12 +73,13 @@
           params: {}
         }
       },
+  
       methods: {
-        fetchData: async function () {
+        fetchData:function () {
           let param = {"username": "admin", "password": "123456"};
           http.post(URLString.login, param, function SuccessCallBack(data) {
-            console.log(data);
             if (data.statusCode === 200) {
+              alert(data);
             } else {
               alert(data.message);
             }
@@ -85,5 +87,4 @@
         }
       }
     }
-
 </script>

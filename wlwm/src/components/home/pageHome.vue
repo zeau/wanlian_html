@@ -11,9 +11,9 @@
     <!--展示部分-->
     <div class="container containerTop">
       <div class="louceng">
-        <div class="index_title"><span>热门活动</span><span>Hot Event</span></div>
+        <div class="index_title"><span>热门商品</span><span>Hot Event</span></div>
         <div class="part01 row">
-          <div class="col-925">
+          <div class="col-925"> 
             <div class="row">
               <div class="col-650">
                 <div class="life_service">
@@ -28,13 +28,13 @@
                   </div>
                 </div>
               </div>
-              <div class="col-275">
+              <div class="col-275" id="life-top-img">
                 <a href="goods/searchproduct2.html?searchType=1&amp;title=希思黎" target="_blank"><img class="lazy hot-img-01" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522318312333.jpg"/></a>
                 <a href="goods/searchproduct2.html?searchType=1&amp;title=兰芝" target="_blank"><img class="lazy hot-img-02" alt="" src="http://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1515649690629.jpg"/></a>
               </div>
             </div>
             <div class="row">
-              <div class="col-24">
+              <div class="col-24" id="life-bottom-img">
                 <a href="goods/searchproduct2.html?searchType=1&amp;title=ECCO" target="_blank">
                   <img class="lazy hot-img-03" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522317387291.jpg"/>
                 </a>
@@ -197,7 +197,7 @@
           <div class="item customer_bag">
             <a href="customer/index.html" target="_blank">
               <i class="icons icon-bag"></i>
-              <span>我的函美</span>
+              <span>我的万联</span>
             </a>
           </div>
         </div>
@@ -251,6 +251,9 @@ import lunbo2 from '../../common/images/lunbo2.jpg'
 import xlunbo1 from '../../common/images/1522318791044.jpg'
 import xlunbo2 from '../../common/images/1522315830910.jpg'
 
+import http from '../../Api/baseHttp'
+import URLString from '../../Api/api'
+
 export default {
   name: 'pageHome',
   data () {
@@ -270,8 +273,28 @@ export default {
     pageFooter,
     swiper,
     swiperSlide,
+  },
+  mounted(){ 
+    this.fetchData();
+  },
+  methods:{
+     fetchData: function () {
+          let param = {};
 
+          http.post(URLString.homeUrl, param, function SuccessCallBack(data) {
+
+            if (data.statusCode === 200) {
+              console.log(data);
+              //获取到后台返回的数据，更换界面.
+    
+            } else {
+              alert(data.message);
+            }
+          });
+        }
+    
   }
+  
 }
 </script>
 
