@@ -76,18 +76,19 @@
           //将信息提交给后台
           submit:function(){
             let params = {
-              "pwd":this.password,//用户密码
-              "vertifyCode":this.$route.params.vertifyCode,//验证码
-              "phoneNum":this.$route.params.phoneNum,//手机号码
+              "password":this.password,//用户密码
+              "smsCode":this.$route.params.vertifyCode,//验证码
+              "mobile":this.$route.params.phoneNum,//手机号码
               "name":"",
-              "":"",
+              "userType":"member",
             };
-            //
+            //提交登录的信息
             http.post(URLString.registerCode, params, function resCallBack(data) {
               if(data.statusCode === 200){
-                alert('注册成功')
+                //注册成功后存储用户的信息在本地
+                this.$toast.center("注册成功");
               }else{
-                alert(data.message)
+                this.$toast.center(data.message);
               }
             });
           }

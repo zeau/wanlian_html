@@ -4,7 +4,7 @@
         <div class="mini_head" style="margin-top: 70px;">
           <h1 class="logo">
             <router-link to="/pageHome">
-              <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1515739240142.jpg" alt="" style="width: 165px;height: 40px;"/>
+              <img src="../assets/logo.jpg" alt="" style="width: 165px;height: 40px;"/>
             </router-link>
           </h1>
         </div>
@@ -135,9 +135,31 @@
 </style>
 
 <script>
+import http from '../../Api/baseHttp'
+import URLString from '../../Api/api'
+
     export default {
         data() {
-            return {}
+            return {
+
+            }
+        },
+        created(){
+          console.log("created");
+          // 获取购物车数据
+          let param = {
+            
+          };
+          http.post(URLString.shoppingCartList,param,function successCallBack(res){
+            if(res.statusCode == 200) {
+
+            }else{
+              this.$toast.center(res.message);
+            }
+          });
+        },
+        methods: {
+
         }
     }
 </script>

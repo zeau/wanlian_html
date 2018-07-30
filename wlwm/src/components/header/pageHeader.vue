@@ -94,7 +94,6 @@
             <div class="sort_open pa" style="width:930px;background:#f5f5f5;">
               <div class="ct_item clearfix">
                 <div class="sub_category clearfix fl" style="background:#f5f5f5;">
-
                   <div class="category_box fl">
                        	<dl>
                                     <dt>
@@ -131,8 +130,6 @@
               <a class="close_category pa" href="javascript:;"></a>
             </div><!--/sort_open-->
           </div><!--/pro_sort-->
-  
-  
   
           <!-- 商品列表分类 -->
           <ul class="sort_list clearfix">
