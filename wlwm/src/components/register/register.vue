@@ -41,7 +41,7 @@
           <div class="reg_form_item">
             <label class="for_text">验证码</label>
             <div class="item">
-              <input id="checkCode" class="text medium" placeholder="请输入图片验证码"  maxlength="4" type="text" v-model="userInputCode">
+              <input id="checkCode" v-model="userInputCode" class="text medium" placeholder="请输入图片验证码"  maxlength="4" type="text">
               <!--图片验证码-->
               <div class="pic_code">
               <identify :identifyCode="identifyCode" style="margin-top:10px;"></identify>
@@ -82,6 +82,7 @@
 <script>
 import SIdentify from '@/components/pictureValidation/identify'
 import PageFooter from '@/components/footer/pageFooter'
+
 import http from '../../Api/baseHttp'
 import URLString from '../../Api/api'
 
@@ -89,8 +90,8 @@ export default {
     data() {
       return {
         userPhone:"",
-        identifyCode:"",
-        identifyCodes: "",
+        identifyCodes: "1234567890",
+        identifyCode: "",
         userInputCode: "",
       }
     },
@@ -106,33 +107,30 @@ export default {
       randomNum(min, max) {
         return Math.floor(Math.random() * (max - min) + min);
       },
-      refreshCode() {
+      refreshCode:function() {
         this.identifyCode = "";
         this.makeCode(this.identifyCodes, 4);
       },
-      makeCode(o, l) {
-        for (let i = 0; i < l; i++) {
-          this.identifyCode += this.identifyCodes[
-            this.randomNum(0, this.identifyCodes.length)
-          ];
-        }
-        console.log(this.identifyCode);
-      },
+       makeCode(o, l) {
+          for (let i = 0; i < l; i++) {
+            this.identifyCode += this.identifyCodes[
+              this.randomNum(0, this.identifyCodes.length)
+            ];
+          }
+          console.log(this.identifyCode);
+        },
       turnNext: function () {
-          //校验手机号跳转下一步
-         re = /^1\d{10}$/
+          //正则校验手机号码是否正确
+        let re = /^1\d{10}$/
          if (re.test(this.userPhone)) {
-           //手机号正确发送验证码，跳转下一步
-           if(this.$refs.userInputCode === this.identifyCodes){
-             //验证码正确
-              http.post(URLString.registerCode,this.userPhone, function resCallBack(data) {
-            console.log(data);
-          });
+           //输入的验证码和图片的验证码一致
+
+           if(this.userInputCode == this.identifyCode){
+            this.$router.push({name:"registerSecond",params:{phoneNum:this.userPhone}});
            }else{
              this.$toast.center('验证码错误');
            }
-
-         } else {
+         }else{
            //弹框提示验证码错误。
            this.$toast.center('手机号格式不正确');
          }

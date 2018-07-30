@@ -4,7 +4,7 @@
         <div class="mini_head" style="margin-top: 70px;">
           <h1 class="logo">
             <router-link to="/pageHome">
-              <img src="../../assets/logo.jpg" alt="" style="width: 165px;height: 40px;"/>
+              <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1515739240142.jpg" alt="" style="width: 165px;height: 40px;"/>
             </router-link>
           </h1>
         </div>

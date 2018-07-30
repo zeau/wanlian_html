@@ -57,7 +57,7 @@
             <input type="hidden" id="isCustomerDiscount" value="0">
             <input type="hidden" class="bread_crumb_cat_id" value="511" data-role="detail" />
             <div class="pd_title">
-              <h2>Samsonite/新秀丽时尚新款双肩包高端商务休闲背包潮轻电脑包</h2>
+              <h2>{{name}}</h2>
               <strong></strong>
             </div><!--/pd_title-->
 
@@ -73,7 +73,7 @@
                 <dt id="priceflr">商城价：</dt>
                 <dd>
                   <span>¥ </span>
-                  <span class="main_price" >1.00</span>
+                  <span class="main_price" >{{price}}</span>
                   <span style="color: red;" id="zk_price">&nbsp;</span>
                   <input type="hidden" id="mprice" value="1.00"/>
                 </dd>
@@ -107,8 +107,8 @@
             </dl>
             <div class="by_cart mt20 clearfix">
               <div class="hasStock" style="display:block;">
-                <router-link to="/cart" class="collect_pro mr20 go_buy" product_id="1" product_stock="-32" distinct_id="3002"  >立即购买</router-link>
-                <router-link to="/cart" class="add_cart"  product_id="1" product_stock="-32" distinct_id="3002" href="javascript:;"><i></i>加入购物车</router-link>
+                <router-link to="/cart" class="collect_pro mr20 go_buy" product_id="1" product_stock="-32" distinct_id="3002">立即购买</router-link>
+                <a class="add_cart" @click="addShoppingCart()" product_id="1" product_stock="-32" distinct_id="3002" href="javascript:;"><i></i>加入购物车</a>
               </div>
               <div class="noStock" >
                 <a class="dis_cart" href="" hidden="hidden"><i></i>加入购物车</a>
@@ -387,24 +387,47 @@
 </template>
 
 <style>
-  @import url(../../common/css/index.css);
+@import url(../../common/css/index.css);
 </style>
 
 <script>
-  import pageHeader from '@/components/header/pageHeader'
-  import pageFooter from '@/components/footer/pageFooter'
+import pageHeader from "@/components/header/pageHeader";
+import pageFooter from "@/components/footer/pageFooter";
+import http from "../../Api/baseHttp";
+import URLString from "../../Api/api";
 
-    export default {
-        data() {
-            return {
+export default {
+  data() {
+    return {
+      name:'',
+      price:'',
+      bigImg:'',
 
-            }
-        },
+    };
+  },
 
-      components: {
-        pageHeader,
-        pageFooter,
-
-      }
+  components: {
+    pageHeader,
+    pageFooter
+  },
+  methods:{
+    addShoppingCart(){
+      http.post(URLString.joinShoppingCart,{id:1},function SuccessCallBack(res){
+       if(res.statusCode === 200){
+         alert('成功加入购物车');
+       }else{
+         alert(res.message);
+       }
+      })
     }
+  },
+  created(){
+    let that = this;
+    http.post(URLString.goodsInfo,{id:5},function SuccessCallBack(res){
+      console.log(res);
+      that.name = res.data.name;
+      that.price = res.data.price;
+    })
+  }
+};
 </script>

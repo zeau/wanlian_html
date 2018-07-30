@@ -1,4 +1,3 @@
-
 <template>
     <div id="login">
       <!--头部-->
@@ -16,7 +15,7 @@
               <p>还没有账号？马上<a href="#">免费注册</a></p>
             </div>
             <div class="login_con_main">
-              <from id="login_form" name="loginForm">
+              <form id="login_form" name="loginForm">
                 <div class="login_con_main_row">
                   <input id="log_user" class="login_con_main_text" maxlength="40" name="username" value="" placeholder="已验证手机/邮箱/用户名"  v-model="params.username" type="text">
                   <span id="login_name"></span>
@@ -36,7 +35,7 @@
                     <label class="re_label">记住账号</label>
                   </div>
                 </div>
-              </from>
+              </form>
             </div>
           </div>
         </div>
@@ -73,18 +72,28 @@
           params: {}
         }
       },
-  
       methods: {
-        fetchData:function () {
-          let param = {"username": "admin", "password": "123456"};
-          http.post(URLString.login, param, function SuccessCallBack(data) {
-            if (data.statusCode === 200) {
-              alert(data);
-            } else {
+        jsonData (data){
+          console.log(data);
+        },
+
+        fetchData: async function () {
+          // let param = {"username": "admin", "password": "123456"}
+          let param = {"username":this.params.username,"password":this.params.password,"userType":"member"}
+
+          http.post(URLString.login, param, function SuccessCallBack(res) {  
+              console.log(res)
+              var token = res.data;
+              console.log(token)
+            if (res.statusCode === 200) {
+              // localStorage.setItem('userToken',data);
+              window.location.href = '/pageHome';
+            } else { 
               alert(data.message);
             }
           });
         }
       }
     }
+
 </script>

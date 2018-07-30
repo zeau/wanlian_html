@@ -40,21 +40,25 @@ function checkCode (res) {
   }
   return res
 }
-
+var token = localStorage.getItem('userToken');
+console.log(token)
 export default {
-
-  post (url,params,callback ) {
-
+  //token填在这里，登录后存储本地，然后放在这里、
+  // var token = '';
+   
+post (url,params,callback ) {
     return axios({
       method: 'post',
       //本地base
-      baseURL: 'http://192.168.2.127:8080/',
+      baseURL: 'http://47.94.93.232:8080/wanlian',
       url,
       data: qs.stringify(params),
       timeout: 10000,
       headers: {
         'X-Requested-With': 'XMLHttpRequest',
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        // 'Authorization': token,
+        'userToken':token
       }
     }).then(
       (res) => {
@@ -65,12 +69,13 @@ export default {
   get (url,params,callback) {
     return axios({
       method: 'get',
-      baseURL: 'http://192.168.2.127:8080/',
+      baseURL: 'http://47.94.93.232:8080/wanlian/',
       url,
       data:qs.stringify(params),// get 请求时带的参数
       timeout: 10000,
       headers: {
-        'X-Requested-With': 'XMLHttpRequest'
+        'X-Requested-With': 'XMLHttpRequest',
+        'Authorization': token
       }
     }).then(
       (res) => {

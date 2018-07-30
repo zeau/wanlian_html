@@ -53,108 +53,18 @@
           </div>
           <div class="goods_list clearfix">
             <ul class="goods_list_item clearfix">
-              <li class="goodsBox" v-for="">
+              <li class="goodsBox" v-for="(item,index) in shoppingList" :key="index" :data-id="item.id">
                 <a class="">
-                  <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc/217143/main/Z_01.jpg">
+                  <img :src="item.imgUrl">
                   <h3>
-                    SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444
+                    {{item.name}}
                   </h3>
                   <p>
                     <em>￥</em>
-                    19800.00
+                    {{item.price}}
                   </p>
-                  <span>
-                    有货
-                  </span>
-                </a>
-              </li>
-              <li class="goodsBox" v-for="">
-                <a class="">
-                  <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc/570984/main/Z_01.jpg">
-                  <h3>
-                    SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444
-                  </h3>
-                  <p>
-                    <em>￥</em>
-                    19800.00
-                  </p>
-                  <span>
-                    有货
-                  </span>
-                </a>
-              </li>
-              <li class="goodsBox" v-for="">
-                <a class="">
-                  <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1515995764806.jpg">
-                  <h3>
-                    SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444
-                  </h3>
-                  <p>
-                    <em>￥</em>
-                    19800.00
-                  </p>
-                  <span>
-                    有货
-                  </span>
-                </a>
-              </li>
-              <li class="goodsBox" v-for="">
-                <a class="">
-                  <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc/430004/main/Z_01.jpg">
-                  <h3>
-                    SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444
-                  </h3>
-                  <p>
-                    <em>￥</em>
-                    19800.00
-                  </p>
-                  <span>
-                    有货
-                  </span>
-                </a>
-              </li>
-              <li class="goodsBox" v-for="">
-                <a class="">
-                  <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1515995490681.jpg">
-                  <h3>
-                    SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444
-                  </h3>
-                  <p>
-                    <em>￥</em>
-                    19800.00
-                  </p>
-                  <span>
-                    有货
-                  </span>
-                </a>
-              </li>
-              <li class="goodsBox" v-for="">
-                <a class="">
-                  <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc/530624/main/Z_01.jpg">
-                  <h3>
-                    SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444
-                  </h3>
-                  <p>
-                    <em>￥</em>
-                    19800.00
-                  </p>
-                  <span>
-                    有货
-                  </span>
-                </a>
-              </li>
-              <li class="goodsBox" v-for="">
-                <a class="">
-                  <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1515986134559.jpg">
-                  <h3>
-                    SUSSI/古色 18春新品 花样早春 红底印花褶褶摆长下裙 28130444
-                  </h3>
-                  <p>
-                    <em>￥</em>
-                    19800.00
-                  </p>
-                  <span>
-                    有货
+                  <span :isNone="item.isNone">
+                    {{item.isNoneName}}
                   </span>
                 </a>
               </li>
@@ -183,16 +93,37 @@
 <script>
   import PageFooter from '@/components/footer/pageFooter'
   import PageHeader from '@/components/header/pageHeader'
+  import http from '../../Api/baseHttp'
+  import URLString from '../../Api/api'
 
     export default {
         data() {
             return {
-              logourl : 'src/assets/logo.jpg'
+              logourl : 'src/assets/logo.jpg',
+              shoppingList:[],
             }
         },
         components:{
           PageFooter,
           PageHeader
+        },
+        created(){
+          let that = this;
+          http.post(URLString.goodsList,{pageCurrent:1,pageSize:9,salesVolume:1,popularity:1,putawayDt:1,name:''},function SuccessCallBack(res){
+            console.log(res)
+            if(res.statusCode === 200){
+              for(let i in res.data.row){
+                if(res.data.row[i].isNone == 0){
+                  res.data.row[i].isNoneName = '无货'
+                }else{
+                  res.data.row[i].isNoneName = '有货'
+                }
+              }
+            }
+            that.shoppingList = res.data.rows;
+            console.log(that.shoppingList)
+            
+          })
         }
     }
 </script>
