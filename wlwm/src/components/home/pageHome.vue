@@ -5,7 +5,7 @@
     <!--轮播-->
     <el-carousel trigger="click" height="450px">
       <el-carousel-item v-for="(item, index) in banners" :key="index">
-        <router-link to="/goodsList"><img :src="item.imgUrl"/></router-link>
+        <router-link to="/goodsList"><img :src="item.imgUrl" /></router-link>
       </el-carousel-item>
     </el-carousel>
     <!--展示部分-->
@@ -21,7 +21,7 @@
                     <div id="lifeService">
                       <el-carousel :interval="5000" arrow="always" height="470px">
                         <el-carousel-item v-for="(item , index) in banners2" :key="index">
-                          <img :src="item.imgUrl2"/>
+                          <img :src="item.imgUrl2" />
                         </el-carousel-item>
                       </el-carousel>
                     </div>
@@ -29,52 +29,53 @@
                 </div>
               </div>
               <div class="col-275">
-                <a href="goods/searchproduct2.html?searchType=1&amp;title=希思黎" target="_blank"><img class="lazy hot-img-01" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522318312333.jpg"/></a>
-                <a href="goods/searchproduct2.html?searchType=1&amp;title=兰芝" target="_blank"><img class="lazy hot-img-02" alt="" src="http://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1515649690629.jpg"/></a>
+                <a href="goods/searchproduct2.html?searchType=1&amp;title=希思黎" target="_blank"><img class="lazy hot-img-01" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522318312333.jpg" /></a>
+                <a href="goods/searchproduct2.html?searchType=1&amp;title=兰芝" target="_blank"><img class="lazy hot-img-02" alt="" src="http://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1515649690629.jpg" /></a>
               </div>
             </div>
             <div class="row">
               <div class="col-24">
                 <a href="goods/searchproduct2.html?searchType=1&amp;title=ECCO" target="_blank">
-                  <img class="lazy hot-img-03" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522317387291.jpg"/>
+                  <img class="lazy hot-img-03" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522317387291.jpg" />
                 </a>
               </div>
             </div>
           </div>
           <div class="col-275">
             <a href="goods/searchproduct2.html?searchType=1&amp;title=安悦" target="_blank">
-              <img class="lazy hot-img-04" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522313234035.jpg"/>
+              <img class="lazy hot-img-04" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522313234035.jpg" />
             </a>
             <a href="goods/searchproduct2.html?searchType=1&amp;title=迪柯尼" target="_blank">
-              <img class="lazy hot-img-05" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522315504735.jpg"/>
+              <img class="lazy hot-img-05" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522315504735.jpg" />
             </a>
             <a href="goods/searchproduct2.html?searchType=1&amp;title=黄色小鸭" target="_blank">
-              <img class="lazy hot-img-06" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522315659146.jpg"/>
+              <img class="lazy hot-img-06" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522315659146.jpg" />
             </a>
           </div>
-        </div><!--part01 row-->
-
+        </div>
+        <!--part01 row-->
+  
         <div class="index_title"><span>本周推荐</span><span>Luxury Goods</span></div>
         <div class="special_buy">
           <div class="body">
             <div class="colFirst">
               <div id="lifeService_02">
-                <a href="goods/searchproduct2.html?searchType=1&amp;title=SK-II" target="_blank"><img class="lazy" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522317932631.jpg"/></a>
+                <a href="goods/searchproduct2.html?searchType=1&amp;title=SK-II" target="_blank"><img class="lazy" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522317932631.jpg" /></a>
               </div>
             </div>
             <div class="colMid mid-img-box">
               <div class="row">
                 <div class="col-block">
-                  <a href="goods/searchproduct2.html?searchType=1&amp;title=左天奴" target="_blank"><img class="lazy" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522318255974.jpg"/></a>
+                  <a href="goods/searchproduct2.html?searchType=1&amp;title=左天奴" target="_blank"><img class="lazy" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522318255974.jpg" /></a>
                 </div>
                 <div class="col-block">
-                  <a href="goods/searchproduct2.html?searchType=1&amp;title=SUSSI" target="_blank"><img class="lazy" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522315561618.jpg"/></a>
+                  <a href="goods/searchproduct2.html?searchType=1&amp;title=SUSSI" target="_blank"><img class="lazy" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522315561618.jpg" /></a>
                 </div>
                 <div class="col-block">
-                  <a href="goods/searchproduct2.html?searchType=1&amp;title=新秀丽" target="_blank"><img class="lazy" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522318038243.jpg"/></a>
+                  <a href="goods/searchproduct2.html?searchType=1&amp;title=新秀丽" target="_blank"><img class="lazy" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522318038243.jpg" /></a>
                 </div>
                 <div class="col-block">
-                  <a href="goods/searchproduct2.html?searchType=1&amp;title=露安适" target="_blank"><img class="lazy" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522313373714.jpg"/></a>
+                  <a href="goods/searchproduct2.html?searchType=1&amp;title=露安适" target="_blank"><img class="lazy" alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522313373714.jpg" /></a>
                 </div>
               </div>
             </div>
@@ -117,37 +118,36 @@
           </div>
         </div>
       </div>
-
+  
       <div class="section-02">
         <div class="index_title"><span>优质商品</span><span>Quality goods</span></div>
         <div class="floor_adv fuzhuangxiebao row louceng" id="floor_1">
           <div class="floor_links">
-            <a href="list/142-141.html"
-               target="_blank">进口表</a>
-            <a href="list/143-141.html"
-               target="_blank">休闲表</a>
-            <a href="list/144-141.html"
-               target="_blank">钟</a>
+            <a href="list/142-141.html" target="_blank">进口表</a>
+            <a href="list/143-141.html" target="_blank">休闲表</a>
+            <a href="list/144-141.html" target="_blank">钟</a>
           </div>
           <div class="row">
             <div class="col-6">
               <div class="floorLogo">
-                <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522377787139.jpg"/>
+                <img src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522377787139.jpg" />
               </div>
             </div>
             <div class="col-18">
               <div class="floor_slide" id="floorSlide01">
-                <div><a href="goods/searchproduct2.html?searchType=1&amp;title=积家" target="_blank"><img
-                  alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522394408133.jpg"/></a></div>
-                <div><a href="goods/searchproduct2.html?searchType=1&amp;title=万国" target="_blank"><img
-                  alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522395779562.jpg"/></a></div>
+                <div>
+                  <a href="goods/searchproduct2.html?searchType=1&amp;title=积家" target="_blank"><img alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522394408133.jpg" /></a>
+                </div>
+                <div>
+                  <a href="goods/searchproduct2.html?searchType=1&amp;title=万国" target="_blank"><img alt="" src="https://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1522395779562.jpg" /></a>
+                </div>
               </div>
             </div>
           </div>
-
+  
           <div class="index_line"></div>
         </div>
-
+  
       </div>
       <!--左侧边固定导航-->
       <div class="toolbar left" style="display: none;">
@@ -184,7 +184,7 @@
           </div>
         </div>
       </div>
-
+  
       <div class="toolbar">
         <!--右侧边固定-->
         <div class="toolbar_tabs">
@@ -217,15 +217,15 @@
           <p>
             <span class="qq_name">函美客服</span>
             <span class="qq_img">
-              <a style="float:right;" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=123456&site=qq&menu=yes">
-                <img border="0" src="http://wpa.qq.com/pa?p=2:123456:51" alt="点击这里给我发消息" title="点击这里给我发消息"/>
-              </a>
-            </span>
+                <a style="float:right;" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=123456&site=qq&menu=yes">
+                  <img border="0" src="http://wpa.qq.com/pa?p=2:123456:51" alt="点击这里给我发消息" title="点击这里给我发消息"/>
+                </a>
+              </span>
           </p>
         </div>
       </div>
     </div>
-
+  
     <!-- pageFooter -->
     <page-footer></page-footer>
   </div>
@@ -234,45 +234,54 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   @import "../../common/css/pageHome.css";
-
   .el-carousel-item img {
     width: 100%;
   }
-
 </style>
 
 
 <script>
-import pageHeader from '@/components/header/pageHeader'
-import pageFooter from '@/components/footer/pageFooter'
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
-import lunbo1 from '../../common/images/lunbo1.jpg'
-import lunbo2 from '../../common/images/lunbo2.jpg'
-import xlunbo1 from '../../common/images/1522318791044.jpg'
-import xlunbo2 from '../../common/images/1522315830910.jpg'
-
-export default {
-  name: 'pageHome',
-  data () {
-    return {
-      banners: [
-        { imgUrl: lunbo1 ,link:"/goodsList"},
-        { imgUrl: lunbo2 ,link:"/goodsDetail"},
-      ],
-      banners2: [
-        { imgUrl2: xlunbo1 },
-        { imgUrl2: xlunbo2 },
-      ],
-    }
-  },
-  components: {
-    pageHeader,
-    pageFooter,
+  import pageHeader from '@/components/header/pageHeader'
+  import pageFooter from '@/components/footer/pageFooter'
+  import {
     swiper,
-    swiperSlide,
-
+    swiperSlide
+  } from 'vue-awesome-swiper'
+  import lunbo1 from '../../common/images/lunbo1.jpg'
+  import lunbo2 from '../../common/images/lunbo2.jpg'
+  import xlunbo1 from '../../common/images/1522318791044.jpg'
+  import xlunbo2 from '../../common/images/1522315830910.jpg'
+  
+  export default {
+    name: 'pageHome',
+    data() {
+      return {
+        banners: [{
+            imgUrl: lunbo1,
+            link: "/goodsList"
+          },
+          {
+            imgUrl: lunbo2,
+            link: "/goodsDetail"
+          },
+        ],
+        banners2: [{
+            imgUrl2: xlunbo1
+          },
+          {
+            imgUrl2: xlunbo2
+          },
+        ],
+      }
+    },
+    components: {
+      pageHeader,
+      pageFooter,
+      swiper,
+      swiperSlide,
+  
+    }
   }
-}
 </script>
 
 

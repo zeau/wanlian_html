@@ -27,52 +27,50 @@
           <span>注册成功</span>
         </div>
       </div>
-        <div class="register_con_form">
-          <form id="" action="" method="">
-            <input id="registerId"  type="hidden">
-            <div class="reg_form_item">
-              <label class="for_text">手机号码</label>
-              <div class="item">
-                <input id="mobileInput" class="text long" placeholder="请输入手机号码" maxlength="11" type="text" v-model="userPhone">
-                <i class="correct" style="display: none"></i>
-                <p class="tips mobile_info" style="display: none">请输入您的手机号码</p>
-              </div>
+      <div class="register_con_form">
+        <form id="" action="" method="">
+          <input id="registerId" type="hidden">
+          <div class="reg_form_item">
+            <label class="for_text">手机号码</label>
+            <div class="item">
+              <input id="mobileInput" class="text long" placeholder="请输入手机号码" maxlength="11" type="text" v-model="userPhone">
+              <i class="correct" style="display: none"></i>
+              <p class="tips mobile_info" style="display: none">请输入您的手机号码</p>
             </div>
+          </div>
           <div class="reg_form_item">
             <label class="for_text">验证码</label>
             <div class="item">
-              <input id="checkCode" class="text medium" placeholder="请输入图片验证码"  maxlength="4" type="text" v-model="userInputCode">
+              <input id="checkCode" class="text medium" placeholder="请输入图片验证码" maxlength="4" type="text" v-model="userInputCode">
               <!--图片验证码-->
               <div class="pic_code">
-              <identify :identifyCode="identifyCode" style="margin-top:10px;"></identify>
-              <span class="code" @click="refreshCode"></span>
+                <identify :identifyCode="identifyCode" style="margin-top:10px;"></identify>
+                <span class="code" @click="refreshCode"></span>
               </div>
               <p class="tips mobile_info" style="display: none">请输入验证码</p>
-              <button class="sub_btn"  @click ="turnNext">同意协议并注册</button>
+              <button class="sub_btn" @click="turnNext">同意协议并注册</button>
             </div>
           </div>
-        <div class="reg_form_item">
-        <label class="for_text">&nbsp;</label>
-        <div class="item">
-          <div class="agreement_confirm">
-            <label>
-              <input type="checkbox" class="i-checks" checked id="readme">
-              我已阅读并同意<a href="javascript:void(0)" onclick="showpro();" id="protocol">《商城用户注册协议》</a>
-            </label>
+          <div class="reg_form_item">
+            <label class="for_text">&nbsp;</label>
+            <div class="item">
+              <div class="agreement_confirm">
+                <label>
+                  <input type="checkbox" class="i-checks" checked id="readme">
+                  我已阅读并同意<a href="javascript:void(0)" onclick="showpro();" id="protocol">《商城用户注册协议》</a>
+                </label>
+              </div>
+              <p class="tips pro_info" style="display: none">请接受服务条款</p>
+            </div>
           </div>
-            <p class="tips pro_info" style="display: none">请接受服务条款</p>
-        </div>
-      </div>
-    </form>
+        </form>
       </div>
     </div>
-
+  
     <!--页脚-->
     <page-footer></page-footer>
-
+  
   </div>
-
-
 </template>
 
 <style>
@@ -80,22 +78,22 @@
 </style>
 
 <script>
-import SIdentify from '@/components/pictureValidation/identify'
-import PageFooter from '@/components/footer/pageFooter'
-import http from '../../Api/baseHttp'
-import URLString from '../../Api/api'
-
-export default {
+  import SIdentify from '@/components/pictureValidation/identify'
+  import PageFooter from '@/components/footer/pageFooter'
+  import http from '../../Api/baseHttp'
+  import URLString from '../../Api/api'
+  
+  export default {
     data() {
       return {
-        userPhone:"",
-        identifyCode:"",
+        userPhone: "",
+        identifyCode: "",
         identifyCodes: "",
         userInputCode: "",
       }
     },
     components: {
-      identify:SIdentify,
+      identify: SIdentify,
       PageFooter
     },
     mounted() {
@@ -118,29 +116,27 @@ export default {
         }
         console.log(this.identifyCode);
       },
-      turnNext: function () {
-          //校验手机号跳转下一步
-         re = /^1\d{10}$/
-         if (re.test(this.userPhone)) {
-           //手机号正确发送验证码，跳转下一步
-           if(this.$refs.userInputCode === this.identifyCodes){
-             //验证码正确
-              http.post(URLString.registerCode,this.userPhone, function resCallBack(data) {
-            console.log(data);
-          });
-           }else{
-             this.$toast.center('验证码错误');
-           }
-
-         } else {
-           //弹框提示验证码错误。
-           this.$toast.center('手机号格式不正确');
-         }
+      turnNext: function() {
+        //校验手机号跳转下一步
+        re = /^1\d{10}$/
+        if (re.test(this.userPhone)) {
+          //手机号正确发送验证码，跳转下一步
+          if (this.$refs.userInputCode === this.identifyCodes) {
+            //验证码正确
+            http.post(URLString.registerCode, this.userPhone, function resCallBack(data) {
+              console.log(data);
+            });
+          } else {
+            this.$toast.center('验证码错误');
+          }
+  
+        } else {
+          //弹框提示验证码错误。
+          this.$toast.center('手机号格式不正确');
         }
+      }
     }
   }
-
-
 </script>
 
 
