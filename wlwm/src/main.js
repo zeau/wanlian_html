@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import $ from 'jquery'
+
 
 import './common/css/base.css'  /*引入公共样式*/
 import './common/css/common.css'

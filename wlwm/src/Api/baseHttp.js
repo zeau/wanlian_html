@@ -75,7 +75,7 @@ post (url,params,callback ) {
       timeout: 10000,
       headers: {
         'X-Requested-With': 'XMLHttpRequest',
-        'Authorization': token
+        'userToken':token
       }
     }).then(
       (res) => {
