@@ -5,12 +5,12 @@
         <div class="container clearfix pr">
           <div class="n_logo fl clearfix">
             <div class="fl ml20">
-              <a href="#" class="fore1">我的函百平台</a>
+              <a href="#" class="fore1">我的万联平台</a>
             </div>
           </div>
           <div class="n_menu fl">
             <ul class="clearfix">
-              <li><router-link to="/pageHome">函百首页</router-link></li>
+              <li><router-link to="/pageHome">万联首页</router-link></li>
               <li class="n_hover">
                 <div class="pr">
                   <a href="#">账户中心</a>

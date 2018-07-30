@@ -79,7 +79,7 @@
               "password":this.password,//用户密码
               "smsCode":this.$route.params.vertifyCode,//验证码
               "mobile":this.$route.params.phoneNum,//手机号码
-              "name":"",
+              "name":this.$route.params.phoneNum,
               "userType":"member",
             };
             //提交登录的信息
