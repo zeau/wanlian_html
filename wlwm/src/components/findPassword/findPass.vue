@@ -7,8 +7,7 @@
                     <div class="n_step1"></div>
                     <ul class="ml10 clearfix">
                         <li class="p100 cur">填写手机号</li>
-                        <li class="p130">验证身份</li>
-                        <li class="p130">设置新密码</li>
+                        <li class="p130">设置密码</li>
                         <li>完成</li>
                     </ul>
                 </div>
@@ -16,14 +15,14 @@
                     <div class="n_item clearfix mb20">
                         <span class="label fl">手机号：</span>
                         <div class="fl">
-                            <input tabindex="1" type="text" placeholder="已验证手机号" class="long_text" id="username" maxlength="11" />
+                            <input tabindex="1" type="text" placeholder="已验证手机号" class="long_text" id="username" maxlength="11" v-model="userPhoneNum" />
                             <div class="ne_tips uesrname_tips hide">您输入的手机号有误</div>
                         </div>
                     </div>
                     <div class="n_item clearfix mb20">
                         <span class="label fl">验证码：</span>
                         <div class="fl">
-                            <input tabindex="2" type="text" id="code" placeholder="请输入验证码" class="short_text mr20" maxlength="4" />
+                            <input tabindex="2" type="text" id="code" placeholder="请输入验证码" class="short_text mr20" maxlength="4" v-model="userInputCode"/>
                             <!--图片验证码-->
                             <div class="pic_code">
                                 <identify :identifyCode="identifyCode" style="margin-top:10px;"></identify>
@@ -35,7 +34,7 @@
                     <div class="n_item clearfix mb20">
                         <span class="label fl">&nbsp;</span>
                         <div class="fl">
-                            <button class="n_nextstep" @click="gofindcode;">下一步</button>
+                            <button class="n_nextstep" @click="gofindcode">下一步</button>
                         </div>
                     </div>
                 </div>
@@ -73,13 +72,14 @@
             return {
                 identifyCodes: "1234567890",
                 identifyCode: "",
+                userPhoneNum:"",
+                userInputCode:""
             }
         },
     
         components: {
             pageFooters,
             identify: SIdentify,
-    
         },
     
         created() {
@@ -106,23 +106,26 @@
                 }
                 console.log(this.identifyCode);
             },
+
             // 找回密码第一步
             gofindcode() {
                 if ($("#username").val().trim().length == 0) {
                     $("#username").parent().find(".uesrname_tips").show().html("请输入手机号").css("color", "#dd6330");
                     return;
                 }
-                this.$router.push ({
-                    name:"FindPassSecond",
-                    params:{
-                        
+                if(this.userInputCode == this.identifyCode){
+                    this.$router.push ({
+                        name:"FindPassSecond",
+                        params:{
+                            phone:this.userPhoneNum
                     }
                 });
-    
+            }else{
+                this.$toast.center("验证码不正确");
+            }
+             
             }
         }
-    
-    
     }
 </script>
 

@@ -137,10 +137,9 @@
               </div>
               <div class="mod-sugar fl ml10">
                 <div class="title">
-                  4ld97nf9
-                  </b>，欢迎您！
+                  4ld97nf9,欢迎您！
                 </div>
-                <p>函美会员</p>
+                <p>万联会员</p>
                 <div class="mod-safe mt10">
                   账户安全：
                   <div class="n_per_bar"><span style="width:66% "></span></div>
@@ -354,7 +353,7 @@
                     <tr>
                       <td class="tr">详细地址：</td>
                       <td>
-                        <input class="text address" style="width: 500px;" id="address" name="infoAddress" type="text"value="" />
+                        <input class="text address" style="width: 500px;" id="address" name="infoAddress" type="text" />
                         <img id="address_img" src="/images/succ-ico.png" />
                         <label id="address_msg"></label>
                       </td>
