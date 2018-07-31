@@ -40,13 +40,21 @@ function checkCode (res) {
   }
   return res
 }
-var token = localStorage.getItem('userToken');
-console.log(token)
-export default {
+
   //token填在这里，登录后存储本地，然后放在这里、
-  // var token = '';
+var token = "";
+if(!window.localStorage){
+  token =  window.sessionStorage.getItem("userToken");
+}else{
+  token = window.localStorage.getItem("userToken");
+}
+console.log(token)
+
+export default {
+  
    
 post (url,params,callback ) {
+    
     return axios({
       method: 'post',
       //本地base

@@ -57,7 +57,6 @@
     height: 420px;
     width: 100%
   }
-
 </style>
 
 <script>
@@ -69,7 +68,7 @@
     data() {
       return {
         params: {},
-        isRemerber:true
+        isRemerber: true
       }
     },
     methods: {
@@ -78,13 +77,13 @@
       },
   
       isEmpty: function(obj) {
-        if (typeof obj == "undefined" || obj == null || obj == "") {
+        if (typeof obj == "undefined" || typeof obj == null || obj === "") {
           return true;
         } else {
           return false;
         }
       },
-      
+  
       beautyCheck() {
         $(".beauty-checkbox").toggleClass('active');
         $('.bu-checkbox').trigger('click');
@@ -99,23 +98,35 @@
           "userType": "member"
         };
         http.post(URLString.login, param, function SuccessCallBack(res) {
-          console.log(res)
-          var token = that.jsonData(res.data);
+          console.log(res);
+          var token = res.data;
+          console.log(token); 
           if (res.statusCode === 200) {
             if (!that.isEmpty(token)) {
-              localStorage.setItem('userToken', data);
-              that.$router.push({
-                name: "PageHome",
-                params: {
-                  "loginStatus": "1"
-                }
-              })
+              if (!window.localStorage) {
+                window.sessionStorage.setItem('userToken', token);
+              } else {
+                window.localStorage.setItem('userToken', token);
+              }
+              console.log("88888" + window.localStorage.getItem("userToken"));
+  
+              that.$toast.center("登录成功，三秒自动返回首页");
+  
+              setTimeout(() => {
+                that.$router.push({
+                  name: "PageHome",
+                  params: {
+                    "loginStatus": "1"
+                  }
+                })
+              }, 300);
+  
             } else {
               that.$toast.center("系统错误");
             }
           } else {
-            if (!that.isEmpty(data.message)) {
-              that.$toast.center(data.message);
+            if (!that.isEmpty(res.message)) {
+              that.$toast.center(res.message);
             } else {
               that.$toast.center("系统错误");
             }

@@ -145,8 +145,9 @@ import URLString from '../../Api/api'
             }
         },
         created(){
-          console.log("created");
+          console.log(window.localStorage.getItem("userToken"));
           // 获取购物车数据
+        
           var that = this;
           let param = {
             
