@@ -7,7 +7,7 @@
         <h1>欢迎注册</h1>
         <p class="login_tip">
           我已经注册，马上
-          <a href="#">登录</a>
+          <router-link to="/login">登录</router-link>
         </p>
       </div>
     </div>
@@ -163,7 +163,7 @@
             <div><br></div>
           </div>
           <!--/agreement_wp-->
-          <div class="mt20 tc" style="text-align: center"><a class="agree_btn" href="javascript:;" onclick="agreepro();">同意并继续</a></div>
+          <div class="mt20 tc" style="text-align: center"><a class="agree_btn" href="javascript:;" @click="agreepro">同意并继续</a></div>
         </div>
         <!--/dia_cont-->
   
@@ -192,7 +192,7 @@
   import http from '../../Api/baseHttp'
   import URLString from '../../Api/api'
   import '../util/register.js'
-  
+
   export default {
     data() {
       return {
@@ -214,6 +214,8 @@
     mounted() {
       this.identifyCode = "";
       this.makeCode(this.identifyCodes, 4);
+      this.initWithWeb();
+      this.agreepro();
     },
     methods: {
       randomNum(min, max) {
@@ -222,20 +224,14 @@
       refreshCode: function() {
         this.identifyCode = "";
         this.makeCode(this.identifyCodes, 4);
-        this.initWithWeb();
       },
 
       initWithWeb () {
-      $(".i-checks").iCheck({
-          checkboxClass:"icheckbox_square-green",
-          radioClass:"iradio_square-green",
-        });
-      win();
+      this.win();
       $(window).resize(function(){
-          win();
+         this.win();
         });
       },
-
 
       makeCode(o, l) {
         for (let i = 0; i < l; i++) {
@@ -254,7 +250,7 @@
   
           if (this.userInputCode == this.identifyCode) {
             this.$router.push({
-              name: "registerSecond",
+              name: "RegisterSecond",
               params: {
                 phoneNum: this.userPhone
               }
@@ -274,7 +270,7 @@
 
       dia(n){
       $(".mask").fadeIn();
-      $(".dia"+n).fadeIn();
+      $(".dia1").fadeIn();
       },
 
       cls(){
@@ -290,11 +286,8 @@
 
     agreepro(){
       $(".icheckbox_square-green").addClass("checked");
-      cls();
+      this.cls();
     }
-
-
-
 
 
     }

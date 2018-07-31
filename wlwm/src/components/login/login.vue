@@ -74,22 +74,39 @@
       },
       methods: {
         jsonData (data){
-          console.log(data);
+          JSON.stringify(data);
         },
 
-        fetchData: async function () {
-          // let param = {"username": "admin", "password": "123456"}
-          let param = {"username":this.params.username,"password":this.params.password,"userType":"member"}
+        isEmpty:function (obj){
+            if(typeof obj == "undefined" || obj == null || obj == ""){
+                return true;
+            }else{
+               return false;
+            }
+          },
 
+        fetchData: async function () {
+          var that = this;
+          let param = {"username":this.params.username,"password":this.params.password,"userType":"member"};
           http.post(URLString.login, param, function SuccessCallBack(res) {  
               console.log(res)
-              var token = res.data;
-              console.log(token)
+              var token = that.jsonData(res.data);
             if (res.statusCode === 200) {
-              // localStorage.setItem('userToken',data);
-              window.location.href = '/pageHome';
+              if(!that.isEmpty(token)){
+              localStorage.setItem('userToken',data);
+              that.$router.push({
+                name:"PageHome",
+                params:{"loginStatus":"1"}
+                })
+              }else{
+                that.$toast.center("系统错误");
+              }
             } else { 
-              alert(data.message);
+              if(!that.isEmpty(data.message)){
+               that.$toast.center(data.message);
+              }else{
+                that.$toast.center("系统错误");
+              }              
             }
           });
         }

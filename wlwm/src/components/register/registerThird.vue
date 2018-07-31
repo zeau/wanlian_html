@@ -6,7 +6,7 @@
           <a href=""><img style="height:45px;width:auto;"></a><h1>欢迎注册</h1>
           <p class="login_tip">
             我已经注册，马上
-            <a href="#">登录</a>
+          <router-link to="/login">登录</router-link>
           </p>
         </div>
       </div>
@@ -48,7 +48,7 @@
             <div class="reg_form_item">
               <label class="for_text"></label>
               <div class="item">
-                <div class="sub_btn next">提交注册</div>
+                <div class="sub_btn next" @click="submit">提交注册</div>
               </div>
             </div>
           </div>
@@ -66,6 +66,9 @@
 </style>
 
 <script>
+import http from '../../Api/baseHttp'
+import URLString from '../../Api/api'
+
     export default {
         data() {
             return {
@@ -75,6 +78,7 @@
       methods: {
           //将信息提交给后台
           submit:function(){
+            var _that = this;
             let params = {
               "password":this.password,//用户密码
               "smsCode":this.$route.params.vertifyCode,//验证码
@@ -83,15 +87,28 @@
               "userType":"member",
             };
             //提交登录的信息
-            http.post(URLString.registerCode, params, function resCallBack(data) {
+            console.log(params);
+            http.post(URLString.registerUser, params, function resCallBack(data) {
               if(data.statusCode === 200){
                 //注册成功后存储用户的信息在本地
-                this.$toast.center("注册成功");
+                _that.$toast.center("注册成功");
               }else{
-                this.$toast.center(data.message);
+                if(_that.isEmpty(data.message)){
+                _that.$toast.center("系统错误");
+                }else {
+                 _that.$toast.center(data.message);
+                }
               }
             });
+          },
+
+          isEmpty:function (obj){
+            if(typeof obj == "undefined" || obj == null || obj == ""){
+                return true;
+            }else{
+               return false;
+            }
           }
       }
-    }
+  }
 </script>

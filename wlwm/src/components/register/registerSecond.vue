@@ -6,7 +6,7 @@
           <a href=""><img style="height:45px;width:auto;"></a><h1>欢迎注册</h1>
           <p class="login_tip">
             我已经注册，马上
-            <a href="#">登录</a>
+          <router-link to="/login">登录</router-link>
           </p>
         </div>
       </div>
@@ -146,7 +146,7 @@ import URLString from '../../Api/api'
               // 2 跳转下一个页面传值
               if (this.userInputVertifyCode == this.vertifyCode) {
                 this.$router.push({
-                  name: "registerThird",
+                  name: "RegisterThird",
                   params: {phoneNum: this.$route.params.phoneNum, vertifyCode: this.vertifyCode}
                 });
               } else {

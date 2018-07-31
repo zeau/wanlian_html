@@ -20,56 +20,57 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name:'PageHome',
       redirect: '/pageHome'
     },
     {
       path: '/login',
-      name: '登陆',
+      name: 'Login',
       component: Login
     },
     {
       path: '/register',
-      name: '注册',
+      name: 'Register',
       component: Register
     },
     {
       path: '/registerSecond',
-      name: '注册第二步',
+      name: 'RegisterSecond',
       component: RegisterSecond
     },
     {
       path: '/registerThird',
-      name: '注册第三步',
+      name: 'RegisterThird',
       component: RegisterThird
     },
     {
       path: '/goodsList',
-      name: '商品列表',
+      name: 'GoodsList',
       component: GoodsList
     },
     {
       path: '/goodsDetail',
-      name: '商品详情',
+      name: 'GoodsDetail',
       component: GoodsDetail
     },
     {
       path: '/cart',
-      name: '购物车',
+      name: 'Cart',
       component: Cart
     },
     {
       path: '/pageHome',
-      name: '首页',
+      name: 'Home',
       component: Home
     },
     {
       path: '/help',
-      name: '帮助',
+      name: 'Help',
       component: Help
     },
     {
       path: '/personalCenter',
-      name: '个人中心首页',
+      name: 'PersonalCenter',
       component: PersonalCenter
     }
   ]
