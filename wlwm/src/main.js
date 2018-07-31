@@ -9,6 +9,7 @@ import $ from 'jquery'
 import './common/css/base.css'  /*引入公共样式*/
 import './common/css/common.css'
 import './common/css/goods.css'
+
 import 'element-ui/lib/theme-chalk/index.css'
 import './components/tool/toast.css';
 import Toast from './components/tool/toast.js';

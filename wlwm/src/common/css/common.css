@@ -37,14 +37,8 @@ input, label {
   vertical-align: middle;
   display: inline-block;
 }
-#login_name {
-  width: 18px;
-  height: 18px;
-  background:  no-repeat;
-  position: absolute;
-  top: 18px;
-  left: 12px;
-}
+#login_name{ width: 18px;height: 18px;background: url(../images/user.png) no-repeat; position: absolute; top: 18px; left: 12px;}
+#login_code{ width: 18px;height: 22px;background: url(../images/code.png) no-repeat; position: absolute; top: 18px; left: 12px;}
 .login_con_main_tips{
   position: absolute;
   left: 0px;
@@ -76,23 +70,17 @@ input[type="button"] {
   background: #C0A369 !important;
   border: 1px solid #C0A369 !important;
 }
+
 .forgetPwd{
   float: right;
   display: inline;
   color: #C0A369;
   text-decoration: none;
 }
-.re_checkBox{
 
-}
-.beauty-checkbox{
-  width: 16px;
-  height: 16px;
-  background: 0 0 no-repeat;
-  position: absolute;
-  top: 0;
-  border: 1px solid #C0A369;
-}
+.beauty-checkbox{width:20px;height:20px;background:url(../images/checkbox2.png) 0 0 no-repeat;position: absolute;top: 0;}
+.beauty-checkbox.active{background:url(../images/checkbox-checked3.png) 0 0 no-repeat;}
+
 .re_label{
   color: #C0A369;
   margin-left: 10px;

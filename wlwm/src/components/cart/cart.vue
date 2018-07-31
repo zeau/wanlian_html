@@ -147,6 +147,7 @@ import URLString from '../../Api/api'
         created(){
           console.log("created");
           // 获取购物车数据
+          var that = this;
           let param = {
             
           };
@@ -154,7 +155,7 @@ import URLString from '../../Api/api'
             if(res.statusCode == 200) {
 
             }else{
-              this.$toast.center(res.message);
+              that.$toast.center(res.message);
             }
           });
         },
