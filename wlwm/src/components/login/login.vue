@@ -3,7 +3,7 @@
       <!--头部-->
       <div class="container">
         <div class="head2">
-          <a href=""><img style="height:45px;width:auto;"></a><h1>欢迎登录</h1>
+          <a href="#"><img style="height:45px;width:auto;"></a><h1>欢迎登录</h1>
         </div>
       </div>
       <!--主体-->
@@ -29,7 +29,7 @@
                 <div class="login_con_main_row">
                   <input id="log_btn" class="login_con_main_btn" maxlength="20" name="login" value="登 录" type="button" @click="fetchData">
                   <div class="login_con_main_row">
-                    <a class="forgetPwd">忘记密码？</a>
+                    <router-link class="forgetPwd" to="/findPass">忘记密码？</router-link>
                     <input class="re_checkBox" name="remember" style="opacity:0;" type="checkbox">
                     <div class="beauty-checkbox"></div>
                     <label class="re_label">记住账号</label>
@@ -42,7 +42,7 @@
       </div>
       <!--页脚-->
       <div class="container">
-        <p class="login_footer"> Copyright © 2018-2038  万联万名开发平台   苏ICP备17067244</p>
+        <p class="login_footer"> Copyright © 2018-2038  万联万名开发平台   苏ICP备xxxxxx</p>
       </div>
 
     </div>

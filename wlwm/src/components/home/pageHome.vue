@@ -263,15 +263,7 @@ export default {
   name: 'pageHome',
   data () {
     return {
-      // banners: [
-      //   { imgUrl: lunbo1 ,link:"/goodsList"},
-      //   { imgUrl: lunbo2 ,link:"/goodsDetail"},
-      // ],
       banners:[],
-      // banners2: [
-      //   { imgUrl2: xlunbo1 },
-      //   { imgUrl2: xlunbo2 },
-      // ],
       weekRecommendImg:[],
       goodsUrl:{
         goodsUrl1:{

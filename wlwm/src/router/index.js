@@ -10,6 +10,9 @@ import Cart from '@/components/cart/cart'
 import Home from '@/components/home/pageHome'
 import Help from '@/components/help/help'
 import PersonalCenter from '@/components/personal/personalCenter'
+import FindPass from '@/components/findPassword/findPass'
+import FindPassSecond from '@/components/findPassword/findPassSecond'
+
 
 
 Vue.use(Router)
@@ -72,6 +75,16 @@ export default new Router({
       path: '/personalCenter',
       name: 'PersonalCenter',
       component: PersonalCenter
+    },
+    {
+      path: '/findPass',
+      name: 'FindPass',
+      component: FindPass
+    },
+    {
+      path: '/findPassSecond',
+      name: 'FindPassSecond',
+      component: FindPassSecond
     }
   ]
 })
