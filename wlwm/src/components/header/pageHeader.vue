@@ -21,7 +21,7 @@
         <!--logo-->
         <div class="logo fl">
           <router-link to="/pageHome">
-            <img src="../assets/logo.jpg" alt="" style="width:165px;height:40px;" />
+            <img src="../assets/logo.jpeg" alt="" style="width:165px;height:40px;" />
           </router-link>
         </div>
         <!--searchBox-->

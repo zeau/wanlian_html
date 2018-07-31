@@ -4,7 +4,7 @@
         <div class="mini_head" style="margin-top: 70px;">
           <h1 class="logo">
             <router-link to="/pageHome">
-              <img src="../assets/logo.jpg" alt="" style="width: 165px;height: 40px;"/>
+              <img src="../assets/logo.jpeg" alt="" style="width: 165px;height: 40px;"/>
             </router-link>
           </h1>
         </div>
