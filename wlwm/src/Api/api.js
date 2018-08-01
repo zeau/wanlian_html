@@ -1,7 +1,7 @@
 export default {
     login:'/web/user/loginInfor.do',//登录
     registerCode:'/sms/getSmsCode.do',//验证码
-    registerUser:'/wanlian_service-1.0-SNAPSHOT/web/user/registerUser.do',//注册
+    registerUser:'/wanlian/web/user/registerUser.do',//注册
 
     banner:'/web/basicData/findBasicData.do',//轮播图
     hotActivity:'/web/basicData/findBasicData.do',//热门活动

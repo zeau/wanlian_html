@@ -171,8 +171,7 @@
                 var that = this;
                 console.log(param);
                 http.post(URLString.updatePassword, param, function successCallBack(data) {
-                    if (1) {
-                        that.$ref.step.class = "n_step3";
+                    if (data.statusCode == 200) {
                         that.$toast.center("修改成功,3秒后跳转首页");
                         setTimeout(() => {
                             that.$route.push({

@@ -54,7 +54,7 @@ export default {
   
    
 post (url,params,callback ) {
-    
+    params.userToken = token;
     return axios({
       method: 'post',
       //本地base
@@ -75,6 +75,7 @@ post (url,params,callback ) {
     )
   },
   get (url,params,callback) {
+    params.userToken = token;
     return axios({
       method: 'get',
       baseURL: 'http://47.94.93.232:8080/wanlian/',
