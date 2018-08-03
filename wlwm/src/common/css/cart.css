@@ -85,6 +85,8 @@ a:hover{ text-decoration: none;}
 .dialog .dialog-bg-s{bottom: -4px;background-position: 0 -10px}
 .dialog .dialog-bg-e{right: -4px;background-position: -10px 0}
 .dialog .dialog-bg-w{left: -4px;background-position: -6px 0}
+.light_btn2{padding:5px 15px;background:#f9f9f9;color:#666;border-radius:3px;border:1px solid #ddd;}
+.light_btn2:hover{color:#333;}
 
 #city_dialog {width: 312px;height: auto}
 #city_dialog .dialog-outer {background-color: #f3f3f3}
