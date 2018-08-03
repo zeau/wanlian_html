@@ -28,9 +28,9 @@
         <!-- /head_s -->
         <div class="flow_title">
           <b></b>
-          <span>
-                建议您立即<router-link to="/pageHome">登录</router-link>，以确保顺利进行购物。
-              </span>
+          <span class="login_isShow">
+                建议您立即<router-link to="/login">登录</router-link>，以确保顺利进行购物。
+          </span>
         </div>
         <div class="cart_box">
           <div class="cart_head">
@@ -59,7 +59,7 @@
 
               <input name="ids" id="ids" value="" type="hidden">
 
-            <!--根据商家进行分组-->
+            <!--根据商家进行分组 这里应该是双重循环-->
             <div class='cart-block' v-for="item in jsonUserData">
                 <div class='activity'> <div class='fl w500 ml15'><span>{{item.name}}</span></div></div>
                 <cart-item :jsonItemData='item.jsonItemData'></cart-item>
@@ -369,6 +369,7 @@
         if (res.statusCode == 200) {
           console.log(res);
           // 购物车不为空
+          $(".login_isShow").hide();
           if (res.data.length > 0) {
             $(".is_none").hide();
           } else {
@@ -378,7 +379,7 @@
           // 遍历数组 新增 渲染购物车
           var arr = [];
           res.data.forEach(function(value, index) {
-            let name = value.name;
+            let name = value.name + index;
             let goodPic = "http://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201803/1521775337351.jpg?x-oss-process=image/resize,w_160";//商品图片地址
             let goodPrice = "1980";//商品价格 
             let goodSpc = "黑色,M";//商品规格 黑色/M
@@ -391,7 +392,9 @@
               "goodSpc":goodSpc,
               "isHave":isHave,
               "inventory":inventory,
-              "cartGoodNum":"123"
+              "cartGoodNum":value.name + index,
+              "value":"1",
+              "checkName":"beautyCheck"+index
             };
             let item = {"name":name,"jsonItemData":jsonItemData};
             arr.push(item);
@@ -402,6 +405,7 @@
           that.jsonUserData = arr;
   
         } else {
+          $(".login_isShow").show();
           that.$toast.center(res.message);
         }
       });
@@ -494,6 +498,7 @@
             $('.beauty-checkbox-all').addClass('active');
           }
         }
+        // 全选操作
         if (checkFlag) {
           if (choseType) {
             $(obj).siblings('.beauty-checkbox').addClass('active');

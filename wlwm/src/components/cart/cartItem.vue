@@ -4,9 +4,9 @@
     
         <div class="cart_goods" :id="jsonItemData.cartGoodNum">
             <div class="cart_item">
-                <div class="cell g_check">
+                <div class="cell g_check" @click="checkBoxChecked">
                     <input type="checkbox" class="g_ckeck mjchecked" name="box" value="1901">
-                    <div class="beauty-checkbox"></div>
+                    <div class="beauty-checkbox"  :id="jsonItemData.checkName" ></div>
                 </div>
                 <div class="cell g_goods">
                     <div class="img">
@@ -24,9 +24,9 @@
                 <div class="cell g_price">1980 </div>
                 <div class="cell g_count">
                     <div class="count">
-                        <a href="javascript:void(0);" class="decrement" data-id="1901">-</a>
-                        <input type="text" class="text w30 num_input" value="1" data-maxnum="20">
-                        <a href="javascript:void(0);" class="increment" data-maxnum="20" data-id="1901">+</a>
+                        <a href="javascript:void(0);" class="decrement" data-id="1901" @click="minus">-</a>
+                        <input type="text" class="text w30 num_input" :value="jsonItemData.value" data-maxnum="20" :name= "jsonItemData.cartGoodNum">
+                        <a href="javascript:void(0);" class="increment" data-maxnum="20" data-id="1901" @click="add">+</a>
                     </div>
                     <div class="red">{{jsonItemData.inventory}}</div>
                 </div>
@@ -57,7 +57,45 @@
     
             }
         },
-        props:['jsonItemData']
+        props:['jsonItemData'],
+        methods :{
+            add(){
+                let name = this.jsonItemData.cartGoodNum;
+                let component = $("input[name="+name+"]");
+                let number =  parseInt(component.val()) + 1;
+                let max = parseInt(component.attr("data-maxnum"));
+                if(number <= max){
+                    component.val(number);
+                }else{
+                    this.$toast.center("库存不足");
+                } 
+            },
+            minus(){
+                let name = this.jsonItemData.cartGoodNum;
+                let component =  $("input[name="+name+"]");
+                let number =  parseInt(component.val()) - 1;
+                if(number >= 1){
+                    component.val(number);
+                }else{
+                    this.$toast.center("已经是最小值");
+                } 
+            },
+            checkBoxChecked(){
+               let elm = $(this.jsonItemData.checkName);
+               let hasC = elm.hasClass("active");
+               console.log(hasC);
+               if(hasC){
+                elm.removeClass("active");
+               }else{
+                elm.addClass("active");
+                console.log(elm.hasClass("active"));
+
+               }
+
+            }
+        }
+
+
     }
 </script>
 
