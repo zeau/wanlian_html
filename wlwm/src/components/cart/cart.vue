@@ -35,8 +35,8 @@
         <div class="cart_box">
           <div class="cart_head">
             <div class="thead t_check">
-              <input type="checkbox" class="check_all" checked="checked" onclick="oncheckAll(this);" />
-              <div class="beauty-checkbox beauty-checkbox-all active" onclick="oncheckAll(this);"></div>
+              <input type="checkbox" class="check_all"  @click="oncheckAll" />
+              <div class="beauty-checkbox beauty-checkbox-all" @click="oncheckAll"></div>
               <label>全选</label>
             </div>
             <div class="thead t_goods">商品</div>
@@ -62,7 +62,7 @@
             <!--根据商家进行分组 这里应该是双重循环-->
             <div class='cart-block' v-for="item in jsonUserData">
                 <div class='activity'> <div class='fl w500 ml15'><span>{{item.name}}</span></div></div>
-                <cart-item :jsonItemData='item.jsonItemData'></cart-item>
+                <cart-item :jsonItemData='item.jsonItemData' v-on:sumMoney="sumMoney"></cart-item>
             </div>
 
           
@@ -72,16 +72,14 @@
   
           <div class="cart_total ">
             <div class="thead fl t_check ">
-              <div class="beauty-checkbox beauty-checkbox-all active " onclick=" "></div>
-              <input type="checkbox " class="check_all " checked="checked " onclick="oncheckAll(this); ">
+              <div class="beauty-checkbox beauty-checkbox-all  " @click="oncheckAll"></div>
+              <input type="checkbox " class="check_all "  @click="oncheckAll">
               <label>全选</label>
               <span class="ml20 ">已选</span><span class="red allcount ">0</span><span>件商品</span>
             </div>
             <a class="check_btn fr " href="javascript:void(0); " @click="onpay">结算</a>
             <div class="fr f14 fb mr20 ">
-  
-  
-              <span>总计（不含运费）：</span><span class="f20 red payPrice mr20 ">￥0</span>
+              <span>总计（不含运费）：</span><span class="f20 red payPrice mr20 ">￥{{sum}}</span>
             </div>
           </div><!-- /cart_total -->
 
@@ -347,7 +345,9 @@
   export default {
     data() {
       return {
-        jsonUserData:[]
+        jsonUserData:[],
+        sum:0,
+        sumGoods:"已选0件商品"
       }
     },
     components: {
@@ -362,7 +362,6 @@
       });
   
       // 获取购物车数据
-  
       var that = this;
       let param = {};
       http.post(URLString.shoppingCartList, param, function successCallBack(res) {
@@ -394,7 +393,8 @@
               "inventory":inventory,
               "cartGoodNum":value.name + index,
               "value":"1",
-              "checkName":"beautyCheck"+index
+              "checkName":"beautyCheck"+index,
+              "index":index
             };
             let item = {"name":name,"jsonItemData":jsonItemData};
             arr.push(item);
@@ -409,8 +409,35 @@
           that.$toast.center(res.message);
         }
       });
+
     },
     methods: {
+
+      // 全选操作
+      oncheckAll (){
+        // 选择框添加active
+          let sumElm = $(this).parents(".cart_goods").find(".count").find("input");
+          console.log(sumElm);
+          let elm = $(".beauty-checkbox-all");
+          let bo = elm.hasClass("active");//是否处于active状态
+          if(bo){
+            elm.removeClass("active");
+            $("#subForm").siblings(".beauty-checkbox").removeClass("active");
+          }else{
+            elm.addClass("active");
+            $("#subForm").siblings(".beauty-checkbox").addClass("active");
+          }
+      },
+
+      //子组件向父组件传值
+      sumMoney(param){
+        if(param.isAdd){
+          this.sum = this.sum + param.money;
+        }else{
+          this.sum = this.sum - param.money;
+        }
+      },
+
       dodelBatch(){
 
       },

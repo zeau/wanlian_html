@@ -6,7 +6,7 @@
             <div class="cart_item">
                 <div class="cell g_check" @click="checkBoxChecked">
                     <input type="checkbox" class="g_ckeck mjchecked" name="box" value="1901">
-                    <div class="beauty-checkbox"  :id="jsonItemData.checkName" ></div>
+                    <div class="beauty-checkbox"  :id="'beautyCheck'+jsonItemData.index"></div>
                 </div>
                 <div class="cell g_goods">
                     <div class="img">
@@ -31,7 +31,7 @@
                     <div class="red">{{jsonItemData.inventory}}</div>
                 </div>
                 <div class="cell g_promotion">
-                    ￥ <span class="pv_smprice"> {{jsonItemData.goodPrice}} </span>
+                    ￥ <span class="pv_smprice" :id = "jsonItemData.index +'index'"> {{jsonItemData.goodPrice}} </span>
                     <input type="hidden" value="1980" class="oneprice">
                     <input type="hidden" value="1980" class="smprice">
                 </div>
@@ -54,7 +54,7 @@
         name: 'cartItem',
         data() {
             return {
-    
+                sumMoney:0
             }
         },
         props:['jsonItemData'],
@@ -80,16 +80,34 @@
                     this.$toast.center("已经是最小值");
                 } 
             },
+
+            //checkBox点击事件
             checkBoxChecked(){
-               let elm = $(this.jsonItemData.checkName);
+               let elm = $("#"+"beautyCheck"+this.jsonItemData.index);
+               let pri = $("#"+this.jsonItemData.index+"index");
                let hasC = elm.hasClass("active");
-               console.log(hasC);
                if(hasC){
-                elm.removeClass("active");
+               elm.removeClass("active");
+               if(this.sumMoney!=0){
+                let num = Number( pri.text());
+                this.sumMoney =  this.sumMoney - num;
+                 let param = {
+                    "money":num,
+                    "isAdd":false
+                }
+                this.$emit('sumMoney', param);
+                }
                }else{
+                let num = Number( pri.text() );
+                console.log(this.sumMoney);
+                this.sumMoney =  this.sumMoney + num;
                 elm.addClass("active");
                 console.log(elm.hasClass("active"));
-
+                let param = {
+                    "money":num,
+                    "isAdd":true
+                }
+                this.$emit('sumMoney', param);
                }
 
             }
