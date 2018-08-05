@@ -13,7 +13,7 @@
         <div class="login_con">
           <div class="login_con_title">
             <span>会员登陆</span>
-            <p>还没有账号？马上<a href="#">免费注册</a></p>
+            <p>还没有账号？马上<router-link to="/register">免费注册</router-link></p>
           </div>
           <div class="login_con_main">
             <form id="login_form" name="loginForm">

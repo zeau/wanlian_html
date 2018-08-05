@@ -69,13 +69,13 @@
                 </a>
               </li>
             </ul>
-            <div class="pages clearfix">
-              <a href="#">上一页</a>
-              <a href="#" class="active">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">下一页</a>
+
+            <div class="paging_area">
+              <div class="paging" v-for="(item,index) in pageList" :key="index">
+                <a href="javaScrip:void(0)" :class="item.active" @click="clickIndex(this)">{{item.indexName}}</a>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -101,6 +101,8 @@
             return {
               logourl : 'src/assets/logo.jpg',
               shoppingList:[],
+              pageList:[],
+              pageindex:1
             }
         },
         components:{
@@ -108,9 +110,41 @@
           PageHeader
         },
         created(){
+          this.req(1);//首次进入请求第一页数据
+        },
+        methods :{
+
+        clickIndex(that){
+            console.log(that);
+            let num = Number(that.text());
+            this.req(num);
+        },
+
+
+          req(pageCurrent){
           let that = this;
-          http.post(URLString.goodsList,{pageCurrent:1,pageSize:9,salesVolume:1,popularity:1,putawayDt:1,name:''},function SuccessCallBack(res){
+          let param = {
+            "pageCurrent":pageCurrent,
+            "pageSize":9,
+            "salesVolume":1,
+            "popularity":1,
+            "putawayDt":1,
+            "name":"",
+          };
+          http.post(URLString.goodsList,param,function SuccessCallBack(res){
             console.log(res)
+            //设置pageCount
+            let arr = [
+              {
+                active:"no_pages",
+                indexName:"上一页"
+              },
+              {
+                active:"pg_next",
+                indexName:"下一页"
+              }
+            ];
+            
             if(res.statusCode === 200){
               for(let i in res.data.row){
                 if(res.data.row[i].isNone == 0){
@@ -119,11 +153,31 @@
                   res.data.row[i].isNoneName = '有货'
                 }
               }
+              //加载分页内容
+             for (let index = 0; index < res.data.pageCount; index++) {
+               let elm = {};
+               if (index + 1 == pageCurrent) {
+                elm =  {
+                active:"num_cur prev",
+                indexName:pageCurrent
+              }
+
+              } else {
+
+                  elm = {
+                    active:"num",
+                    indexName:index + 1
+                   }
+
+               } 
+               arr.splice(index + 1,0,elm);
+             }
+             that.pageList = arr;
+             console.log(arr);
             }
-            that.shoppingList = res.data.rows;
-            console.log(that.shoppingList)
-            
+            that.shoppingList = res.data.rows;            
           })
+          }
         }
     }
 </script>

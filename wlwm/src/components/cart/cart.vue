@@ -422,10 +422,10 @@
           let bo = elm.hasClass("active");//是否处于active状态
           if(bo){
             elm.removeClass("active");
-            $("#subForm").siblings(".beauty-checkbox").removeClass("active");
+            $("#subForm").siblings("cart-item").removeClass("active");
           }else{
             elm.addClass("active");
-            $("#subForm").siblings(".beauty-checkbox").addClass("active");
+            $("#subForm").siblings("cart-item").addClass("active");
           }
       },
 
