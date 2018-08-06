@@ -265,11 +265,17 @@
   display: block;
   float: left;
 }
+.order img{
+  margin-left: 10px;
+}
 .order a:hover{
   text-decoration: none;
   color: #8B572A;
   font-weight: 600;
 }
+
+
+
 .goods_list{
   width: 100%;
   padding: 20px 0px;
@@ -292,11 +298,11 @@
 .goods_list_item .goodsBox a:hover{
 cursor: pointer;
 }
-.goods_list_item .goodsBox a img {
+.goods_list_item .goodsBox a>img {
   width: 228px;
   height: 228px;
 }
-.goods_list_item .goodsBox a h3 {
+.goods_list_item .goodsBox a>h3 {
   margin-top: 15px;
   line-height: 18px;
   overflow: hidden;
@@ -309,7 +315,11 @@ cursor: pointer;
   line-height: 20px;
   font-weight: bold;
 }
-.goods_list_item .goodsBox a span {
+.goods_list_item{
+  color: #999999;
+  font-family: "Microsoft YaHei";
+}
+ .goods_span {
   color: #999999;
   font-family: "Microsoft YaHei";
 }

@@ -60,7 +60,7 @@
               <input name="ids" id="ids" value="" type="hidden">
 
             <!--根据商家进行分组 这里应该是双重循环-->
-            <div class='cart-block' v-for="item in jsonUserData">
+            <div class='cart-block' v-for="item in jsonUserData" :key="item.index">
                 <div class='activity'> <div class='fl w500 ml15'><span>{{item.name}}</span></div></div>
                 <cart-item :jsonItemData='item.jsonItemData' v-on:sumMoney="sumMoney"></cart-item>
             </div>

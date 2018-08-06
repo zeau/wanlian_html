@@ -193,8 +193,8 @@ a:hover {text-decoration:none; color:#e32d2d;}
 .flr_line_01 .f_item li {width:199px; height:299px;}
 .flr_line_02 .f_item li {width:199px; height:199px;}
 .f_item li a:hover img {opacity:0.8; filter:alpha(opacity=80);}
-.goods_list li {float:left; width:169px; height:229px; border:1px solid #ddd; padding:10px 15px;}
-.goods_list li:hover {box-shadow:0 0 5px rgba(140,140,140,.5);}
+.goods_list_li  {float:left; width:169px; height:229px; border:1px solid #ddd; padding:10px 15px;}
+.goods_list_li:hover {box-shadow:0 0 5px rgba(140,140,140,.5);}
 .good_name {line-height:150%; height:36px;}
 .good_name a {color:#333;}
 .good_price {font-family:Microsoft YaHei; font-size:14px;}
