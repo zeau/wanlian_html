@@ -53,7 +53,7 @@
         </div>
         <div class="goods_list clearfix">
           <ul class="goods_list_item clearfix">
-            <li class="goodsBox goods_list_li" v-for="(item,index) in shoppingList" :key="index" :data-id="item.id">
+            <li class="goodsBox goods_list_li" v-for="(item,index) in shoppingList" :key="index" :data-id="item.id" @click="seeDetail(item)">
               <a class="">
                 <img :src="item.imgUrl">
                 <h3>
@@ -63,8 +63,8 @@
                   <em>￥</em> {{item.price}}
                 </p>
                 <span :isNone="item.isNone" class="goods_span">
-                          {{item.isNoneName}}
-                        </span>
+                              {{item.isNoneName}}
+                            </span>
               </a>
             </li>
           </ul>
@@ -142,6 +142,19 @@
     methods: {
   
       /*
+       *前往商品详情
+       *seeDetail 跳转
+       */
+      seeDetail(val) {
+        this.$router.push({
+          name: "GoodsDetail",
+          params: {
+            goodInfo: val
+          }
+        });
+  
+      },
+      /*
        *分页的点击事件
        *prevClick 上一页
        *nextClick 下一页
@@ -162,6 +175,7 @@
         this.req(val, this.salesVolume, this.popularity, this.putawayDt);
       },
   
+  
       /*
        *条件筛选点击事件
        *selecterWithCon 
@@ -169,13 +183,13 @@
       selecterWithCon(val) {
         if (val == 0) {
           this.selSrc = this.salesVolume == 0 ? require("../../common/images/arrow_up.png") : require("../../common/images/arrow_up.png");
-          this.salesVolume = this.salesVolume == 0 ? 1:0;
+          this.salesVolume = this.salesVolume == 0 ? 1 : 0;
         } else if (val == 1) {
           this.popularSrc = this.popularity == 0 ? "../../common/images/arrow_d.png" : "../../common/images/arrow_up.png";
-          this.popularity = this.popularity == 0 ? 1:0;
+          this.popularity = this.popularity == 0 ? 1 : 0;
         } else {
           this.putawaySrc = this.putawayDt == 0 ? "../../common/images/arrow_d.png" : "../../common/images/arrow_up.png";
-          this.putawayDt = this.putawayDt == 0 ? 1:0;
+          this.putawayDt = this.putawayDt == 0 ? 1 : 0;
         }
         this.req(this.currentPage, this.salesVolume, this.popularity, this.putawayDt);
       },

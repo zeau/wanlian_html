@@ -100,9 +100,7 @@
               </dd>
               <dt>购买数量：</dt>
               <dd>
-                <a class="minus num_minus fl" href="javascript:;">-</a>
-                <input class="min_text num_text fl product_buy_num" type="text" value="1" />
-                <a class="plus num_plus fl" href="javascript:;">+</a>
+                 <el-input-number v-model="num1" @change="handleChange" :min="1" :max="10" label="描述文字"></el-input-number>
               </dd>
             </dl>
             <div class="by_cart mt20 clearfix">
@@ -402,7 +400,7 @@ export default {
       name:'',
       price:'',
       bigImg:'',
-
+      num1:1
     };
   },
 
@@ -412,7 +410,7 @@ export default {
   },
   methods:{
     addShoppingCart(){
-      http.post(URLString.joinShoppingCart,{id:1},function SuccessCallBack(res){
+      http.post(URLString.joinShoppingCart,{id:this.$route.params.goodInfo.id},function SuccessCallBack(res){
        if(res.statusCode === 200){
          alert('成功加入购物车');
        }else{
@@ -423,7 +421,8 @@ export default {
   },
   created(){
     let that = this;
-    http.post(URLString.goodsInfo,{id:5},function SuccessCallBack(res){
+    // 获取商品信息
+    http.post(URLString.goodsInfo,{id:this.$route.params.goodInfo.id},function SuccessCallBack(res){
       console.log(res);
       that.name = res.data.name;
       that.price = res.data.price;
