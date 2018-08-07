@@ -854,6 +854,9 @@
 </template>
 
 <script>
+  import http from '../../Api/baseHttp';
+  import URLString from '../../Api/api';
+
     export default {
         name: "personIntroCenter",
         data() {
@@ -864,10 +867,25 @@
             }
         },
         props: ["showWithFIndex"],
+        created () {
+          this.findMyOrder("pay");  
+        },
         methods: {
             handleSelect(key, keyPath) {
                 console.log(key, keyPath);
+            },
+
+            // 获取我的订单
+            findMyOrder (orderStatus){
+                let param = {
+                    "orderStatus":orderStatus
+                };
+                http.post(URLString.myOrder,param,function successCall(res){
+                    console.log(res);
+                });
             }
+
+
         }
     }
 </script>

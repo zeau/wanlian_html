@@ -252,12 +252,12 @@
                 </div><!--/evaluation_info-->
 
                 <div class="det_title mt10 clearfix">
-                  <ul class="cmt_tabs fl clearfix">
-                    <li class="cur"><a href="javascript:;" class="commentTab" data-role="3">全部评论（<span class="allCount"></span>）</a></li>
-                    <li><a href="javascript:;" class="commentTab" data-role="0">好评（<span class="haoCount"></span>）</a></li>
-                    <li><a href="javascript:;" class="commentTab" data-role="1">中评（<span class="zhongCount"></span>）</a></li>
-                    <li><a href="javascript:;" class="commentTab" data-role="2">差评（<span class="chaCount"></span>）</a></li>
-                  </ul><!--/cmt_tabs-->
+                  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" text-color="#999" active-text-color="#57402e">
+                      <el-menu-item index="1">全部评论（0）</el-menu-item>
+                      <el-menu-item index="2">好评（0）</el-menu-item>
+                      <el-menu-item index="3">中评（0）</el-menu-item>
+                      <el-menu-item index="4">差评（0）</el-menu-item>
+                  </el-menu>
                 </div><!--/det_title-->
 
                 <div class="comment_wp">
@@ -279,14 +279,14 @@
 
               <div class="details_box">
                 <div class="det_title mt10 clearfix">
-                  <ul class="consult_tabs fl clearfix">
-                    <li class="cur" data-role="0"><a href="javascript:;">全部购买咨询</a></li>
-                    <li data-role="1"><a href="javascript:;">商品咨询</a></li>
-                    <li data-role="2"><a href="javascript:;">库存配送</a></li>
-                    <li data-role="3"><a href="javascript:;">支付</a></li>
-                    <li data-role="4"><a href="javascript:;">发票及配送</a></li>
-                    <li data-role="5"><a href="javascript:;">促销及赠品</a></li>
-                  </ul><!--/consult_tabs-->
+                  <el-menu :default-active="activeIndex1" class="el-menu-demo" mode="horizontal" @select="handleSelect" text-color="#999" active-text-color="#ffd04b">
+                      <el-menu-item index="1">全部购买咨询</el-menu-item>
+                      <el-menu-item index="2">商品咨询</el-menu-item>
+                      <el-menu-item index="3">库存配送</el-menu-item>
+                      <el-menu-item index="4">支付</el-menu-item>
+                      <el-menu-item index="5">发票及配送</el-menu-item>
+                      <el-menu-item index="6">促销及赠品</el-menu-item>
+                  </el-menu>
                 </div><!--/det_title-->
                 <div class="consult_box clearfix">
                   <div class="consult_search fl">
@@ -400,7 +400,9 @@ export default {
       name:'',
       price:'',
       bigImg:'',
-      num1:1
+      num1:1,
+      activeIndex1:"1",
+      activeIndex:"1"
     };
   },
 
@@ -425,7 +427,7 @@ export default {
   created(){
     let that = this;
     // 获取商品信息
-    console.log(this.$route.params.goodInfo.id);
+    console.log(this.$route.params.goodInfo);
     http.post(URLString.goodsInfo,{id:this.$route.params.goodInfo.id},function SuccessCallBack(res){
       console.log(res);
       that.name = res.data.name;
