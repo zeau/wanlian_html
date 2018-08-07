@@ -67,7 +67,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/help',
+      path: '/help:title',
       name: 'Help',
       component: Help
     },

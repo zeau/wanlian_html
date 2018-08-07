@@ -367,6 +367,7 @@
       http.post(URLString.shoppingCartList, param, function successCallBack(res) {
         if (res.statusCode == 200) {
           console.log(res);
+          
           // 购物车不为空
           $(".login_isShow").hide();
           if (res.data.length > 0) {
@@ -441,7 +442,8 @@
       dodelBatch(){
 
       },
-      win() {
+
+      win(){
         var _wd = $(window).width();
         var _hd = $(window).height();
         $(".member-dialog").css("top", (_hd - $(".member-dialog").height()) / 2).css("left", (_wd - $(".member-dialog").width()) / 2);
