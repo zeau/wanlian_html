@@ -24,16 +24,16 @@
                 <dl class="svc_box fl">
                     <dt>购物指南</dt>
                     <dd>
-                        <div><router-link :to="{name:'Help',params:{title:'用户注册'}}" target="_blank">用户注册</router-link></div>
-                        <div><router-link to="{path:'/help'}" target="_blank">账户安全</router-link></div>
-                        <div><router-link to="{path:'/help'}" target="_blank">联系客服</router-link></div>
-                        <div><router-link to="{path:'/help'}" target="_blank">购物流程</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'用户注册',index:1}}" target="_blank">用户注册</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'账户安全',index:2}}" target="_blank">账户安全</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'联系客服',index:3}}" target="_blank">联系客服</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'购物流程',index:4}}" target="_blank">购物流程</router-link></div>
                     </dd>
                 </dl>
                 <dl class="svc_box fl">
                     <dt>帮助中心</dt>
                     <dd>
-                        <div><router-link :to="{path:'/help'}" target="_blank">函百平台承诺</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'函百平台承诺'}}" target="_blank">函百平台承诺</router-link></div>
                     </dd>
                 </dl>
 
@@ -41,27 +41,26 @@
                     <dt>配送方式</dt>
                     <dd>
                         <!-- <router-link :to="{path:''}" ></router-link> -->
-                        <div><router-link to="{path:'/help'}" target="_blank">函百快递</router-link></div>
-                        <div><router-link to="{path:'/help'}" target="_blank">上门自提</router-link></div>
-                        <div><router-link to="{path:'/help'}" target="_blank">物流费用收费标准</router-link></div>
-                        <div><router-link to="{path:'/help'}" target="_blank">配送服务说明</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'万联快递',index:8}}" target="_blank">万联快递</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'物流费用收费标准',index:10}}" target="_blank">物流费用收费标准</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'配送服务说明',index:11}}" target="_blank">配送服务说明</router-link></div>
                     </dd>
                 </dl>
 
                 <dl class="svc_box fl">
                     <dt>支付方式</dt>
                     <dd>
-                        <div><router-link to="{path:'/help'}" target="_blank">在线支付</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'在线支付',index:13}}" target="_blank">在线支付说明</router-link></div>
                     </dd>
                 </dl>
 
                 <dl class="svc_box fl">
                     <dt>售后服务</dt>
                     <dd>
-                        <div><router-link to="{path:'/help'}" target="_blank">售后政策</router-link></div>
-                        <div><router-link to="{path:'/help'}" target="_blank">价格保护</router-link></div>
-                        <div><router-link to="{path:'/help'}" target="_blank">退单说明</router-link></div>
-                        <div><router-link to="{path:'/help'}" target="_blank">取消订单</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'售后政策',index:15}}" target="_blank">售后政策</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'价格保护',index:16}}" target="_blank">价格保护</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'退单说明',index:17}}" target="_blank">退单说明</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'取消订单',index:18}}" target="_blank">取消订单</router-link></div>
                     </dd>
                 </dl>
 
@@ -74,7 +73,7 @@
 
         <!--页脚-->
         <div class="container">
-          <p class="login_footer"> Copyright © 2018-2038 万联万名交易平台 苏ICP备xxxxxx</p>
+          <p class="login_footer"> Copyright © 2018-2038 万联万名交易平台  北京ICP备xxxxxx</p>
         </div>
     </div>
 </template>

@@ -95,6 +95,8 @@
         },
         created() {
             this.helpTitle = this.$route.params.title; //标题赋值  
+            this.wuliuIndex = this.$route.params.index; //标题赋值  
+            this.leftItemIndex = this.$route.params.index;
         },
         components: {
             PageFooter,
