@@ -409,6 +409,9 @@ export default {
     pageFooter
   },
   methods:{
+    handleChange(){
+
+    },
     addShoppingCart(){
       http.post(URLString.joinShoppingCart,{id:this.$route.params.goodInfo.id},function SuccessCallBack(res){
        if(res.statusCode === 200){
@@ -422,6 +425,7 @@ export default {
   created(){
     let that = this;
     // 获取商品信息
+    console.log(this.$route.params.goodInfo.id);
     http.post(URLString.goodsInfo,{id:this.$route.params.goodInfo.id},function SuccessCallBack(res){
       console.log(res);
       that.name = res.data.name;

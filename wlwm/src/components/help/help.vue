@@ -4,7 +4,7 @@
         <div class="location">
 				<a href="javascript:;"><strong>帮助中心</strong></a>
 				<span>&gt;</span><a href="javascript:;">购物指南</a>
-				<span>&gt;</span><span>用户注册</span>
+				<span>&gt;</span><span>{{this.$route.params.userTitle}}</span>
         </div>
 
         <div class="help_cont fr">

@@ -24,10 +24,10 @@
                 <dl class="svc_box fl">
                     <dt>购物指南</dt>
                     <dd>
-                        <div><router-link to="{path:'/help'}" target="_blank">用户注册</router-link></div>
-                        <div><router-link to="{path:'/help'}" target="_blank">账户安全</router-link></div>
-                        <div><router-link to="{path:'/help'}" target="_blank">联系客服</router-link></div>
-                        <div><router-link to="{path:'/help'}" target="_blank">购物流程</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {userTitle:123}}" target="_blank">用户注册</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'账户安全'}}" target="_blank">账户安全</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'联系客服'}}" target="_blank">联系客服</router-link></div>
+                        <div><router-link :to="{name:'Help',params: {title:'购物流程'}}" target="_blank">购物流程</router-link></div>
                     </dd>
                 </dl>
                 <dl class="svc_box fl">
