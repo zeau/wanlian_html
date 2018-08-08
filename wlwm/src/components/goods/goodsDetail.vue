@@ -60,7 +60,7 @@
           <input type="hidden" id="isCustomerDiscount" value="0">
           <input type="hidden" class="bread_crumb_cat_id" value="511" data-role="detail" />
           <div class="pd_title">
-            <h2>{{name}}</h2>
+            <h2>{{jsonData.name}}</h2>
             <strong></strong>
           </div>
           <!--/pd_title-->
