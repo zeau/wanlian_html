@@ -66,9 +66,9 @@ input, label {
 }
 .login_con_main_btn:hover{ background: #352110}
 input[type="button"] {
-  color: #fff !important;
-  background: #C0A369 !important;
-  border: 1px solid #C0A369 !important;
+  color: #fff ;
+  background: #C0A369 ;
+  border: 1px solid #C0A369 ;
 }
 
 .forgetPwd{
@@ -303,9 +303,9 @@ input[type="button"] {
   font-size: 20px;
 }
 button, input[type="button"] {
-  color: #fff !important;
-  background-color: #C0A369 !important;
-  border: 1px solid #C0A369 !important;
+  color: #fff ;
+  background-color: #C0A369 ;
+  border: 1px solid #C0A369 ;
 }
 .register_con_form .reg_form_item .item {
   line-height: 48px;
