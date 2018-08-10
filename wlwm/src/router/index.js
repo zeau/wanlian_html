@@ -6,10 +6,15 @@ import RegisterSecond from '@/components/register/registerSecond'
 import RegisterThird from '@/components/register/registerThird'
 import GoodsList from '@/components/goods/goodsList'
 import GoodsDetail from '@/components/goods/goodsDetail'
+
 import Cart from '@/components/cart/cart'
+import CheckOrder from '@/components/cart/checkOrder'
+
+
 import Home from '@/components/home/pageHome'
 import Help from '@/components/help/help'
 import PersonalCenter from '@/components/personal/personalCenter'
+
 import FindPass from '@/components/findPassword/findPass'
 import FindPassSecond from '@/components/findPassword/findPassSecond'
 
@@ -85,6 +90,11 @@ export default new Router({
       path: '/findPassSecond',
       name: 'FindPassSecond',
       component: FindPassSecond
+    },
+    {
+      path: '/checkOrder',
+      name: 'CheckOrder',
+      component: CheckOrder
     }
   ]
 })

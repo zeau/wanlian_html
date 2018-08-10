@@ -54,11 +54,12 @@ export default {
   
    
 post (url,params,callback ) {
+    // params.userToken = "uc.adfb6ba3-0f10-48ec-89ed-e0093d1bc0f7";
     params.userToken = token;
     return axios({
       method: 'post',
       //本地base
-      baseURL: 'http://47.94.93.232:8080/wanlian',
+      baseURL: 'http://wlwmmall.com/wanlian',
       url,
       data: qs.stringify(params),
       timeout: 10000,
@@ -78,7 +79,7 @@ post (url,params,callback ) {
     params.userToken = token;
     return axios({
       method: 'get',
-      baseURL: 'http://47.94.93.232:8080/wanlian/',
+      baseURL: 'http://wlwmmall.com/wanlian/',
       url,
       data:qs.stringify(params),// get 请求时带的参数
       timeout: 10000,

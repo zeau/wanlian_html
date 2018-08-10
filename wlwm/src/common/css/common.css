@@ -29,10 +29,10 @@ a{ color: #666;}
 input::-webkit-input-placeholder,input::-ms-input-placeholder,input::-moz-placeholder, textarea::-moz-placeholder {
   color: #D0C0A3;
 }
-input[type="text"], input[type="password"] {
+/* input[type="text"], input[type="password"] {
   color: #B3A180 !important;
   border: 1px solid #CBBFA8 !important;
-}
+} */
 input, label {
   vertical-align: middle;
   display: inline-block;
@@ -65,11 +65,11 @@ input, label {
   margin-bottom: 10px;
 }
 .login_con_main_btn:hover{ background: #352110}
-input[type="button"] {
+/* input[type="button"] {
   color: #fff ;
   background: #C0A369 ;
   border: 1px solid #C0A369 ;
-}
+} */
 
 .forgetPwd{
   float: right;
@@ -302,11 +302,11 @@ input[type="button"] {
   line-height: 48px;
   font-size: 20px;
 }
-button, input[type="button"] {
+/* button, input[type="button"] {
   color: #fff ;
   background-color: #C0A369 ;
   border: 1px solid #C0A369 ;
-}
+} */
 .register_con_form .reg_form_item .item {
   line-height: 48px;
 }

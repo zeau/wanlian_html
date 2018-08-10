@@ -182,6 +182,7 @@
                 }
     
             },
+
             delItem() {
                 var that = this;
                 this.$confirm('此商品将从购物车永久删除，是否继续?', '提示', {
@@ -195,33 +196,22 @@
                         console.log(delArr);
                         that.$emit('dodelBatch', delArr);
                     } else {
-                        this.$message({
+                        that.$message({
                             type: 'info',
                             message: '已取消删除'
                         });
                     }
                 });
             },
-            //删除的点击事件
-            dodelBatch(ids) {
-                let param = {
-                    "ids": ids
-                };
-                http.post(URLString.deleteShoppingCartList, param, function successCallBack(res) {
-                    console.log(res);
-                    if (res.data.statusCode == 200) {
-                        this.$message({
-                            type: 'success',
-                            message: '删除成功!'
-                        });
-                    } else {
-                        this.$message({
-                            type: 'error',
-                            message: '删除失败!'
-                        });
-                    }
-                });
-            },
+
+            // 返回被选中的Id
+            backCheckedID(){
+                let elm = $("#" + "beautyCheck" + this.jsonItemData.index);
+                let hasC = elm.hasClass("active");    
+                if (hasC) {
+                    return this.jsonItemData.id;
+                }          
+            }
     
     
         }

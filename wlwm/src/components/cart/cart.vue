@@ -29,8 +29,8 @@
         <div class="flow_title">
           <b></b>
           <span class="login_isShow">
-                          建议您立即<router-link to="/login">登录</router-link>，以确保顺利进行购物。
-                    </span>
+                  建议您立即<router-link to="/login">登录</router-link>，以确保顺利进行购物。
+            </span>
         </div>
         <div class="cart_box">
           <div class="cart_head">
@@ -78,7 +78,7 @@
               <label>全选</label>
               <span class="ml20 ">已选</span><span class="red allcount ">0</span><span>件商品</span>
             </div>
-            <a class="check_btn fr " href="javascript:void(0); " @click="onpay">结算</a>
+            <a class="check_btn fr " href="javascript:void(0); " @click="onpay" v-loading.fullscreen.lock="fullscreenLoading">结算</a>
             <div class="fr f14 fb mr20 ">
               <span>总计（不含运费）：</span><span class="f20 red payPrice mr20 ">￥{{sum}}</span>
             </div>
@@ -102,26 +102,26 @@
       <div id="delete_dialog_batch" class="dialog" style="position:fixed;min-height:auto;">
         <div class="dialog-outer">
           <span class="dialog-bg dialog-bg-n">
-                        </span>
+                                  </span>
           <span class="dialog-bg dialog-bg-ne">
-                        </span>
+                                  </span>
           <span class="dialog-bg dialog-bg-e">
-                        </span>
+                                  </span>
           <span class="dialog-bg dialog-bg-se">
-                        </span>
+                                  </span>
           <span class="dialog-bg dialog-bg-s">
-                        </span>
+                                  </span>
           <span class="dialog-bg dialog-bg-sw">
-                        </span>
+                                  </span>
           <span class="dialog-bg dialog-bg-w">
-                        </span>
+                                  </span>
           <span class="dialog-bg dialog-bg-nw">
-                        </span>
+                                  </span>
           <div class="dialog-inner">
             <div class="dialog-toolbar clearfix">
               <a class="dialog-close" href="javascript:void(0);" title="关闭" onclick="hideDiaBatch()">
-                                        关闭
-                                    </a>
+                                                  关闭
+                                              </a>
               <h3 class="dialog-title">
                 批量删除商品
               </h3>
@@ -350,7 +350,8 @@
       return {
         jsonUserData: [],
         sum: 0,
-        sumGoods: "已选0件商品"
+        sumGoods: "已选0件商品",
+        fullscreenLoading: false
       }
     },
     components: {
@@ -363,7 +364,7 @@
       $(window).resize(function() {
         this.win();
       });
-
+  
       this.reqForBuyCar();
     },
     methods: {
@@ -449,12 +450,15 @@
         if (bo) {
           elm.removeClass("active");
           $("#subForm").siblings("cart-item").removeClass("active");
+          this.sumGoods = "已选择"+elmArr.length +"件商品";
           elmArr.forEach(function(val, index) {
             val.checkAll(false);
           });
         } else {
           elm.addClass("active");
           $("#subForm").siblings("cart-item").addClass("active");
+          this.sumGoods = "已选择0件商品";
+
           elmArr.forEach(function(val, index) {
             val.checkAll(true);
           });
@@ -494,7 +498,6 @@
         });
       },
   
-  
       win() {
         var _wd = $(window).width();
         var _hd = $(window).height();
@@ -520,9 +523,43 @@
         })
       },
   
-      //结算
+      //结算 跳转至核对订单页面
       onpay() {
+        this.fullscreenLoading = true;
+        let elmArr = this.$refs.child; //子控件
+        var idsArr = [];
+        elmArr.forEach(function(val, index) {
+          let id = val.backCheckedID();
+          if (id) {
+            idsArr.push(id);
+          }
+        });
+        if (idsArr.length == 0) {
+          this.$message("请选择商品");
+        } else {
+          let ids = idsArr.join(",");
+          let param = {
+            "commodityIds": "3,4"
+          };
+          var that = this;
+          console.log(param);
+          http.post(URLString.updateOrderDetail, param, function successCall(res) {
+            console.log(res);
+            that.fullscreenLoading = false;
+            if (res.statusCode == 200) {
   
+            } else {
+              that.$message("系统错误，下单失败");
+            }
+          });
+  
+          // this.$route.push({
+          //   name:"CheckOrder",
+          //   params:{
+  
+          //   }
+          // });
+        }
       },
   
       //关闭删除界面
@@ -552,10 +589,39 @@
   
       // 批量删除：
       delall() {
-        
-      },
+        var that = this;
+        let elmArr = this.$refs.child; //子控件
   
+        var idsArr = [];
+        elmArr.forEach(function(val, index) {
+          let id = val.backCheckedID();
+          if (id) {
+            idsArr.push(id);
+          }
+        });
+        if (idsArr.length != 0) {
+          this.$confirm('选中的商品将从购物车永久删除，是否继续?', '提示', {
+            confirmButtonText: '确定',
+            cancelButtonText: '取消',
+            type: 'warning'
+          }).then((result) => {
+            if (result == "confirm") {
+              that.dodelBatch(idsArr.join(","));
+            } else {
+              that.$message({
+                type: 'info',
+                message: '已取消删除'
+              });
+            }
+          });
+        } else {
+          that.$message({
+            type: 'info',
+            message: '未选中商品。'
+          });
+        }
   
+      }
     }
   }
 </script>
