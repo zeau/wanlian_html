@@ -179,10 +179,10 @@
 </template>
 
 <style>
-  @import url(../../common/css/register.css);
-  @import url(../../common/css/iCheck/custom.css);
-  @import url(../../common/css/receive.m.css);
-  @import url(../../common/css/index_seven.css);
+  @import url(../../assets/css/register.css);
+  @import url(../../assets/css/iCheck/custom.css);
+  @import url(../../assets/css/receive.m.css);
+  @import url(../../assets/css/index_seven.css);
 
 </style>
 

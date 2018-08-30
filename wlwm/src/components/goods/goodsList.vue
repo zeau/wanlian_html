@@ -126,9 +126,9 @@
         salesVolume: 1,
         popularity: 1,
         putawayDt: 1,
-        salesSrc: "../../common/images/arrow_up.png",
-        popularSrc: "../../common/images/arrow_up.png",
-        putawaySrc: "../../common/images/arrow_up.png"
+        salesSrc: "../../assets/images/arrow_up.png",
+        popularSrc: "../../assets/images/arrow_up.png",
+        putawaySrc: "../../assets/images/arrow_up.png"
   
       }
     },
@@ -182,13 +182,13 @@
        */
       selecterWithCon(val) {
         if (val == 0) {
-          this.selSrc = this.salesVolume == 0 ? require("../../common/images/arrow_up.png") : require("../../common/images/arrow_up.png");
+          this.selSrc = this.salesVolume == 0 ? require("../../assets/images/arrow_up.png") : require("../../assets/images/arrow_up.png");
           this.salesVolume = this.salesVolume == 0 ? 1 : 0;
         } else if (val == 1) {
-          this.popularSrc = this.popularity == 0 ? "../../common/images/arrow_d.png" : "../../common/images/arrow_up.png";
+          this.popularSrc = this.popularity == 0 ? "../../assets/images/arrow_d.png" : "../../assets/images/arrow_up.png";
           this.popularity = this.popularity == 0 ? 1 : 0;
         } else {
-          this.putawaySrc = this.putawayDt == 0 ? "../../common/images/arrow_d.png" : "../../common/images/arrow_up.png";
+          this.putawaySrc = this.putawayDt == 0 ? "../../assets/images/arrow_d.png" : "../../assets/images/arrow_up.png";
           this.putawayDt = this.putawayDt == 0 ? 1 : 0;
         }
         this.req(this.currentPage, this.salesVolume, this.popularity, this.putawayDt);

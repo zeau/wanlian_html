@@ -10,6 +10,7 @@ export default {
 
     goodsList:'/web/commodity/findCommodity.do',//商品列表
     goodsInfo:'/web/commodity/getCommodity.do',//商品详情
+    goodCommodityType:'web/commodity/getCommodityType.do',//商品分类
 
     joinShoppingCart:'/web/shoppingCart/addShoppingCartHome.do',//加入购物车
     shoppingCartList:'/web/shoppingCart/getShoppingCartHome.do',//购物车列表

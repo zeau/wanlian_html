@@ -131,8 +131,8 @@
 
 
 <style>
-    @import url("../../common/css/jd.base.min.css");
-    @import url("../../common/css/jd.style.css");
-    @import url("../../common/css/pages.css");
-    @import url(../../common/css/register.css);
+    @import url("../../assets/css/jd.base.min.css");
+    @import url("../../assets/css/jd.style.css");
+    @import url("../../assets/css/pages.css");
+    /* @import url(../../assets/css/register.css); */
 </style>

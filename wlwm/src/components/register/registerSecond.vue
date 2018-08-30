@@ -77,7 +77,7 @@
 </template>
 
 <style>
-  @import url(../../common/css/register);
+  @import url(../../assets/css/register);
 </style>
 
 <script>

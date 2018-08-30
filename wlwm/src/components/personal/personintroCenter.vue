@@ -6,7 +6,7 @@
                 <div class="mod-main-left fl clearfix">
                     <div class="mod_img fl">
                         <form id="upload_form64470" name="upload_form" method="post" enctype="multipart/form-data" action="/uploadimg.htm?customerId=64470" target="hidden_frame">
-                            <img src="&#9;&#9;&#9;&#9;&#9;&#9;&#9; /images/default_head.jpg&#10;&#9;&#9;&#9;&#9;&#9;&#9;" width="106" height="106" id="customer_imgs">
+                            <img src="" width="106" height="106" id="customer_imgs">
                             <p><a class="upload_file">修改头像</a></p>
                             <input type="file" class="upload_file" id="imageFile" name="shareFile" customer_id="64470" style="width:100px;height:100px;margin-top:-100px;filter:alpha(opacity=0);-moz-opacity:0.5;-khtml-opacity: 0;opacity: 0;position:relative;z-index:999;">
                         </form>

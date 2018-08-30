@@ -37,8 +37,6 @@ input, label {
   vertical-align: middle;
   display: inline-block;
 }
-#login_name{ width: 18px;height: 18px;background: url(../images/user.png) no-repeat; position: absolute; top: 18px; left: 12px;}
-#login_code{ width: 18px;height: 22px;background: url(../images/code.png) no-repeat; position: absolute; top: 18px; left: 12px;}
 .login_con_main_tips{
   position: absolute;
   left: 0px;
@@ -78,8 +76,6 @@ input, label {
   text-decoration: none;
 }
 
-.beauty-checkbox{width:20px;height:20px;background:url(../images/checkbox2.png) 0 0 no-repeat;position: absolute;top: 0;}
-.beauty-checkbox.active{background:url(../images/checkbox-checked3.png) 0 0 no-repeat;}
 
 .re_label{
   color: #C0A369;

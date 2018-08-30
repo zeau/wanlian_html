@@ -4,7 +4,7 @@
       <div class="mini_head" style="margin-top: 70px;">
         <h1 class="logo">
           <router-link to="/pageHome">
-            <img src="../assets/logo.jpeg" alt="" style="width: 165px;height: 40px;" />
+            <img src="../../assets/images/logo.jpeg" alt="" style="width: 165px;height: 40px;" />
           </router-link>
         </h1>
       </div>
@@ -153,7 +153,7 @@
         <!--/dia_tit-->
         <div class="dia_cont">
           <div class="dia_intro no_tc pt30">
-            <img class="vm mr10" id="f_img" alt="" src="images/mod_war.png" />
+            <img class="vm mr10" id="f_img" alt="" src="../../assets/images/mod_war.png" />
             <em id="con_00">修改成功！</em>
           </div>
           <div class="dia_ops mt50 tc" style="text-align: center;">
@@ -289,8 +289,8 @@
 </template>
 
 <style>
-  @import "../../common/css/cart.css";
-  @import "../../common/css/header.css";
+  @import "../../assets/css/cart.css";
+  @import "../../assets/css/header.css";
   .brown_btn {
     padding: 5px 15px;
     background: #fff;

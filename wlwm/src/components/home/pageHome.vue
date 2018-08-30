@@ -202,7 +202,7 @@
           <div class="item customer_bag">
             <a href="customer/index.html" target="_blank">
               <i class="icons icon-bag"></i>
-              <span>我的函美</span>
+              <span>我的万联信息</span>
             </a>
           </div>
         </div>
@@ -215,19 +215,7 @@
           </div>
         </div>
         <!--客服-->
-        <div class="customer-box">
-          <span class="title">客服咨询</span>
-          <hr>
-          <a href="javascript:;" class="close-cs"></a>
-          <p>
-            <span class="qq_name">函美客服</span>
-            <span class="qq_img">
-              <a style="float:right;" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=123456&site=qq&menu=yes">
-                <img border="0" src="http://wpa.qq.com/pa?p=2:123456:51" alt="点击这里给我发消息" title="点击这里给我发消息"/>
-              </a>
-            </span>
-          </p>
-        </div>
+
       </div>
     </div>
 
@@ -237,8 +225,8 @@
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  @import "../../common/css/pageHome.css";
+<style>
+  @import "../../assets/css/pageHome.css";
 
   .el-carousel-item img {
     width: 100%;
@@ -251,10 +239,10 @@
 import pageHeader from '@/components/header/pageHeader'
 import pageFooter from '@/components/footer/pageFooter'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
-import lunbo1 from '../../common/images/lunbo1.jpg'
-import lunbo2 from '../../common/images/lunbo2.jpg'
-import xlunbo1 from '../../common/images/1522318791044.jpg'
-import xlunbo2 from '../../common/images/1522315830910.jpg'
+// import lunbo1 from '../../assets/images/lunbo1.jpg'
+// import lunbo2 from '../../assets/images/lunbo2.jpg'
+// import xlunbo1 from '../../assets/images/1522318791044.jpg'
+// import xlunbo2 from '../../assets/images/1522315830910.jpg'
 
 import http from '../../Api/baseHttp'
 import URLString from '../../Api/api'

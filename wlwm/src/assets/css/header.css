@@ -67,7 +67,7 @@ a{}
 }
 
 #headsearch {
-  background: url(../../common/images/search_btn.png) no-repeat,#57402e;
+  background: url(../images/search_btn.png) no-repeat,#57402e;
   width: 45px;
   height: 45px;
   border: none;

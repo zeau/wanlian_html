@@ -74,7 +74,7 @@
 </template>
 
 <style>
-    @import "../../common/css/help.css";
+    @import "../../assets/css/help.css";
 </style>
 
 <script>

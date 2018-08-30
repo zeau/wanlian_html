@@ -79,7 +79,7 @@
 </template>
 
 <style>
-@import url(../../common/css/footer);
+@import url(../../assets/css/footer);
 </style>
 
 <script>

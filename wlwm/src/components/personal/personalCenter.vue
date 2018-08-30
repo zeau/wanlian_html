@@ -124,7 +124,7 @@
 </template>
 
 <style>
-@import "../../common/css/personalCenter.css";
+@import "../../assets/css/personalCenter.css";
 </style>
 
 <script>

@@ -6,9 +6,9 @@ import router from './router'
 import $ from 'jquery'
 
 
-import './common/css/base.css'  /*引入公共样式*/
-import './common/css/common.css'
-import './common/css/goods.css'
+import './assets/css/base.css'  /*引入公共样式*/
+import './assets/css/common.css'
+import './assets/css/goods.css'
 
 import 'element-ui/lib/theme-chalk/index.css'
 import './components/tool/toast.css';
@@ -18,7 +18,7 @@ import ElementUI from 'element-ui'
 Vue.use(Toast);
 Vue.use(ElementUI)
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true;
 
 /* eslint-disable no-new */
 new Vue({

@@ -52,7 +52,7 @@ export default new Router({
       component: RegisterThird
     },
     {
-      path: '/goodsList',
+      path: '/goodsList:name',
       name: 'GoodsList',
       component: GoodsList
     },

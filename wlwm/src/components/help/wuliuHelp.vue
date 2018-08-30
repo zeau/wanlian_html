@@ -75,7 +75,7 @@
             <p class="MsoNormal" style="margin-bottom: 15pt; line-height: 15pt; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"
                 align="left"><span style="font-size:9.0pt;
                     font-family:宋体;mso-ascii-font-family:Tahoma;mso-hansi-font-family:Tahoma;
-                    mso-bidi-font-family:Tahoma;color:#555555;mso-font-kerning:0pt"><img style="" src="../assets/personal.jpg"></span></p>
+                    mso-bidi-font-family:Tahoma;color:#555555;mso-font-kerning:0pt"><img style="" src="../../assets/images/personal.jpg"></span></p>
     
             <p class="MsoNormal" style="margin-bottom: 15pt; line-height: 15pt; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"
                 align="left"><span style="font-size: 9pt; font-family: 宋体; color: rgb(85, 85, 85);">二、更换用户名</span></p>
@@ -99,7 +99,7 @@
         </div>
     
         <div class="body" v-else-if="this.wuliuType == 4">
-            <p style="padding-left:25px;"><img alt="" src="../assets/intro.jpg" style="margin: 10px 0px 10px -2em; padding: 0px; text-align: center; max-width: 650px; color: rgb(0, 0, 0); font-family: Arial, Verdana, 宋体; line-height: 21px; text-indent: 24px; font-size: 16px;"><br></p>
+            <p style="padding-left:25px;"><img alt="" src="../../assets/images/intro.jpg" style="margin: 10px 0px 10px -2em; padding: 0px; text-align: center; max-width: 650px; color: rgb(0, 0, 0); font-family: Arial, Verdana, 宋体; line-height: 21px; text-indent: 24px; font-size: 16px;"><br></p>
         </div>
     
     
@@ -217,8 +217,8 @@
         </div>
     
         <div class="body" v-else-if="this.wuliuType == 16">
-            <p style="margin-bottom: 20px; padding: 0px; line-height: 20px; color: rgb(85, 85, 85); font-family: tahoma, arial, 宋体;"><span style="font-weight: bold;"><img src="../assets/baozhang.jpg" style="width: 81.0156px; height: 94.7198px;"></span></p>
-            <p style="margin-bottom: 20px; padding: 0px; line-height: 20px; color: rgb(85, 85, 85); font-family: tahoma, arial, 宋体;"><img src="../assets/dianhua.jpg" style="font-weight: bold; line-height: 17.1429px; width: 29.1329px; height: 28px;"><span style="font-weight: bold;">投诉电话：400-8850-868</span></p>
+            <p style="margin-bottom: 20px; padding: 0px; line-height: 20px; color: rgb(85, 85, 85); font-family: tahoma, arial, 宋体;"><span style="font-weight: bold;"><img src="../../assets/images/baozhang.jpg" style="width: 81.0156px; height: 94.7198px;"></span></p>
+            <p style="margin-bottom: 20px; padding: 0px; line-height: 20px; color: rgb(85, 85, 85); font-family: tahoma, arial, 宋体;"><img src="../../assets/images/dianhua.jpg" style="font-weight: bold; line-height: 17.1429px; width: 29.1329px; height: 28px;"><span style="font-weight: bold;">投诉电话：400-8850-868</span></p>
             <p style="margin-bottom: 20px; padding: 0px; line-height: 20px; color: rgb(85, 85, 85); font-family: tahoma, arial, 宋体;"><span style="font-weight: bold;">函百商城平台确保所售卖的商品不会出现一品多价的情况，保护消费者的合法权益不收侵害。</span></p>
         </div>
     

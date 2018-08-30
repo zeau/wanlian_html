@@ -404,7 +404,7 @@
 </template>
 
 <style>
-  @import url(../../common/css/index.css);
+  @import url(../../assets/css/index.css);
   .el-tabs__content{
     padding: 0;
   }

@@ -4,8 +4,8 @@
       <div class="container clearfix">
         <div class="top_left fr">
           <span class="my_store pr">
-                                        <router-link to="/personalCenter"><i class="icons icon_bag"></i>我的万联平台</router-link>
-                                      </span>
+                  <router-link to="/personalCenter"><i class="icons icon_bag"></i>我的万联平台</router-link>
+          </span>
           <span class="no_login"><i class="icons icon_user"></i><router-link to="/login">登录</router-link>/<router-link to="/register">注册</router-link></span>
           <span class="is_login">{{phoneNum}} 欢迎您！<a href="javascrip:void(0)" @click="loginOut" style="border-left:1px solid #e2e2e2;padding:0 10px;">退出</a></span>
         </div>
@@ -20,7 +20,7 @@
         <!--logo-->
         <div class="logo fl">
           <router-link to="/pageHome">
-            <img src="../assets/logo.jpeg" alt="" style="width:165px;height:40px;" />
+            <img src="../../assets/images/logo.jpeg" alt="" style="width:165px;height:40px;" />
           </router-link>
         </div>
         <!--searchBox-->
@@ -32,13 +32,13 @@
                 <div class="platform-item">搜万联</div>
               </div>
               <select id="searchType" name="searchType" class="searchType c999" style="display: none;">
-              								<option value="1" selected="selected">商品</option>
-              								<option value="2">店铺</option>
-              			</select>
+                								<option value="1" selected="selected">商品</option>
+                								<option value="2">店铺</option>
+                			</select>
               <div class="btn-group" id="search-select" @click="searchSel">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="btn-text">商品</span><span class="caret"></span>
-                        </button>
+                              <span class="btn-text">商品</span><span class="caret"></span>
+                          </button>
                 <ul class="dropdown-menu">
                   <li class="active"><a href="javascript:;" data-type="1">商品</a></li>
                   <li class=""><a href="javascript:;" data-type="2">店铺</a></li>
@@ -62,12 +62,12 @@
         <div class="shopping_cart fr mt10">
           <dl class="pr" id="loadcart">
             <dt class="pr" id="mminicart">
-                              <router-link to="/cart">
-                                  <span class="lineBar">购物车</span>
-                                  <i class="icons icon_cart"></i>
-                                  <span class="sc_num"><em>0</em></span>
-                              </router-link>
-                          </dt>
+                                <router-link to="/cart">
+                                    <span class="lineBar">购物车</span>
+                                    <i class="icons icon_cart"></i>
+                                    <span class="sc_num"><em>0</em></span>
+                                </router-link>
+                            </dt>
           </dl>
         </div>
   
@@ -85,81 +85,81 @@
               <!-- 第一个分类的展示 -->
               <dl>
                 <dt>
-                                              <!--判断是否自定义分类导航-->
-                            <router-link to="/">服饰/鞋靴</router-link>
-                            <img class="vm" alt="" src="http://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1516162583299.jpg" width="20px" height="20px"/>
-                            </dt>
+                                                <!--判断是否自定义分类导航-->
+                              <router-link to="/">服饰/鞋靴</router-link>
+                              <img class="vm" alt="" src="http://oss-cn-suzhou-gov.aliyuncs.com/picture-downroad/bbc_test/upload/image/201801/1516162583299.jpg" width="20px" height="20px"/>
+                              </dt>
                 <dd></dd>
               </dl>
             </div>
             <!--/sort_cont-->
   
-            <div class="sort_open pa" style="width:930px;background:#f5f5f5;">
+            <div class="sort_open pa" style="width:1000px;background:#f5f5f5;">
               <div class="ct_item clearfix">
                 <div class="sub_category clearfix fl" style="background:#f5f5f5;">
                   <div class="category_box fl">
                     <dl>
                       <dt>
-                                                          	<!--判断是否自定义分类导航-->
-                                                          		<a href="list/2092-2091-4.html">女装</a>
-                                                          <dt/>
-                                                          <dd>
-                      	                            		<!--判断是否自定义分类导航-->
-                                                          		<a href="list/2107-2091-39.html">风衣</a>
-                      
-                      	                            		<!--判断是否自定义分类导航-->
-                                                          		<a href="list/2102-2091-42.html">休闲裤</a>
-                      
-                      	                            		<!--判断是否自定义分类导航-->
-                                                          		<a href="list/2100-2091-43.html">半身裙</a>
-                      
-                      	                            		<!--判断是否自定义分类导航-->
-                                                          		<a href="list/2099-2091-44.html">连衣裙</a>
-                      
-                      	                            		<!--判断是否自定义分类导航-->
-                                                          		<a href="list/2124-2091-45.html">上衣</a>
-                      
-                      	                            		<!--判断是否自定义分类导航-->
-                                                          		<a href="list/2101-2091-508.html">牛仔裤</a>
-                      
-                      	                            		<!--判断是否自定义分类导航-->
-                                                          		<a href="list/2098-2091-47.html">马甲</a>
-                      
-                                                          </dd>
-                                              </dl>
-                                        </div><!--/category_box-->
-                                      </div><!--/sub_category-->
-                                    </div><!--/ct_item-->
-                                    <a class="close_category pa" href="javascript:;"></a>
-                                  </div><!--/sort_open-->
-                                </div><!--/pro_sort-->
+                                                            	<!--判断是否自定义分类导航-->
+                                                            		<a href="list/2092-2091-4.html">女装</a>
+                                                            <dt/>
+                                                            <dd>
+                        	                            		<!--判断是否自定义分类导航-->
+                                                            		<a href="list/2107-2091-39.html">风衣</a>
                         
-                                <!-- 商品列表分类 -->
-                                <ul class="sort_list clearfix">
-                                  <li class="">
-                                    <router-link to="/goodsList">国际精品</router-link>
-                                  </li>
-                                </ul>
-                      
-                      
-                                <!--/sort_list-->
+                        	                            		<!--判断是否自定义分类导航-->
+                                                            		<a href="list/2102-2091-42.html">休闲裤</a>
+                        
+                        	                            		<!--判断是否自定义分类导航-->
+                                                            		<a href="list/2100-2091-43.html">半身裙</a>
+                        
+                        	                            		<!--判断是否自定义分类导航-->
+                                                            		<a href="list/2099-2091-44.html">连衣裙</a>
+                        
+                        	                            		<!--判断是否自定义分类导航-->
+                                                            		<a href="list/2124-2091-45.html">上衣</a>
+                        
+                        	                            		<!--判断是否自定义分类导航-->
+                                                            		<a href="list/2101-2091-508.html">牛仔裤</a>
+                        
+                        	                            		<!--判断是否自定义分类导航-->
+                                                            		<a href="list/2098-2091-47.html">马甲</a>
+                        
+                                                            </dd>
+                                                </dl>
+                                          </div><!--/category_box-->
+                                        </div><!--/sub_category-->
+                                      </div><!--/ct_item-->
+                                      <a class="close_category pa" href="javascript:;"></a>
+                                    </div><!--/sort_open-->
+                                  </div><!--/pro_sort-->
+                          
+                                  <!-- 商品列表分类 -->
+                                  <ul class="sort_list clearfix">
+                                    <li class="">
+                                      <router-link to="/goodsList">国际精品</router-link>
+                                    </li>
+                                  </ul>
+                        
+                        
+                                  <!--/sort_list-->
+                                </div>
+                                <!--/container-->
                               </div>
-                              <!--/container-->
+                              <!--/nav-->
                             </div>
-                            <!--/nav-->
+                          
                           </div>
-                        
-                        </div>
 </template>
 
 <style>
-  @import "../../common/css/header.css";
+  @import "../../assets/css/header.css";
   .divhide {
     display: none;
   }
   
   .search_btn {
-    background: url(../../common/images/search_btn.png) no-repeat, #57402e;
+    background: url(../../assets/images/search_btn.png) no-repeat, #57402e;
     width: 45px !important;
     height: 45px;
     border: none !important;
@@ -233,7 +233,7 @@
   }
   
   #headsearch {
-    background: url(../../common/images/search_btn.png) no-repeat, #57402e;
+    background: url(../../assets/images/search_btn.png) no-repeat, #57402e;
     width: 45px;
     height: 45px;
     border: none;
@@ -313,7 +313,7 @@
   // import '../util/jsOperation.js'
   // import '../util/jquery.zclip.js'
   // import '../util/jquery.zclip.min.js'
-
+  
   export default {
     name: 'PageHeader',
     data() {
@@ -384,11 +384,11 @@
       $(".pro_sort").mouseleave(function() {
         this.hideSort();
       });
-
+  
       $(".pro_sort h2").mouseover(function() {
         this.hideSort();
       });
-
+  
       $(".close_category").click(function() {
         this.hideSort();
       });
@@ -399,7 +399,7 @@
         this.proSort();
       };
   
-      this.findClassData();//获取分页数据
+      this.findClassData(); //获取分页数据
   
     },
     methods: {
@@ -441,7 +441,7 @@
         };
         console.log("this click");
         http.post(URLString.goodCommodityType, param, function success(res) {
-          console.log(res);
+  
         });
   
       },
