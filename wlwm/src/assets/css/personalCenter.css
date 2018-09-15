@@ -90,7 +90,7 @@ textarea {
 }
 @-moz-document url-prefix(http), url-prefix(file) {
   img:-moz-broken {
-    -moz-force-broken-image-icon: 1 !important;
+    -moz-force-broken-image-icon: 1  ;
     width: 24px;
     height: 24px;
   }
@@ -573,7 +573,7 @@ input, label {
   color: #666;
 }
 .n_error {
-  border-color: #f2445d !important;
+  border-color: #f2445d  ;
 }
 .n_row .n_btn {
   height: 40px;
@@ -672,21 +672,21 @@ input:-webkit-autofill {
 .go_pay {
   border-width: 1px;
   border-style: solid;
-  color: #fff !important;
+  color: #fff  ;
 }
 .go_shopping {
   border: 1px solid #ddd;
   padding: 0 20px;
-  color: #666 !important;
+  color: #666  ;
   background: #f5f5f5;
 }
 /*加入购物车页面的小弹框*/
 .promotion_dialog {
-  width: 350px !important;
-  border: none !important;
-  position: absolute !important;
-  min-height: 0 !important;
-  padding: 0 !important;
+  width: 350px  ;
+  border: none  ;
+  position: absolute  ;
+  min-height: 0  ;
+  padding: 0  ;
 }
 .dialog .dialog-outer {
   width: 100%;
@@ -2844,7 +2844,7 @@ a:hover {
   height: 24px;
   line-height: 23px;
   text-align: center;
-  color: #fff !important;
+  color: #fff  ;
 }
 .pro_filter {
   border: 1px solid #ddd;
@@ -3029,7 +3029,7 @@ a:hover {
   padding: 0 14px 0 8px;
 }
 .no_pages {
-  color: #ccc !important;
+  color: #ccc  ;
   cursor: default;
 }
 .op_prev.no_pages {
@@ -3266,12 +3266,12 @@ a:hover {
   border-style: solid;
   border-radius: 3px;
   font-weight: 700;
-  color: #fff !important;
+  color: #fff  ;
 }
 .contrast_btn.dis_ct {
   background: #fff;
-  border-color: #ddd !important;
-  color: #ccc !important;
+  border-color: #ddd  ;
+  color: #ccc  ;
   cursor: default;
 }
 .ct_operation .del-items a {
@@ -3291,17 +3291,17 @@ a:hover {
   display: block;
 }
 #wrap {
-  z-index: 99 !important;
+  z-index: 99  ;
 }
 .mousetrap {
-  z-index: 9 !important;
+  z-index: 9  ;
 }
 .cloud-zoom-lens {
   border: 1px solid #f60;
   margin: -1px;
   background-color: #fe9;
   cursor: move;
-  z-index: 8 !important;
+  z-index: 8  ;
 }
 .cloud-zoom-big {
   border: 1px solid #ddd;
@@ -3391,8 +3391,8 @@ a:hover {
   *width: 205px;
 }
 .bdsharebuttonbox a {
-  margin: 0 3px 0 2px !important;
-  float: none !important;
+  margin: 0 3px 0 2px  ;
+  float: none  ;
   display: inline-block;
   zoom: 1;
   *display: inline;
@@ -3596,7 +3596,7 @@ a:hover {
   padding: 2px 5px 2px 5px;
 }
 .locate_list li a:hover {
-  color: #fff !important;
+  color: #fff  ;
 }
 .store-prompt em {
   font-size: 14px;
@@ -3614,7 +3614,7 @@ a:hover {
 .installment {
   background: url(../images/installment_bg.gif) no-repeat;
   width: 78px;
-  color: #fff !important;
+  color: #fff  ;
   text-align: right;
 }
 .no_freight {
@@ -3816,7 +3816,7 @@ a:hover {
   margin: 15px auto 0;
   text-align: center;
   line-height: 33px;
-  color: #fff !important;
+  color: #fff  ;
   font-size: 18px;
 }
 .enter_shop:hover {
@@ -3952,7 +3952,7 @@ a:hover {
   height: 32px;
   background: url(../images/buy_group.gif) no-repeat;
   font-size: 16px;
-  color: #fff !important;
+  color: #fff  ;
   text-align: center;
   line-height: 32px;
   margin-top: 5px;
@@ -3988,7 +3988,7 @@ a:hover {
   width: 112px;
   height: 26px;
   background: url(../images/add_cart_btn.gif) no-repeat left top;
-  color: #fff !important;
+  color: #fff  ;
   font-size: 14px;
   line-height: 25px;
   text-indent: 35px;
@@ -4132,7 +4132,7 @@ a:hover {
   height: 30px;
   line-height: 29px;
   font-size: 14px;
-  color: #fff !important;
+  color: #fff  ;
   margin: 10px auto;
 }
 .comment_box {
@@ -6407,7 +6407,7 @@ a:hover {
   border-bottom: 1px solid #efefef;
 }
 .section_headerTop .slot_headerTop01 .siteNav {
-  margin-top: 0 !important;
+  margin-top: 0  ;
 }
 .mcGo a {
   color: #fff;
@@ -6417,7 +6417,7 @@ a:hover {
   color: #fff;
 }
 .content {
-  width: auto !important;
+  width: auto  ;
 }
 /*
 .safety_con {
@@ -6486,7 +6486,7 @@ a:hover {
     padding-left: 120px;
 }*/
 .member-dialog .dia-btn .btn {
-  padding: 5px 20px !important;
+  padding: 5px 20px  ;
 }
 .mod-order .tc-title a:hover {
   color: #E4A21F;
@@ -6498,41 +6498,13 @@ a:hover {
   color: #E4A21F;
 }
 /* input,button 重构样式 */
-select, textarea, input[type="text"], input[type="password"] {
-  color: #B3A180 !important;
-  border: 1px solid #CBBFA8 !important;
-}
-select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus {
-  color: #7D715C !important;
-  border: 1px solid #C3A872 !important;
-}
-button,
-input[type="button"],
-.complain-submit {
-  color: #fff !important;
-  background: #C0A369 !important;
-  border: 1px solid #C0A369 !important;
-  border-radius: 0 !important;
-}
-button:hover,
-input[type="button"]:hover,
-.complain-submit:hover {
-  color: #fff !important;
-  background: #E4A21F !important;
-  border: 1px solid #E4A21F !important;
-}
-button:active,
-input[type="button"]:active,
-.complain-submit:active {
-  background: #CC921E !important;
-  border: 1px solid #CC921E !important;
-}
+
 button:disabled, input[type="button"]:disabled {
-  cursor: inherit !important;
-  background: #D8D8D8 !important;
-  border: 1px solid #D8D8D8 !important;
+  cursor: inherit  ;
+  background: #D8D8D8  ;
+  border: 1px solid #D8D8D8  ;
 }
 .btn-del:active {
-  background: #ED3737 !important;
-  border: 1px solid #ED3737 !important;
+  background: #ED3737  ;
+  border: 1px solid #ED3737  ;
 }

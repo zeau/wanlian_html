@@ -1,13 +1,15 @@
 @charset "utf-8";
 
-
+a:hover {text-decoration:none; color:#764e34;}
+.sort_list .cur a, .sort_list li a:hover, .sales_label {background:#c2a779;}
+.sub_category dl dt a, .flr_title h2 span, .flr_tabs .cur a, .cart_empty a:hover, .sort_cont dl dd a:hover, .rec_name a:hover, .flr_menu li a:hover, .good_name a:hover, .good_price, .side_tools .hover em, .sortItem ul .cur a, .left_box h3 em, .browse_name span, .browse_price, .sellers_price em, #selected_filter li a em, .op_pages b, .goods_num, .g-price, .no-goods, .good-operation a:hover, .pages .cur, .gc_tit h3, .ct-item-price, .main_price, .pd_info dd a:hover, .selected_type, .eva_up, .groups_tabs .cur a, .gp_name a, .det_title .cur a, .uname a, .rp-name a, .rp_btn, .all_cmt, .cs_reply, .all_consult a {color:#764e34;}
+.search_text, .sort_cont, .ex_search, .side_tools .hover, .side_tools .hover span, .side_tools .cur, .side_tools .cur span, .backtotop:hover, .sorting_box .checked, .g-scroll-wrap .cur img, .goods_contrast, .contrast_items dl, .contrast_btn, .groups_tabs {border-color:#57402e!important;}
 .c999{
   color: #999;
 }
 .divhide{
   display: none;
 }
-a{}
 /*搜索提示-liangck-20151127*/
 .section-header .content .search{
   z-index: 999;
@@ -66,14 +68,6 @@ a{}
   margin: 0;
 }
 
-#headsearch {
-  background: url(../images/search_btn.png) no-repeat,#57402e;
-  width: 45px;
-  height: 45px;
-  border: none;
-  cursor: pointer;
-  position: initial;
-}
 #search-select{
   float: left;
 }
@@ -83,7 +77,7 @@ a{}
   border: 2px solid #333;
   border-right: 0;
   border-radius: 0;
-  height: 35px;
+  height: 45px;
   background-color: #fff;
   color: #999;
 }
@@ -150,11 +144,11 @@ a{}
 .logo {width:410px;overflow: hidden;}
 .logo img {vertical-align:middle;max-width: 250px;max-height: 100px;}
 .search_text {width:390px; height:41px;
-  font-size: 14px; line-height:39px\9; padding:0 10px; border-style:solid; border-right:none;}
+  font-size: 14px; line-height:39px; padding:0 10px; border-style:solid; border-right:none;}
 .search_btn {
-    background:url(../images/search_btn.png) no-repeat,#57402e; width:45px !important;
+    background:url(../images/search_btn.png) no-repeat,#57402e; 
+    width:45px !important;
     height:45px; 
-    border:none !important; 
     cursor:pointer;
   }
 .hot_word a {margin-right:10px;}
@@ -218,7 +212,11 @@ a{}
 .settle_accounts b {font-weight:700;}
 .settle_btn {display:inline-block; zoom:1; *display:inline; background:url(../images/settle_accounts_btn.gif) no-repeat; width:100px; height:30px; text-align:center; line-height:30px; color:#fff; font-weight:700;}
 .settle_btn:hover {color:#fff;}
-.nav {*position:relative; *z-index:100;}
+.nav {position:relative; 
+  z-index:100;
+  background:#47352d;
+}
+
 .pro_sort {width:270px;}
 .pro_sort h2 {line-height:54px; position:relative;}
 .pro_sort h2 a {display:block; font-family:Microsoft YaHei; font-size:16px;
@@ -227,7 +225,8 @@ a{}
 }
 .pro_sort h2 b {position:absolute; background:url(../images/all_sort_icon.png) no-repeat; width:20px; height:16px; top:19px; right:11px; *top:15px;}
 .sort_list li {float:left !important;
-  border-right:1px solid #796559;}
+  border-right:1px solid #796559;};
+.sort_list .cur a, .sort_list li a:hover, .sales_label {background:#c2a779;}
 .sort_list li a {display:block; line-height:54px; font-family:Microsoft YaHei; font-size:14px; color:#fff; padding:0 45px;}
 .sort_cont {width:270px;
   border: 0; top:54px; left:0; background:rgb(255, 255, 255); z-index:105;}
@@ -242,7 +241,7 @@ a{}
   right: 10px;
   top: 8px;}
 .sort_cont dl dt a {
-  display: block;margin:0; font-size:14px; vertical-align:middle;
+  display: block;margin:0; font-size:14px; 
   padding-right: 20px;
   text-indent: 10px;
   color: #666666;}
@@ -250,7 +249,6 @@ a{}
 .sort_cont dl dd {margin-left:10px;overflow:hidden; display:none;}
 .sort_cont dl dd a {float:left; margin-right:5px; color:#999;}
 .sort_cont .hover .sort_line {position:absolute; width:1px; height:100%; top:0; left:0; margin-left:0; padding-bottom:0;}
-.sort_cont .hover {/*background:#f5f5f5; z-index:19; *width:270px;*/}
 /*.sort_cont .hover dt {background:#f5f5f5;}
 .sort_cont .hover dd {background:#f5f5f5;}*/
 .sort_cont .hover a{background: #f5f5f5}
@@ -396,3 +394,156 @@ a{}
   border-right: none;
 }
 .thirdStore-search .searchType{display:none;}
+
+
+.search_text {
+  border-color: #57402e!important;
+}
+ 
+/*搜索提示-liangck-20151127*/
+
+.top{ 
+  height: 50px;
+  min-width: 1200px;
+  width: 100%;
+  line-height: 50px;
+  background: #fafafa;
+  border-bottom: 1px solid #e8e8e8;
+  color: #666666;
+  font-size: 13px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.divhide {
+  display: none;
+}
+
+
+.section-header .content .search {
+z-index: 999;
+}
+
+.ex_search ul {
+border-bottom: 1px solid #ddd;
+}
+
+.ex_search li {
+position: relative;
+}
+
+.ex_search li a {
+display: block;
+height: 25px;
+line-height: 25px;
+padding: 0 10px;
+color: #666;
+}
+
+.ex_search li:hover {
+background: #f2f2f2;
+}
+
+.ex_search li a span {
+color: #ccc;
+float: right;
+}
+
+.ex_search li .del_history {
+position: absolute;
+top: 0;
+right: 0;
+color: #369;
+display: none;
+}
+
+.ex_search p {
+height: 25px;
+line-height: 25px;
+padding: 0 10px;
+}
+
+.cur {
+background: #f2f2f2;
+}
+
+.inputsearch {
+width: 390px;
+height: 41px;
+font-size: 14px;
+line-height: 39px;
+padding: 0 10px;
+border-style: solid;
+border-right: none;
+border: solid 2px #57402e;
+margin: 0;
+}
+
+#headsearch {
+background: url(../../assets/images/search_btn.png) no-repeat, #57402e;
+width: 45px;
+height: 45px;
+border: none;
+cursor: pointer;
+position: initial;
+}
+
+#search-select {
+float: left;
+}
+
+#search-select button {
+width: 52px;
+padding: 0;
+border: 2px solid #333;
+border-right: 0;
+border-radius: 0;
+height: 45px;
+background-color: #fff;
+color: #999;
+}
+
+#search-select button span.caret {
+margin-left: 6px;
+display: inline-block;
+width: 0;
+height: 0;
+vertical-align: middle;
+border-top: 4px dashed;
+border-top: 4px solid\9;
+border-right: 4px solid transparent;
+border-left: 4px solid transparent;
+}
+
+#search-select input.search_text.fl.c999 {
+height: 45px!important;
+}
+
+#search-select .dropdown-menu {
+min-width: 51px;
+border: 1px solid #c2a779;
+position: absolute;
+display: none;
+background-color: #fff;
+z-index: 2;
+}
+
+#search-select .dropdown-menu li a {
+display: block;
+padding: 6px;
+text-align: center;
+color: #999;
+}
+
+#search-select .dropdown-menu>.active>a,
+#search-select .dropdown-menu>.active>a:hover,
+#search-select .dropdown-menu>.active>a:focus {
+background-color: #c2a779;
+color: #fff;
+}
+
+#search-select .dropdown-menu>li>a:hover {
+background-color: #c2a779;
+color: #fff;
+}

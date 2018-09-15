@@ -40,7 +40,6 @@ a:hover {text-decoration:none; color:#e32d2d;}
 .logo {width:410px;}
 .logo img {vertical-align:middle;}
 .search_text {width:397px; height:33px; line-height:30px\9; padding:0 5px; border-width:2px; border-style:solid; border-right:none;}
-.search_btn {background:url(../images/search_btn.gif) no-repeat; width:80px; height:35px; border:none; cursor:pointer;}
 .hot_word a {margin-right:10px;}
 .ex_search {background:#fff; border-width:2px; border-style:solid; border-top:none; top:36px; width:407px; z-index:12; box-shadow:0 4px 8px rgba(140,140,140,.5); display:none;}
 .ex_search ul {border-bottom:1px solid #ddd;}

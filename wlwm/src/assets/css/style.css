@@ -69,7 +69,6 @@ img{vertical-align:middle;}
 .sc_info p em {color:#cc0000; font-size:18px; font-weight:700;}
 .sc_btn {display:inline-block; zoom:1; *display:inline; width:120px; height:30px; background:#F15421; color:#fff; text-align:center; line-height:30px; font-weight:700; border-radius:5px;}
 .sc_btn:hover {color:#fff;}
-.nav {background:#eb6122;}
 .pro_sort {width:210px;height:32px;}
 
 .pro_sort h3 {height:32px; background:#cc3902; font-family:"微软雅黑"; font-size:16px; color:#fff; line-height:32px; text-indent:12px; cursor:pointer;}
@@ -1081,7 +1080,6 @@ div.member_pages span.disabled{padding:5px 10px; border:1px solid #ccc; border-r
 .ex_search li:hover {background:#F80;}
 .ex_search li a span {color:#ccc; float:right;}
 .ex_search li .del_history {position:absolute; top:0; right:0; color:#369; display:none;}
-.search_wp {position:relative;}
 .ex_search p {height:25px; line-height:25px; padding:0 10px;}
 .ex_search .force em {font-weight:700;}
 .ex_search {border-color:#ddd;}
