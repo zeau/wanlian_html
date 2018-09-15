@@ -1,20 +1,21 @@
 <template>
   <div id="pageHeader">
-    <div class="top">
-      <div class="container clearfix">
-        <div class="top_left fr">
-          <span class="my_store pr">
-                  <router-link to="/personalCenter"><i class="icons icon_bag"></i>我的万联平台</router-link>
-          </span>
-          <span class="no_login"><i class="icons icon_user"></i><router-link to="/login">登录</router-link>/<router-link to="/register">注册</router-link></span>
-          <span class="is_login">{{phoneNum}} 欢迎您！<a href="javascrip:void(0)" @click="loginOut" style="border-left:1px solid #e2e2e2;padding:0 10px;">退出</a></span>
-        </div>
-        <div class="top_nav fl clearfix">
-          <span>万联万民有限公司</span>
-        </div>
-      </div>
-    </div>
-  
+
+<div class="top">
+    	<div class="top_wp clearfix">
+        	<div class="top_left fr">
+                <span class="my_store pr">
+                    <router-link to="/personalCenter"><i class="icons icon_bag"></i>我的万联平台</router-link>
+                </span>
+            <span class="no_login"><i class="icons icon_user"></i><router-link to="/login">登录</router-link>/<router-link to="/register">注册</router-link></span>
+            <span class="is_login">{{phoneNum}} 欢迎您！<a href="javascrip:void(0)" @click="loginOut" style="border-left:1px solid #e2e2e2;padding:0 10px;">退出</a></span>
+          </div><!--/top_left-->
+          <div class="top_nav fl clearfix">
+                <span>万联万民有限公司</span>
+          </div><!--/top_nav-->
+      </div><!--/top_wp-->
+</div><!--/top-->
+
     <div class="container">
       <div class="header clearfix">
         <!--logo-->
@@ -36,7 +37,7 @@
                 								<option value="2">店铺</option>
                 			</select>
               <div class="btn-group" id="search-select" @click="searchSel">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                               <span class="btn-text">商品</span><span class="caret"></span>
                           </button>
                 <ul class="dropdown-menu">
@@ -44,8 +45,8 @@
                   <li class=""><a href="javascript:;" data-type="2">店铺</a></li>
                 </ul>
               </div>
-              <input class="search_text fl c999" type="text" name="title" autocomplete="off" value="" placeholder="Ecco" />
-              <input class="search_btn fl" type="button" @click="checkSearch()" value="" />
+              <input class="search_text fl c999" type="text" name="title" autocomplete="off" value=" " placeholder="Ecco" />
+              <input class="search_btn fl" type="button" @click="checkSearch()" value=" " />
             </form>
           </div>
           <!--/search_box-->
@@ -153,152 +154,6 @@
 </template>
 
 <style>
-  @import "../../assets/css/header.css";
-  .divhide {
-    display: none;
-  }
-  
-  .search_btn {
-    background: url(../../assets/images/search_btn.png) no-repeat, #57402e;
-    width: 45px !important;
-    height: 45px;
-    border: none !important;
-    cursor: pointer;
-  }
-  
-  .search_text {
-    border-color: #57402e!important;
-  }
-  
-  
-  /*搜索提示-liangck-20151127*/
-  
-  .section-header .content .search {
-    z-index: 999;
-  }
-  
-  .ex_search ul {
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .ex_search li {
-    position: relative;
-  }
-  
-  .ex_search li a {
-    display: block;
-    height: 25px;
-    line-height: 25px;
-    padding: 0 10px;
-    color: #666;
-  }
-  
-  .ex_search li:hover {
-    background: #f2f2f2;
-  }
-  
-  .ex_search li a span {
-    color: #ccc;
-    float: right;
-  }
-  
-  .ex_search li .del_history {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: #369;
-    display: none;
-  }
-  
-  .ex_search p {
-    height: 25px;
-    line-height: 25px;
-    padding: 0 10px;
-  }
-  
-  .cur {
-    background: #f2f2f2;
-  }
-  
-  .inputsearch {
-    width: 390px;
-    height: 41px;
-    font-size: 14px;
-    line-height: 39px;
-    padding: 0 10px;
-    border-style: solid;
-    border-right: none;
-    border: solid 2px #57402e;
-    margin: 0;
-  }
-  
-  #headsearch {
-    background: url(../../assets/images/search_btn.png) no-repeat, #57402e;
-    width: 45px;
-    height: 45px;
-    border: none;
-    cursor: pointer;
-    position: initial;
-  }
-  
-  #search-select {
-    float: left;
-  }
-  
-  #search-select button {
-    width: 52px;
-    padding: 0;
-    border: 2px solid #333;
-    border-right: 0;
-    border-radius: 0;
-    height: 45px;
-    background-color: #fff;
-    color: #999;
-  }
-  
-  #search-select button span.caret {
-    margin-left: 6px;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    vertical-align: middle;
-    border-top: 4px dashed;
-    border-top: 4px solid\9;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
-  }
-  
-  #search-select input.search_text.fl.c999 {
-    height: 45px!important;
-  }
-  
-  #search-select .dropdown-menu {
-    min-width: 51px;
-    border: 1px solid #c2a779;
-    position: absolute;
-    display: none;
-    background-color: #fff;
-    z-index: 2;
-  }
-  
-  #search-select .dropdown-menu li a {
-    display: block;
-    padding: 6px;
-    text-align: center;
-    color: #999;
-  }
-  
-  #search-select .dropdown-menu>.active>a,
-  #search-select .dropdown-menu>.active>a:hover,
-  #search-select .dropdown-menu>.active>a:focus {
-    background-color: #c2a779;
-    color: #fff;
-  }
-  
-  #search-select .dropdown-menu>li>a:hover {
-    background-color: #c2a779;
-    color: #fff;
-  }
 </style>
 
 <script>

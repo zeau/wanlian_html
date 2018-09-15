@@ -227,6 +227,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
   @import "../../assets/css/pageHome.css";
+  @import "../../assets/css/header.css";
 
   .el-carousel-item img {
     width: 100%;

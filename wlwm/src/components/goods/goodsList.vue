@@ -87,6 +87,7 @@
 </template>
 
 <style>
+  @import "../../assets/css/header.css";
   .index_dl li {
     min-width: 35.5px;
     height: 28px;

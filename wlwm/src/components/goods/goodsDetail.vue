@@ -405,6 +405,8 @@
 
 <style>
   @import url(../../assets/css/index.css);
+  @import "../../assets/css/header.css";
+
   .el-tabs__content{
     padding: 0;
   }
